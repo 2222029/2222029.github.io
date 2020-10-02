@@ -53,11 +53,14 @@
         </script>
     <h1 class="title">L&#228;ndervergleich des Fallverlaufs Covid-19</h1>
     <h2>Sortierung nach Rating und dann Anzahl der Tage in denen die w&#246;chentliche Inzidenz &#252;ber 10 lag</h2>
-    <p>Datenstand: <b>2020-09-30 00:00:00</b></p>
+    <p>Datenstand: <b>2020-10-01 00:00:00</b></p>
     <p>Quelle: <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv">Johns Hopkins</a></p>
     <p>Betrachtet sind L&#228;nder mit mindestens 5000 gemeldeten F&#228;llen</p>
     <p>Die besten 10 L&#228;nder lagen im Durchschnitt 0 Tage &#252;ber einer w&#246;chentlichen Inzidenz von 10 Neuerkrankungen je 100.00 Einwohner</p>
     <p>Siehe auch <a href="./info.html">Erl&#228;uterungen</a></p>
+    <p>
+      <a href="./7day_predictions_on_test_data.jpg">7 Tage Prognose (experimentell) </a>
+    </p>
     <p>Spalten ein- und ausblenden</p>
     <table id="countries" CLASS="display" style="width:100%">
       <caption>
@@ -93,16 +96,34 @@
         <td>99999</td>
         <td>0</td>
         <td>0</td>
-        <td>-34</td>
-        <td>0002,59</td>
-        <td>0117,96</td>
+        <td>-16</td>
+        <td>0002,54</td>
+        <td>0118,32</td>
       </tr>
       <tr>
         <td>
-          <img src="2_China.png"/>
+          <img src="2_Angola.png"/>
         </td>
         <td>
-          <a href="2_China.png" target="_blank">2</a>
+          <a href="2_Angola.png" target="_blank">2</a>
+        </td>
+        <td>Angola</td>
+        <td>nan</td>
+        <td>3</td>
+        <td>1</td>
+        <td>99999</td>
+        <td>0</td>
+        <td>0</td>
+        <td>+14</td>
+        <td>0001,96</td>
+        <td>0015,67</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="3_China.png"/>
+        </td>
+        <td>
+          <a href="3_China.png" target="_blank">3</a>
         </td>
         <td>China</td>
         <td>nan</td>
@@ -111,16 +132,16 @@
         <td>24</td>
         <td>0</td>
         <td>0</td>
-        <td>+24</td>
+        <td>+14</td>
         <td>0000,01</td>
         <td>0006,30</td>
       </tr>
       <tr>
         <td>
-          <img src="3_Cote_d'Ivoire.png"/>
+          <img src="4_Cote_d'Ivoire.png"/>
         </td>
         <td>
-          <a href="3_Cote_d'Ivoire.png" target="_blank">3</a>
+          <a href="4_Cote_d'Ivoire.png" target="_blank">4</a>
         </td>
         <td>Cote_d'Ivoire</td>
         <td>nan</td>
@@ -129,16 +150,16 @@
         <td>66</td>
         <td>0</td>
         <td>0</td>
-        <td>-25</td>
-        <td>0001,12</td>
-        <td>0075,17</td>
+        <td>-14</td>
+        <td>0000,97</td>
+        <td>0075,29</td>
       </tr>
       <tr>
         <td>
-          <img src="4_Ethiopia.png"/>
+          <img src="5_Ethiopia.png"/>
         </td>
         <td>
-          <a href="4_Ethiopia.png" target="_blank">4</a>
+          <a href="5_Ethiopia.png" target="_blank">5</a>
         </td>
         <td>Ethiopia</td>
         <td>nan</td>
@@ -147,16 +168,16 @@
         <td>99999</td>
         <td>0</td>
         <td>0</td>
-        <td>+33</td>
-        <td>0003,75</td>
-        <td>0065,91</td>
+        <td>+42</td>
+        <td>0003,86</td>
+        <td>0066,54</td>
       </tr>
       <tr>
         <td>
-          <img src="5_Kenya.png"/>
+          <img src="6_Kenya.png"/>
         </td>
         <td>
-          <a href="5_Kenya.png" target="_blank">5</a>
+          <a href="6_Kenya.png" target="_blank">6</a>
         </td>
         <td>Kenya</td>
         <td>nan</td>
@@ -165,16 +186,16 @@
         <td>84</td>
         <td>0</td>
         <td>0</td>
-        <td>-06</td>
-        <td>0002,21</td>
-        <td>0071,99</td>
+        <td>-10</td>
+        <td>0002,29</td>
+        <td>0072,33</td>
       </tr>
       <tr>
         <td>
-          <img src="6_Madagascar.png"/>
+          <img src="7_Madagascar.png"/>
         </td>
         <td>
-          <a href="6_Madagascar.png" target="_blank">6</a>
+          <a href="7_Madagascar.png" target="_blank">7</a>
         </td>
         <td>Madagascar</td>
         <td>nan</td>
@@ -183,16 +204,16 @@
         <td>52</td>
         <td>0</td>
         <td>0</td>
-        <td>+14</td>
-        <td>0000,88</td>
-        <td>0059,58</td>
+        <td>+13</td>
+        <td>0000,96</td>
+        <td>0059,75</td>
       </tr>
       <tr>
         <td>
-          <img src="7_Malawi.png"/>
+          <img src="8_Malawi.png"/>
         </td>
         <td>
-          <a href="7_Malawi.png" target="_blank">7</a>
+          <a href="8_Malawi.png" target="_blank">8</a>
         </td>
         <td>Malawi</td>
         <td>nan</td>
@@ -201,16 +222,16 @@
         <td>69</td>
         <td>0</td>
         <td>0</td>
-        <td>-21</td>
-        <td>0000,14</td>
-        <td>0030,35</td>
+        <td>-25</td>
+        <td>0000,17</td>
+        <td>0030,38</td>
       </tr>
       <tr>
         <td>
-          <img src="8_Nicaragua.png"/>
+          <img src="9_Nicaragua.png"/>
         </td>
         <td>
-          <a href="8_Nicaragua.png" target="_blank">8</a>
+          <a href="9_Nicaragua.png" target="_blank">9</a>
         </td>
         <td>Nicaragua</td>
         <td>nan</td>
@@ -219,16 +240,16 @@
         <td>133</td>
         <td>0</td>
         <td>0</td>
-        <td>+23</td>
+        <td>+12</td>
         <td>0001,47</td>
         <td>0078,23</td>
       </tr>
       <tr>
         <td>
-          <img src="9_Nigeria.png"/>
+          <img src="10_Nigeria.png"/>
         </td>
         <td>
-          <a href="9_Nigeria.png" target="_blank">9</a>
+          <a href="10_Nigeria.png" target="_blank">10</a>
         </td>
         <td>Nigeria</td>
         <td>nan</td>
@@ -237,16 +258,16 @@
         <td>99999</td>
         <td>0</td>
         <td>0</td>
-        <td>+23</td>
-        <td>0000,55</td>
-        <td>0028,70</td>
+        <td>+01</td>
+        <td>0000,56</td>
+        <td>0028,77</td>
       </tr>
       <tr>
         <td>
-          <img src="10_Senegal.png"/>
+          <img src="11_Senegal.png"/>
         </td>
         <td>
-          <a href="10_Senegal.png" target="_blank">10</a>
+          <a href="11_Senegal.png" target="_blank">11</a>
         </td>
         <td>Senegal</td>
         <td>nan</td>
@@ -255,16 +276,16 @@
         <td>152</td>
         <td>0</td>
         <td>0</td>
-        <td>+13</td>
-        <td>0001,12</td>
-        <td>0089,98</td>
+        <td>+16</td>
+        <td>0001,22</td>
+        <td>0090,21</td>
       </tr>
       <tr>
         <td>
-          <img src="11_Sudan.png"/>
+          <img src="12_Sudan.png"/>
         </td>
         <td>
-          <a href="11_Sudan.png" target="_blank">11</a>
+          <a href="12_Sudan.png" target="_blank">12</a>
         </td>
         <td>Sudan</td>
         <td>nan</td>
@@ -273,16 +294,16 @@
         <td>77</td>
         <td>0</td>
         <td>0</td>
-        <td>+04</td>
+        <td>+15</td>
         <td>0000,14</td>
-        <td>0031,26</td>
+        <td>0031,29</td>
       </tr>
       <tr>
         <td>
-          <img src="12_Zambia.png"/>
+          <img src="13_Zambia.png"/>
         </td>
         <td>
-          <a href="12_Zambia.png" target="_blank">12</a>
+          <a href="13_Zambia.png" target="_blank">13</a>
         </td>
         <td>Zambia</td>
         <td>nan</td>
@@ -291,16 +312,16 @@
         <td>73</td>
         <td>5</td>
         <td>5</td>
-        <td>-04</td>
-        <td>0001,73</td>
-        <td>0080,77</td>
+        <td>-03</td>
+        <td>0001,70</td>
+        <td>0081,00</td>
       </tr>
       <tr>
         <td>
-          <img src="13_Haiti.png"/>
+          <img src="14_Haiti.png"/>
         </td>
         <td>
-          <a href="13_Haiti.png" target="_blank">13</a>
+          <a href="14_Haiti.png" target="_blank">14</a>
         </td>
         <td>Haiti</td>
         <td>nan</td>
@@ -309,16 +330,16 @@
         <td>66</td>
         <td>12</td>
         <td>12</td>
-        <td>-17</td>
-        <td>0001,06</td>
-        <td>0077,07</td>
+        <td>-14</td>
+        <td>0000,99</td>
+        <td>0077,20</td>
       </tr>
       <tr>
         <td>
-          <img src="14_Tajikistan.png"/>
+          <img src="15_Tajikistan.png"/>
         </td>
         <td>
-          <a href="14_Tajikistan.png" target="_blank">14</a>
+          <a href="15_Tajikistan.png" target="_blank">15</a>
         </td>
         <td>Tajikistan</td>
         <td>nan</td>
@@ -327,16 +348,16 @@
         <td>94</td>
         <td>14</td>
         <td>14</td>
-        <td>-23</td>
-        <td>0003,10</td>
-        <td>0102,91</td>
+        <td>+00</td>
+        <td>0003,07</td>
+        <td>0103,36</td>
       </tr>
       <tr>
         <td>
-          <img src="15_Egypt.png"/>
+          <img src="16_Egypt.png"/>
         </td>
         <td>
-          <a href="15_Egypt.png" target="_blank">15</a>
+          <a href="16_Egypt.png" target="_blank">16</a>
         </td>
         <td>Egypt</td>
         <td>nan</td>
@@ -345,16 +366,16 @@
         <td>89</td>
         <td>15</td>
         <td>15</td>
-        <td>-10</td>
-        <td>0000,81</td>
-        <td>0101,24</td>
+        <td>+31</td>
+        <td>0000,79</td>
+        <td>0101,36</td>
       </tr>
       <tr>
         <td>
-          <img src="16_Afghanistan.png"/>
+          <img src="17_Afghanistan.png"/>
         </td>
         <td>
-          <a href="16_Afghanistan.png" target="_blank">16</a>
+          <a href="17_Afghanistan.png" target="_blank">17</a>
         </td>
         <td>Afghanistan</td>
         <td>nan</td>
@@ -363,16 +384,16 @@
         <td>75</td>
         <td>29</td>
         <td>29</td>
-        <td>-09</td>
-        <td>0000,32</td>
-        <td>0101,36</td>
+        <td>+02</td>
+        <td>0000,30</td>
+        <td>0101,40</td>
       </tr>
       <tr>
         <td>
-          <img src="17_Pakistan.png"/>
+          <img src="18_Pakistan.png"/>
         </td>
         <td>
-          <a href="17_Pakistan.png" target="_blank">17</a>
+          <a href="18_Pakistan.png" target="_blank">18</a>
         </td>
         <td>Pakistan</td>
         <td>nan</td>
@@ -381,16 +402,16 @@
         <td>78</td>
         <td>38</td>
         <td>38</td>
-        <td>-19</td>
-        <td>0002,09</td>
-        <td>0142,19</td>
+        <td>+03</td>
+        <td>0002,01</td>
+        <td>0142,47</td>
       </tr>
       <tr>
         <td>
-          <img src="18_Mauritania.png"/>
+          <img src="19_Mauritania.png"/>
         </td>
         <td>
-          <a href="18_Mauritania.png" target="_blank">18</a>
+          <a href="19_Mauritania.png" target="_blank">19</a>
         </td>
         <td>Mauritania</td>
         <td>nan</td>
@@ -399,16 +420,16 @@
         <td>58</td>
         <td>46</td>
         <td>46</td>
-        <td>+01</td>
-        <td>0001,67</td>
-        <td>0162,26</td>
+        <td>-17</td>
+        <td>0001,56</td>
+        <td>0162,32</td>
       </tr>
       <tr>
         <td>
-          <img src="19_Congo_(Kinshasa).png"/>
+          <img src="20_Congo_(Kinshasa).png"/>
         </td>
         <td>
-          <a href="19_Congo_(Kinshasa).png" target="_blank">19</a>
+          <a href="20_Congo_(Kinshasa).png" target="_blank">20</a>
         </td>
         <td>Congo_(Kinshasa)</td>
         <td>nan</td>
@@ -417,16 +438,16 @@
         <td>102</td>
         <td>54</td>
         <td>54</td>
-        <td>-02</td>
-        <td>0002,22</td>
-        <td>0194,18</td>
+        <td>+13</td>
+        <td>0002,37</td>
+        <td>0194,66</td>
       </tr>
       <tr>
         <td>
-          <img src="20_Bangladesh.png"/>
+          <img src="21_Bangladesh.png"/>
         </td>
         <td>
-          <a href="20_Bangladesh.png" target="_blank">20</a>
+          <a href="21_Bangladesh.png" target="_blank">21</a>
         </td>
         <td>Bangladesh</td>
         <td>nan</td>
@@ -435,16 +456,16 @@
         <td>99999</td>
         <td>80</td>
         <td>80</td>
-        <td>+05</td>
-        <td>0005,86</td>
-        <td>0221,16</td>
+        <td>+33</td>
+        <td>0005,84</td>
+        <td>0222,07</td>
       </tr>
       <tr>
         <td>
-          <img src="21_Kazakhstan.png"/>
+          <img src="22_Kazakhstan.png"/>
         </td>
         <td>
-          <a href="21_Kazakhstan.png" target="_blank">21</a>
+          <a href="22_Kazakhstan.png" target="_blank">22</a>
         </td>
         <td>Kazakhstan</td>
         <td>nan</td>
@@ -453,16 +474,16 @@
         <td>42</td>
         <td>84</td>
         <td>84</td>
-        <td>+18</td>
-        <td>0002,40</td>
-        <td>0576,49</td>
+        <td>+13</td>
+        <td>0002,42</td>
+        <td>0576,83</td>
       </tr>
       <tr>
         <td>
-          <img src="22_Azerbaijan.png"/>
+          <img src="23_Azerbaijan.png"/>
         </td>
         <td>
-          <a href="22_Azerbaijan.png" target="_blank">22</a>
+          <a href="23_Azerbaijan.png" target="_blank">23</a>
         </td>
         <td>Azerbaijan</td>
         <td>nan</td>
@@ -471,16 +492,16 @@
         <td>85</td>
         <td>87</td>
         <td>87</td>
-        <td>-28</td>
-        <td>0006,97</td>
-        <td>0397,50</td>
+        <td>-17</td>
+        <td>0006,16</td>
+        <td>0398,29</td>
       </tr>
       <tr>
         <td>
-          <img src="23_Kosovo.png"/>
+          <img src="24_Kosovo.png"/>
         </td>
         <td>
-          <a href="23_Kosovo.png" target="_blank">23</a>
+          <a href="24_Kosovo.png" target="_blank">24</a>
         </td>
         <td>Kosovo</td>
         <td>Europe</td>
@@ -495,10 +516,10 @@
       </tr>
       <tr>
         <td>
-          <img src="24_Singapore.png"/>
+          <img src="25_Singapore.png"/>
         </td>
         <td>
-          <a href="24_Singapore.png" target="_blank">24</a>
+          <a href="25_Singapore.png" target="_blank">25</a>
         </td>
         <td>Singapore</td>
         <td>nan</td>
@@ -507,16 +528,16 @@
         <td>72</td>
         <td>137</td>
         <td>137</td>
-        <td>+34</td>
-        <td>0002,16</td>
-        <td>0988,96</td>
+        <td>+29</td>
+        <td>0002,23</td>
+        <td>0989,28</td>
       </tr>
       <tr>
         <td>
-          <img src="25_Saudi_Arabia.png"/>
+          <img src="26_Saudi_Arabia.png"/>
         </td>
         <td>
-          <a href="25_Saudi_Arabia.png" target="_blank">25</a>
+          <a href="26_Saudi_Arabia.png" target="_blank">26</a>
         </td>
         <td>Saudi_Arabia</td>
         <td>nan</td>
@@ -525,16 +546,16 @@
         <td>136</td>
         <td>163</td>
         <td>163</td>
-        <td>-10</td>
-        <td>0009,35</td>
-        <td>0964,24</td>
+        <td>+09</td>
+        <td>0009,34</td>
+        <td>0965,66</td>
       </tr>
       <tr>
         <td>
-          <img src="26_Cuba.png"/>
+          <img src="27_Cuba.png"/>
         </td>
         <td>
-          <a href="26_Cuba.png" target="_blank">26</a>
+          <a href="27_Cuba.png" target="_blank">27</a>
         </td>
         <td>Cuba</td>
         <td>nan</td>
@@ -543,16 +564,16 @@
         <td>51</td>
         <td>0</td>
         <td>0</td>
-        <td>+17</td>
-        <td>0002,89</td>
-        <td>0049,41</td>
+        <td>+26</td>
+        <td>0003,18</td>
+        <td>0050,05</td>
       </tr>
       <tr>
         <td>
-          <img src="27_Guinea.png"/>
+          <img src="28_Guinea.png"/>
         </td>
         <td>
-          <a href="27_Guinea.png" target="_blank">27</a>
+          <a href="28_Guinea.png" target="_blank">28</a>
         </td>
         <td>Guinea</td>
         <td>nan</td>
@@ -561,16 +582,16 @@
         <td>99999</td>
         <td>0</td>
         <td>0</td>
-        <td>+03</td>
+        <td>-31</td>
         <td>0001,67</td>
         <td>0081,58</td>
       </tr>
       <tr>
         <td>
-          <img src="28_Japan.png"/>
+          <img src="29_Japan.png"/>
         </td>
         <td>
-          <a href="28_Japan.png" target="_blank">28</a>
+          <a href="29_Japan.png" target="_blank">29</a>
         </td>
         <td>Japan</td>
         <td>nan</td>
@@ -579,16 +600,16 @@
         <td>39</td>
         <td>0</td>
         <td>0</td>
-        <td>-04</td>
-        <td>0002,83</td>
-        <td>0066,05</td>
+        <td>+05</td>
+        <td>0002,97</td>
+        <td>0066,57</td>
       </tr>
       <tr>
         <td>
-          <img src="29_Korea_South.png"/>
+          <img src="30_Korea_South.png"/>
         </td>
         <td>
-          <a href="29_Korea_South.png" target="_blank">29</a>
+          <a href="30_Korea_South.png" target="_blank">30</a>
         </td>
         <td>Korea_South</td>
         <td>nan</td>
@@ -597,16 +618,16 @@
         <td>19</td>
         <td>0</td>
         <td>0</td>
-        <td>-10</td>
-        <td>0001,07</td>
-        <td>0046,60</td>
+        <td>+05</td>
+        <td>0000,97</td>
+        <td>0046,73</td>
       </tr>
       <tr>
         <td>
-          <img src="30_Malaysia.png"/>
+          <img src="31_Malaysia.png"/>
         </td>
         <td>
-          <a href="30_Malaysia.png" target="_blank">30</a>
+          <a href="31_Malaysia.png" target="_blank">31</a>
         </td>
         <td>Malaysia</td>
         <td>nan</td>
@@ -615,16 +636,16 @@
         <td>63</td>
         <td>0</td>
         <td>0</td>
-        <td>+10</td>
-        <td>0002,23</td>
-        <td>0034,77</td>
+        <td>+26</td>
+        <td>0002,81</td>
+        <td>0035,58</td>
       </tr>
       <tr>
         <td>
-          <img src="31_Zimbabwe.png"/>
+          <img src="32_Zimbabwe.png"/>
         </td>
         <td>
-          <a href="31_Zimbabwe.png" target="_blank">31</a>
+          <a href="32_Zimbabwe.png" target="_blank">32</a>
         </td>
         <td>Zimbabwe</td>
         <td>nan</td>
@@ -633,16 +654,16 @@
         <td>60</td>
         <td>0</td>
         <td>0</td>
-        <td>-36</td>
-        <td>0000,76</td>
-        <td>0052,89</td>
+        <td>-28</td>
+        <td>0000,66</td>
+        <td>0052,98</td>
       </tr>
       <tr>
         <td>
-          <img src="32_Cameroon.png"/>
+          <img src="33_Cameroon.png"/>
         </td>
         <td>
-          <a href="32_Cameroon.png" target="_blank">32</a>
+          <a href="33_Cameroon.png" target="_blank">33</a>
         </td>
         <td>Cameroon</td>
         <td>nan</td>
@@ -651,16 +672,16 @@
         <td>42</td>
         <td>4</td>
         <td>4</td>
-        <td>+01</td>
-        <td>0000,56</td>
+        <td>-05</td>
+        <td>0000,48</td>
         <td>0078,92</td>
       </tr>
       <tr>
         <td>
-          <img src="33_Australia.png"/>
+          <img src="34_Australia.png"/>
         </td>
         <td>
-          <a href="33_Australia.png" target="_blank">33</a>
+          <a href="34_Australia.png" target="_blank">34</a>
         </td>
         <td>Australia</td>
         <td>nan</td>
@@ -669,16 +690,16 @@
         <td>24</td>
         <td>20</td>
         <td>20</td>
-        <td>-03</td>
-        <td>0000,46</td>
-        <td>0106,51</td>
+        <td>-01</td>
+        <td>0000,43</td>
+        <td>0106,56</td>
       </tr>
       <tr>
         <td>
-          <img src="34_Ghana.png"/>
+          <img src="35_Ghana.png"/>
         </td>
         <td>
-          <a href="34_Ghana.png" target="_blank">34</a>
+          <a href="35_Ghana.png" target="_blank">35</a>
         </td>
         <td>Ghana</td>
         <td>nan</td>
@@ -687,16 +708,16 @@
         <td>10</td>
         <td>37</td>
         <td>37</td>
-        <td>+24</td>
-        <td>0001,53</td>
-        <td>0150,72</td>
+        <td>+18</td>
+        <td>0001,40</td>
+        <td>0150,81</td>
       </tr>
       <tr>
         <td>
-          <img src="35_Equatorial_Guinea.png"/>
+          <img src="36_Equatorial_Guinea.png"/>
         </td>
         <td>
-          <a href="35_Equatorial_Guinea.png" target="_blank">35</a>
+          <a href="36_Equatorial_Guinea.png" target="_blank">36</a>
         </td>
         <td>Equatorial_Guinea</td>
         <td>nan</td>
@@ -705,16 +726,16 @@
         <td>14</td>
         <td>56</td>
         <td>56</td>
-        <td>-07</td>
-        <td>0000,86</td>
-        <td>0361,10</td>
+        <td>+21</td>
+        <td>0001,94</td>
+        <td>0362,18</td>
       </tr>
       <tr>
         <td>
-          <img src="36_Djibouti.png"/>
+          <img src="37_Djibouti.png"/>
         </td>
         <td>
-          <a href="36_Djibouti.png" target="_blank">36</a>
+          <a href="37_Djibouti.png" target="_blank">37</a>
         </td>
         <td>Djibouti</td>
         <td>nan</td>
@@ -723,16 +744,16 @@
         <td>15</td>
         <td>85</td>
         <td>85</td>
-        <td>+17</td>
-        <td>0000,91</td>
-        <td>0549,83</td>
+        <td>+06</td>
+        <td>0001,02</td>
+        <td>0549,93</td>
       </tr>
       <tr>
         <td>
-          <img src="37_Serbia.png"/>
+          <img src="38_Serbia.png"/>
         </td>
         <td>
-          <a href="37_Serbia.png" target="_blank">37</a>
+          <a href="38_Serbia.png" target="_blank">38</a>
         </td>
         <td>Serbia</td>
         <td>Europe</td>
@@ -741,16 +762,16 @@
         <td>37</td>
         <td>97</td>
         <td>97</td>
-        <td>-21</td>
-        <td>0005,39</td>
-        <td>0383,69</td>
+        <td>+14</td>
+        <td>0005,71</td>
+        <td>0384,96</td>
       </tr>
       <tr>
         <td>
-          <img src="38_Gabon.png"/>
+          <img src="39_Gabon.png"/>
         </td>
         <td>
-          <a href="38_Gabon.png" target="_blank">38</a>
+          <a href="39_Gabon.png" target="_blank">39</a>
         </td>
         <td>Gabon</td>
         <td>nan</td>
@@ -759,16 +780,16 @@
         <td>105</td>
         <td>106</td>
         <td>106</td>
-        <td>+30</td>
+        <td>+08</td>
         <td>0002,26</td>
         <td>0395,83</td>
       </tr>
       <tr>
         <td>
-          <img src="39_Mozambique.png"/>
+          <img src="40_Mozambique.png"/>
         </td>
         <td>
-          <a href="39_Mozambique.png" target="_blank">39</a>
+          <a href="40_Mozambique.png" target="_blank">40</a>
         </td>
         <td>Mozambique</td>
         <td>nan</td>
@@ -777,16 +798,16 @@
         <td>99999</td>
         <td>0</td>
         <td>0</td>
-        <td>+26</td>
-        <td>0004,72</td>
-        <td>0028,09</td>
+        <td>-03</td>
+        <td>0004,79</td>
+        <td>0028,61</td>
       </tr>
       <tr>
         <td>
-          <img src="40_Uganda.png"/>
+          <img src="41_Uganda.png"/>
         </td>
         <td>
-          <a href="40_Uganda.png" target="_blank">40</a>
+          <a href="41_Uganda.png" target="_blank">41</a>
         </td>
         <td>Uganda</td>
         <td>nan</td>
@@ -795,952 +816,952 @@
         <td>99999</td>
         <td>0</td>
         <td>0</td>
-        <td>+04</td>
-        <td>0002,75</td>
-        <td>0017,89</td>
+        <td>+01</td>
+        <td>0002,69</td>
+        <td>0018,24</td>
       </tr>
       <tr>
         <td>
-          <img src="41_Jamaica.png"/>
+          <img src="42_Jamaica.png"/>
         </td>
         <td>
-          <a href="41_Jamaica.png" target="_blank">41</a>
+          <a href="42_Jamaica.png" target="_blank">42</a>
         </td>
         <td>Jamaica</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>39</td>
-        <td>39</td>
-        <td>-09</td>
-        <td>0036,74</td>
-        <td>0219,09</td>
+        <td>40</td>
+        <td>40</td>
+        <td>-16</td>
+        <td>0032,68</td>
+        <td>0221,56</td>
       </tr>
       <tr>
         <td>
-          <img src="42_Finland.png"/>
+          <img src="43_Finland.png"/>
         </td>
         <td>
-          <a href="42_Finland.png" target="_blank">42</a>
+          <a href="43_Finland.png" target="_blank">43</a>
         </td>
         <td>Finland</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>69</td>
-        <td>55</td>
-        <td>55</td>
-        <td>+11</td>
-        <td>0012,71</td>
-        <td>0180,39</td>
+        <td>56</td>
+        <td>56</td>
+        <td>+10</td>
+        <td>0013,07</td>
+        <td>0182,40</td>
       </tr>
       <tr>
         <td>
-          <img src="43_Uzbekistan.png"/>
+          <img src="44_Uzbekistan.png"/>
         </td>
         <td>
-          <a href="43_Uzbekistan.png" target="_blank">43</a>
+          <a href="44_Uzbekistan.png" target="_blank">44</a>
         </td>
         <td>Uzbekistan</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>60</td>
-        <td>60</td>
-        <td>-27</td>
-        <td>0010,32</td>
-        <td>0169,97</td>
+        <td>61</td>
+        <td>61</td>
+        <td>-16</td>
+        <td>0010,06</td>
+        <td>0171,39</td>
       </tr>
       <tr>
         <td>
-          <img src="44_Slovenia.png"/>
+          <img src="45_Slovenia.png"/>
         </td>
         <td>
-          <a href="44_Slovenia.png" target="_blank">44</a>
+          <a href="45_Slovenia.png" target="_blank">45</a>
         </td>
         <td>Slovenia</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>45</td>
-        <td>62</td>
-        <td>62</td>
-        <td>-06</td>
-        <td>0047,91</td>
-        <td>0273,70</td>
+        <td>63</td>
+        <td>63</td>
+        <td>-05</td>
+        <td>0050,46</td>
+        <td>0282,12</td>
       </tr>
       <tr>
         <td>
-          <img src="45_Libya.png"/>
+          <img src="46_Libya.png"/>
         </td>
         <td>
-          <a href="45_Libya.png" target="_blank">45</a>
+          <a href="46_Libya.png" target="_blank">46</a>
         </td>
         <td>Libya</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>69</td>
-        <td>69</td>
-        <td>+18</td>
-        <td>0064,62</td>
-        <td>0503,87</td>
+        <td>70</td>
+        <td>70</td>
+        <td>+10</td>
+        <td>0066,78</td>
+        <td>0513,83</td>
       </tr>
       <tr>
         <td>
-          <img src="46_Venezuela.png"/>
+          <img src="47_Venezuela.png"/>
         </td>
         <td>
-          <a href="46_Venezuela.png" target="_blank">46</a>
+          <a href="47_Venezuela.png" target="_blank">47</a>
         </td>
         <td>Venezuela</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>69</td>
-        <td>69</td>
-        <td>-20</td>
-        <td>0019,97</td>
-        <td>0264,03</td>
+        <td>70</td>
+        <td>70</td>
+        <td>+19</td>
+        <td>0019,76</td>
+        <td>0267,22</td>
       </tr>
       <tr>
         <td>
-          <img src="47_Norway.png"/>
+          <img src="48_Norway.png"/>
         </td>
         <td>
-          <a href="47_Norway.png" target="_blank">47</a>
+          <a href="48_Norway.png" target="_blank">48</a>
         </td>
         <td>Norway</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>49</td>
-        <td>70</td>
-        <td>70</td>
-        <td>-11</td>
-        <td>0013,86</td>
-        <td>0259,15</td>
+        <td>71</td>
+        <td>71</td>
+        <td>+11</td>
+        <td>0013,73</td>
+        <td>0261,41</td>
       </tr>
       <tr>
         <td>
-          <img src="48_Austria.png"/>
+          <img src="49_Austria.png"/>
         </td>
         <td>
-          <a href="48_Austria.png" target="_blank">48</a>
+          <a href="49_Austria.png" target="_blank">49</a>
         </td>
         <td>Austria</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>30</td>
-        <td>82</td>
-        <td>82</td>
-        <td>-20</td>
-        <td>0053,68</td>
-        <td>0498,14</td>
+        <td>83</td>
+        <td>83</td>
+        <td>+23</td>
+        <td>0054,14</td>
+        <td>0507,85</td>
       </tr>
       <tr>
         <td>
-          <img src="49_Kyrgyzstan.png"/>
+          <img src="50_Kyrgyzstan.png"/>
         </td>
         <td>
-          <a href="49_Kyrgyzstan.png" target="_blank">49</a>
+          <a href="50_Kyrgyzstan.png" target="_blank">50</a>
         </td>
         <td>Kyrgyzstan</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>17</td>
-        <td>82</td>
-        <td>82</td>
-        <td>-01</td>
-        <td>0015,98</td>
-        <td>0717,79</td>
+        <td>83</td>
+        <td>83</td>
+        <td>-04</td>
+        <td>0016,67</td>
+        <td>0720,43</td>
       </tr>
       <tr>
         <td>
-          <img src="50_Germany.png"/>
+          <img src="51_Germany.png"/>
         </td>
         <td>
-          <a href="50_Germany.png" target="_blank">50</a>
+          <a href="51_Germany.png" target="_blank">51</a>
         </td>
         <td>Germany</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>46</td>
-        <td>87</td>
-        <td>87</td>
-        <td>+03</td>
-        <td>0016,59</td>
-        <td>0349,83</td>
+        <td>88</td>
+        <td>88</td>
+        <td>+30</td>
+        <td>0016,95</td>
+        <td>0352,97</td>
       </tr>
       <tr>
         <td>
-          <img src="51_Namibia.png"/>
+          <img src="52_Namibia.png"/>
         </td>
         <td>
-          <a href="51_Namibia.png" target="_blank">51</a>
+          <a href="52_Namibia.png" target="_blank">52</a>
         </td>
         <td>Namibia</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>87</td>
-        <td>87</td>
-        <td>+00</td>
-        <td>0023,78</td>
-        <td>0445,03</td>
+        <td>88</td>
+        <td>88</td>
+        <td>+03</td>
+        <td>0025,01</td>
+        <td>0449,30</td>
       </tr>
       <tr>
         <td>
-          <img src="52_India.png"/>
+          <img src="53_India.png"/>
         </td>
         <td>
-          <a href="52_India.png" target="_blank">52</a>
+          <a href="53_India.png" target="_blank">53</a>
         </td>
         <td>India</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>90</td>
-        <td>90</td>
-        <td>-34</td>
-        <td>0035,81</td>
-        <td>0452,05</td>
+        <td>91</td>
+        <td>91</td>
+        <td>-32</td>
+        <td>0035,87</td>
+        <td>0458,35</td>
       </tr>
       <tr>
         <td>
-          <img src="53_Bulgaria.png"/>
+          <img src="54_Bulgaria.png"/>
         </td>
         <td>
-          <a href="53_Bulgaria.png" target="_blank">53</a>
+          <a href="54_Bulgaria.png" target="_blank">54</a>
         </td>
         <td>Bulgaria</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>99</td>
-        <td>99</td>
-        <td>+04</td>
-        <td>0022,27</td>
+        <td>100</td>
+        <td>100</td>
+        <td>-13</td>
+        <td>0018,11</td>
         <td>0299,38</td>
       </tr>
       <tr>
         <td>
-          <img src="54_Croatia.png"/>
+          <img src="55_Croatia.png"/>
         </td>
         <td>
-          <a href="54_Croatia.png" target="_blank">54</a>
+          <a href="55_Croatia.png" target="_blank">55</a>
         </td>
         <td>Croatia</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>100</td>
-        <td>100</td>
-        <td>-24</td>
-        <td>0030,49</td>
-        <td>0403,70</td>
+        <td>101</td>
+        <td>101</td>
+        <td>-01</td>
+        <td>0030,53</td>
+        <td>0409,39</td>
       </tr>
       <tr>
         <td>
-          <img src="55_El_Salvador.png"/>
+          <img src="56_El_Salvador.png"/>
         </td>
         <td>
-          <a href="55_El_Salvador.png" target="_blank">55</a>
+          <a href="56_El_Salvador.png" target="_blank">56</a>
         </td>
         <td>El_Salvador</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>94</td>
-        <td>101</td>
-        <td>101</td>
-        <td>-17</td>
-        <td>0017,33</td>
-        <td>0448,75</td>
+        <td>102</td>
+        <td>102</td>
+        <td>-11</td>
+        <td>0015,03</td>
+        <td>0450,26</td>
       </tr>
       <tr>
         <td>
-          <img src="56_Canada.png"/>
+          <img src="57_West_Bank_and_Gaza.png"/>
         </td>
         <td>
-          <a href="56_Canada.png" target="_blank">56</a>
+          <a href="57_West_Bank_and_Gaza.png" target="_blank">57</a>
+        </td>
+        <td>West_Bank_and_Gaza</td>
+        <td>nan</td>
+        <td>7</td>
+        <td>1</td>
+        <td>99999</td>
+        <td>102</td>
+        <td>102</td>
+        <td>+19</td>
+        <td>0060,11</td>
+        <td>0887,54</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="58_Canada.png"/>
+        </td>
+        <td>
+          <a href="58_Canada.png" target="_blank">58</a>
         </td>
         <td>Canada</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>87</td>
-        <td>102</td>
-        <td>102</td>
-        <td>+38</td>
-        <td>0029,64</td>
-        <td>0427,63</td>
+        <td>103</td>
+        <td>103</td>
+        <td>+29</td>
+        <td>0031,43</td>
+        <td>0432,46</td>
       </tr>
       <tr>
         <td>
-          <img src="57_Albania.png"/>
+          <img src="59_Albania.png"/>
         </td>
         <td>
-          <a href="57_Albania.png" target="_blank">57</a>
+          <a href="59_Albania.png" target="_blank">59</a>
         </td>
         <td>Albania</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>108</td>
-        <td>108</td>
-        <td>+09</td>
-        <td>0029,95</td>
-        <td>0474,18</td>
+        <td>109</td>
+        <td>109</td>
+        <td>+34</td>
+        <td>0030,75</td>
+        <td>0479,64</td>
       </tr>
       <tr>
         <td>
-          <img src="58_Italy.png"/>
+          <img src="60_Italy.png"/>
         </td>
         <td>
-          <a href="58_Italy.png" target="_blank">58</a>
+          <a href="60_Italy.png" target="_blank">60</a>
         </td>
         <td>Italy</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>61</td>
-        <td>109</td>
-        <td>109</td>
-        <td>-20</td>
-        <td>0020,38</td>
-        <td>0520,61</td>
+        <td>110</td>
+        <td>110</td>
+        <td>+19</td>
+        <td>0021,64</td>
+        <td>0524,82</td>
       </tr>
       <tr>
         <td>
-          <img src="59_Eswatini.png"/>
+          <img src="61_Eswatini.png"/>
         </td>
         <td>
-          <a href="59_Eswatini.png" target="_blank">59</a>
+          <a href="61_Eswatini.png" target="_blank">61</a>
         </td>
         <td>Eswatini</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
-        <td>99999</td>
-        <td>111</td>
-        <td>111</td>
-        <td>-31</td>
-        <td>0012,01</td>
-        <td>0473,52</td>
+        <td>95</td>
+        <td>112</td>
+        <td>112</td>
+        <td>-17</td>
+        <td>0010,80</td>
+        <td>0475,08</td>
       </tr>
       <tr>
         <td>
-          <img src="60_Montenegro.png"/>
+          <img src="62_Montenegro.png"/>
         </td>
         <td>
-          <a href="60_Montenegro.png" target="_blank">60</a>
+          <a href="62_Montenegro.png" target="_blank">62</a>
         </td>
         <td>Montenegro</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>13</td>
-        <td>113</td>
-        <td>113</td>
-        <td>-36</td>
-        <td>0214,00</td>
-        <td>1715,15</td>
+        <td>114</td>
+        <td>114</td>
+        <td>-13</td>
+        <td>0202,21</td>
+        <td>1749,38</td>
       </tr>
       <tr>
         <td>
-          <img src="61_France.png"/>
+          <img src="63_France.png"/>
         </td>
         <td>
-          <a href="61_France.png" target="_blank">61</a>
+          <a href="63_France.png" target="_blank">63</a>
         </td>
         <td>France</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>31</td>
-        <td>115</td>
-        <td>115</td>
-        <td>-10</td>
-        <td>0146,49</td>
-        <td>0925,79</td>
+        <td>116</td>
+        <td>116</td>
+        <td>+14</td>
+        <td>0123,68</td>
+        <td>0945,65</td>
       </tr>
       <tr>
         <td>
-          <img src="62_Switzerland.png"/>
+          <img src="64_Iraq.png"/>
         </td>
         <td>
-          <a href="62_Switzerland.png" target="_blank">62</a>
-        </td>
-        <td>Switzerland</td>
-        <td>Europe</td>
-        <td>7</td>
-        <td>1</td>
-        <td>40</td>
-        <td>116</td>
-        <td>116</td>
-        <td>+08</td>
-        <td>0025,24</td>
-        <td>0616,56</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="63_Iraq.png"/>
-        </td>
-        <td>
-          <a href="63_Iraq.png" target="_blank">63</a>
+          <a href="64_Iraq.png" target="_blank">64</a>
         </td>
         <td>Iraq</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>117</td>
-        <td>117</td>
-        <td>+07</td>
-        <td>0075,81</td>
-        <td>0906,74</td>
+        <td>118</td>
+        <td>118</td>
+        <td>+17</td>
+        <td>0075,86</td>
+        <td>0917,96</td>
       </tr>
       <tr>
         <td>
-          <img src="64_Denmark.png"/>
+          <img src="65_Denmark.png"/>
         </td>
         <td>
-          <a href="64_Denmark.png" target="_blank">64</a>
+          <a href="65_Denmark.png" target="_blank">65</a>
         </td>
         <td>Denmark</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>56</td>
-        <td>118</td>
-        <td>118</td>
-        <td>-31</td>
-        <td>0063,18</td>
-        <td>0492,03</td>
+        <td>119</td>
+        <td>119</td>
+        <td>-37</td>
+        <td>0060,42</td>
+        <td>0498,99</td>
       </tr>
       <tr>
         <td>
-          <img src="65_Netherlands.png"/>
+          <img src="66_Netherlands.png"/>
         </td>
         <td>
-          <a href="65_Netherlands.png" target="_blank">65</a>
+          <a href="66_Netherlands.png" target="_blank">66</a>
         </td>
         <td>Netherlands</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>55</td>
-        <td>118</td>
-        <td>118</td>
+        <td>119</td>
+        <td>119</td>
         <td>+16</td>
-        <td>0120,77</td>
-        <td>0735,60</td>
+        <td>0124,85</td>
+        <td>0754,84</td>
       </tr>
       <tr>
         <td>
-          <img src="66_Turkey.png"/>
+          <img src="67_Turkey.png"/>
         </td>
         <td>
-          <a href="66_Turkey.png" target="_blank">66</a>
+          <a href="67_Turkey.png" target="_blank">67</a>
         </td>
         <td>Turkey</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>68</td>
-        <td>121</td>
-        <td>121</td>
-        <td>-45</td>
-        <td>0012,59</td>
-        <td>0378,67</td>
+        <td>122</td>
+        <td>122</td>
+        <td>-39</td>
+        <td>0012,22</td>
+        <td>0380,34</td>
       </tr>
       <tr>
         <td>
-          <img src="67_Bosnia_and_Herzegovina.png"/>
+          <img src="68_Bosnia_and_Herzegovina.png"/>
         </td>
         <td>
-          <a href="67_Bosnia_and_Herzegovina.png" target="_blank">67</a>
+          <a href="68_Bosnia_and_Herzegovina.png" target="_blank">68</a>
         </td>
         <td>Bosnia_and_Herzegovina</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>122</td>
-        <td>122</td>
-        <td>-12</td>
-        <td>0042,26</td>
-        <td>0836,24</td>
+        <td>123</td>
+        <td>123</td>
+        <td>+13</td>
+        <td>0043,63</td>
+        <td>0844,77</td>
       </tr>
       <tr>
         <td>
-          <img src="68_Ireland.png"/>
+          <img src="69_Ireland.png"/>
         </td>
         <td>
-          <a href="68_Ireland.png" target="_blank">68</a>
+          <a href="69_Ireland.png" target="_blank">69</a>
         </td>
         <td>Ireland</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>45</td>
-        <td>122</td>
-        <td>122</td>
-        <td>+30</td>
-        <td>0050,34</td>
-        <td>0733,89</td>
+        <td>123</td>
+        <td>123</td>
+        <td>+34</td>
+        <td>0052,84</td>
+        <td>0742,86</td>
       </tr>
       <tr>
         <td>
-          <img src="69_Guatemala.png"/>
+          <img src="70_Guatemala.png"/>
         </td>
         <td>
-          <a href="69_Guatemala.png" target="_blank">69</a>
+          <a href="70_Guatemala.png" target="_blank">70</a>
         </td>
         <td>Guatemala</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>124</td>
-        <td>124</td>
-        <td>-04</td>
-        <td>0024,12</td>
-        <td>0514,09</td>
+        <td>125</td>
+        <td>125</td>
+        <td>-09</td>
+        <td>0025,08</td>
+        <td>0517,81</td>
       </tr>
       <tr>
         <td>
-          <img src="70_Colombia.png"/>
+          <img src="71_Colombia.png"/>
         </td>
         <td>
-          <a href="70_Colombia.png" target="_blank">70</a>
+          <a href="71_Colombia.png" target="_blank">71</a>
         </td>
         <td>Colombia</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>131</td>
-        <td>131</td>
-        <td>-35</td>
-        <td>0089,44</td>
-        <td>1634,13</td>
+        <td>132</td>
+        <td>132</td>
+        <td>-42</td>
+        <td>0087,68</td>
+        <td>1645,28</td>
       </tr>
       <tr>
         <td>
-          <img src="71_South_Africa.png"/>
+          <img src="72_South_Africa.png"/>
         </td>
         <td>
-          <a href="71_South_Africa.png" target="_blank">71</a>
+          <a href="72_South_Africa.png" target="_blank">72</a>
         </td>
         <td>South_Africa</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>78</td>
-        <td>134</td>
-        <td>134</td>
-        <td>-18</td>
-        <td>0015,47</td>
-        <td>1139,96</td>
+        <td>135</td>
+        <td>135</td>
+        <td>+26</td>
+        <td>0015,27</td>
+        <td>1142,91</td>
       </tr>
       <tr>
         <td>
-          <img src="72_United_Kingdom.png"/>
+          <img src="73_United_Kingdom.png"/>
         </td>
         <td>
-          <a href="72_United_Kingdom.png" target="_blank">72</a>
+          <a href="73_United_Kingdom.png" target="_blank">73</a>
         </td>
         <td>United_Kingdom</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>74</td>
-        <td>139</td>
-        <td>139</td>
-        <td>+00</td>
-        <td>0064,29</td>
-        <td>0672,20</td>
+        <td>140</td>
+        <td>140</td>
+        <td>+14</td>
+        <td>0064,72</td>
+        <td>0682,42</td>
       </tr>
       <tr>
         <td>
-          <img src="73_Mexico.png"/>
+          <img src="74_Mexico.png"/>
         </td>
         <td>
-          <a href="73_Mexico.png" target="_blank">73</a>
+          <a href="74_Mexico.png" target="_blank">74</a>
         </td>
         <td>Mexico</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>140</td>
-        <td>140</td>
-        <td>-26</td>
-        <td>0025,78</td>
-        <td>0577,68</td>
+        <td>141</td>
+        <td>141</td>
+        <td>-07</td>
+        <td>0025,54</td>
+        <td>0581,64</td>
       </tr>
       <tr>
         <td>
-          <img src="74_Bolivia.png"/>
+          <img src="75_Bolivia.png"/>
         </td>
         <td>
-          <a href="74_Bolivia.png" target="_blank">74</a>
+          <a href="75_Bolivia.png" target="_blank">75</a>
         </td>
         <td>Bolivia</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>141</td>
-        <td>141</td>
-        <td>-09</td>
-        <td>0028,53</td>
-        <td>1162,45</td>
+        <td>142</td>
+        <td>142</td>
+        <td>+03</td>
+        <td>0026,61</td>
+        <td>1165,93</td>
       </tr>
       <tr>
         <td>
-          <img src="75_Cabo_Verde.png"/>
+          <img src="76_Cabo_Verde.png"/>
         </td>
         <td>
-          <a href="75_Cabo_Verde.png" target="_blank">75</a>
+          <a href="76_Cabo_Verde.png" target="_blank">76</a>
         </td>
         <td>Cabo_Verde</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>144</td>
-        <td>144</td>
-        <td>+01</td>
-        <td>0110,32</td>
-        <td>1085,89</td>
+        <td>145</td>
+        <td>145</td>
+        <td>-03</td>
+        <td>0116,63</td>
+        <td>1104,28</td>
       </tr>
       <tr>
         <td>
-          <img src="76_Spain.png"/>
+          <img src="77_Spain.png"/>
         </td>
         <td>
-          <a href="76_Spain.png" target="_blank">76</a>
+          <a href="77_Spain.png" target="_blank">77</a>
         </td>
         <td>Spain</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>38</td>
-        <td>144</td>
-        <td>144</td>
-        <td>+14</td>
-        <td>0161,78</td>
-        <td>1645,28</td>
+        <td>145</td>
+        <td>145</td>
+        <td>+12</td>
+        <td>0159,14</td>
+        <td>1665,43</td>
       </tr>
       <tr>
         <td>
-          <img src="77_North_Macedonia.png"/>
+          <img src="78_North_Macedonia.png"/>
         </td>
         <td>
-          <a href="77_North_Macedonia.png" target="_blank">77</a>
+          <a href="78_North_Macedonia.png" target="_blank">78</a>
         </td>
         <td>North_Macedonia</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>146</td>
-        <td>146</td>
-        <td>-03</td>
-        <td>0044,54</td>
-        <td>0862,87</td>
+        <td>147</td>
+        <td>147</td>
+        <td>+10</td>
+        <td>0045,02</td>
+        <td>0870,60</td>
       </tr>
       <tr>
         <td>
-          <img src="78_Belgium.png"/>
+          <img src="79_Belgium.png"/>
         </td>
         <td>
-          <a href="78_Belgium.png" target="_blank">78</a>
+          <a href="79_Belgium.png" target="_blank">79</a>
         </td>
         <td>Belgium</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>55</td>
-        <td>151</td>
-        <td>151</td>
-        <td>-33</td>
-        <td>0099,87</td>
-        <td>1022,95</td>
+        <td>152</td>
+        <td>152</td>
+        <td>+05</td>
+        <td>0106,14</td>
+        <td>1045,46</td>
       </tr>
       <tr>
         <td>
-          <img src="79_Belarus.png"/>
+          <img src="80_Belarus.png"/>
         </td>
         <td>
-          <a href="79_Belarus.png" target="_blank">79</a>
+          <a href="80_Belarus.png" target="_blank">80</a>
         </td>
         <td>Belarus</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>94</td>
-        <td>154</td>
-        <td>154</td>
-        <td>+35</td>
-        <td>0024,06</td>
-        <td>0832,08</td>
+        <td>155</td>
+        <td>155</td>
+        <td>+39</td>
+        <td>0025,06</td>
+        <td>0836,19</td>
       </tr>
       <tr>
         <td>
-          <img src="80_Brazil.png"/>
+          <img src="81_Brazil.png"/>
         </td>
         <td>
-          <a href="80_Brazil.png" target="_blank">80</a>
+          <a href="81_Brazil.png" target="_blank">81</a>
         </td>
         <td>Brazil</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>159</td>
-        <td>159</td>
-        <td>-24</td>
-        <td>0103,45</td>
-        <td>2266,60</td>
+        <td>160</td>
+        <td>160</td>
+        <td>+20</td>
+        <td>0089,23</td>
+        <td>2283,64</td>
       </tr>
       <tr>
         <td>
-          <img src="81_Oman.png"/>
+          <img src="82_Oman.png"/>
         </td>
         <td>
-          <a href="81_Oman.png" target="_blank">81</a>
+          <a href="82_Oman.png" target="_blank">82</a>
         </td>
         <td>Oman</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>72</td>
-        <td>168</td>
-        <td>168</td>
-        <td>+00</td>
-        <td>0063,91</td>
+        <td>169</td>
+        <td>169</td>
+        <td>-08</td>
+        <td>0052,73</td>
         <td>1941,06</td>
       </tr>
       <tr>
         <td>
-          <img src="82_Russia.png"/>
+          <img src="83_Russia.png"/>
         </td>
         <td>
-          <a href="82_Russia.png" target="_blank">82</a>
+          <a href="83_Russia.png" target="_blank">83</a>
         </td>
         <td>Russia</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>169</td>
-        <td>169</td>
-        <td>+43</td>
-        <td>0036,53</td>
-        <td>0802,35</td>
+        <td>170</td>
+        <td>170</td>
+        <td>+42</td>
+        <td>0038,14</td>
+        <td>0808,40</td>
       </tr>
       <tr>
         <td>
-          <img src="83_Armenia.png"/>
+          <img src="84_Armenia.png"/>
         </td>
         <td>
-          <a href="83_Armenia.png" target="_blank">83</a>
+          <a href="84_Armenia.png" target="_blank">84</a>
         </td>
         <td>Armenia</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>172</td>
-        <td>172</td>
-        <td>-05</td>
-        <td>0083,79</td>
-        <td>1700,09</td>
+        <td>173</td>
+        <td>173</td>
+        <td>+13</td>
+        <td>0087,74</td>
+        <td>1716,67</td>
       </tr>
       <tr>
         <td>
-          <img src="84_Dominican_Republic.png"/>
+          <img src="85_Dominican_Republic.png"/>
         </td>
         <td>
-          <a href="84_Dominican_Republic.png" target="_blank">84</a>
+          <a href="85_Dominican_Republic.png" target="_blank">85</a>
         </td>
         <td>Dominican_Republic</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>174</td>
-        <td>174</td>
-        <td>-35</td>
-        <td>0022,83</td>
-        <td>1036,51</td>
+        <td>175</td>
+        <td>175</td>
+        <td>-07</td>
+        <td>0024,07</td>
+        <td>1041,30</td>
       </tr>
       <tr>
         <td>
-          <img src="85_United_Arab_Emirates.png"/>
+          <img src="86_United_Arab_Emirates.png"/>
         </td>
         <td>
-          <a href="85_United_Arab_Emirates.png" target="_blank">85</a>
+          <a href="86_United_Arab_Emirates.png" target="_blank">86</a>
         </td>
         <td>United_Arab_Emirates</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>180</td>
-        <td>180</td>
-        <td>-04</td>
-        <td>0067,51</td>
-        <td>0954,71</td>
+        <td>181</td>
+        <td>181</td>
+        <td>+14</td>
+        <td>0069,09</td>
+        <td>0966,45</td>
       </tr>
       <tr>
         <td>
-          <img src="86_Chile.png"/>
+          <img src="87_Chile.png"/>
         </td>
         <td>
-          <a href="86_Chile.png" target="_blank">86</a>
+          <a href="87_Chile.png" target="_blank">87</a>
         </td>
         <td>Chile</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>183</td>
-        <td>183</td>
-        <td>-30</td>
-        <td>0068,59</td>
-        <td>2426,22</td>
+        <td>184</td>
+        <td>184</td>
+        <td>-42</td>
+        <td>0068,73</td>
+        <td>2435,44</td>
       </tr>
       <tr>
         <td>
-          <img src="87_Sweden.png"/>
+          <img src="88_Sweden.png"/>
         </td>
         <td>
-          <a href="87_Sweden.png" target="_blank">87</a>
+          <a href="88_Sweden.png" target="_blank">88</a>
         </td>
         <td>Sweden</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>117</td>
-        <td>185</td>
-        <td>185</td>
-        <td>+11</td>
-        <td>0030,80</td>
-        <td>0920,66</td>
+        <td>186</td>
+        <td>186</td>
+        <td>+20</td>
+        <td>0032,97</td>
+        <td>0928,12</td>
       </tr>
       <tr>
         <td>
-          <img src="88_Bahrain.png"/>
+          <img src="89_Bahrain.png"/>
         </td>
         <td>
-          <a href="88_Bahrain.png" target="_blank">88</a>
+          <a href="89_Bahrain.png" target="_blank">89</a>
         </td>
         <td>Bahrain</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>186</td>
-        <td>186</td>
-        <td>-30</td>
-        <td>0228,00</td>
-        <td>4196,54</td>
+        <td>187</td>
+        <td>187</td>
+        <td>-19</td>
+        <td>0217,51</td>
+        <td>4226,74</td>
       </tr>
       <tr>
         <td>
-          <img src="89_Qatar.png"/>
+          <img src="90_Qatar.png"/>
         </td>
         <td>
-          <a href="89_Qatar.png" target="_blank">89</a>
+          <a href="90_Qatar.png" target="_blank">90</a>
         </td>
         <td>Qatar</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>97</td>
-        <td>188</td>
-        <td>188</td>
-        <td>-11</td>
-        <td>0055,21</td>
-        <td>4380,47</td>
+        <td>189</td>
+        <td>189</td>
+        <td>-12</td>
+        <td>0053,43</td>
+        <td>4387,41</td>
       </tr>
       <tr>
         <td>
-          <img src="90_Panama.png"/>
+          <img src="91_Panama.png"/>
         </td>
         <td>
-          <a href="90_Panama.png" target="_blank">90</a>
+          <a href="91_Panama.png" target="_blank">91</a>
         </td>
         <td>Panama</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>189</td>
-        <td>189</td>
-        <td>-08</td>
-        <td>0107,08</td>
-        <td>2618,08</td>
+        <td>190</td>
+        <td>190</td>
+        <td>+15</td>
+        <td>0107,33</td>
+        <td>2635,45</td>
       </tr>
       <tr>
         <td>
-          <img src="91_US.png"/>
+          <img src="92_US.png"/>
         </td>
         <td>
-          <a href="91_US.png" target="_blank">91</a>
+          <a href="92_US.png" target="_blank">92</a>
         </td>
         <td>US</td>
         <td>nan</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>192</td>
-        <td>192</td>
-        <td>-22</td>
-        <td>0090,59</td>
-        <td>2187,78</td>
+        <td>193</td>
+        <td>193</td>
+        <td>-15</td>
+        <td>0088,46</td>
+        <td>2201,31</td>
       </tr>
       <tr>
         <td>
-          <img src="92_Portugal.png"/>
+          <img src="93_Portugal.png"/>
         </td>
         <td>
-          <a href="92_Portugal.png" target="_blank">92</a>
+          <a href="93_Portugal.png" target="_blank">93</a>
         </td>
         <td>Portugal</td>
         <td>Europe</td>
         <td>7</td>
         <td>1</td>
         <td>99999</td>
-        <td>194</td>
-        <td>194</td>
-        <td>-12</td>
-        <td>0049,76</td>
-        <td>0740,42</td>
+        <td>195</td>
+        <td>195</td>
+        <td>-05</td>
+        <td>0051,36</td>
+        <td>0748,79</td>
       </tr>
       <tr>
         <td>
-          <img src="93_Congo_(Brazzaville).png"/>
+          <img src="94_Congo_(Brazzaville).png"/>
         </td>
         <td>
-          <a href="93_Congo_(Brazzaville).png" target="_blank">93</a>
+          <a href="94_Congo_(Brazzaville).png" target="_blank">94</a>
         </td>
         <td>Congo_(Brazzaville)</td>
         <td>nan</td>
@@ -1749,531 +1770,531 @@
         <td>30</td>
         <td>0</td>
         <td>0</td>
-        <td>+32</td>
+        <td>+22</td>
         <td>0000nan</td>
         <td>0000nan</td>
       </tr>
       <tr>
         <td>
-          <img src="94_Philippines.png"/>
+          <img src="95_Philippines.png"/>
         </td>
         <td>
-          <a href="94_Philippines.png" target="_blank">94</a>
+          <a href="95_Philippines.png" target="_blank">95</a>
         </td>
         <td>Philippines</td>
         <td>nan</td>
         <td>8</td>
         <td>2</td>
         <td>99999</td>
-        <td>80</td>
-        <td>80</td>
-        <td>+06</td>
-        <td>0015,65</td>
-        <td>0285,22</td>
+        <td>81</td>
+        <td>81</td>
+        <td>-06</td>
+        <td>0015,85</td>
+        <td>0287,41</td>
       </tr>
       <tr>
         <td>
-          <img src="95_Honduras.png"/>
+          <img src="96_Switzerland.png"/>
         </td>
         <td>
-          <a href="95_Honduras.png" target="_blank">95</a>
+          <a href="96_Switzerland.png" target="_blank">96</a>
+        </td>
+        <td>Switzerland</td>
+        <td>Europe</td>
+        <td>8</td>
+        <td>2</td>
+        <td>40</td>
+        <td>117</td>
+        <td>117</td>
+        <td>+23</td>
+        <td>0027,08</td>
+        <td>0622,93</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="97_Honduras.png"/>
+        </td>
+        <td>
+          <a href="97_Honduras.png" target="_blank">97</a>
         </td>
         <td>Honduras</td>
         <td>nan</td>
         <td>8</td>
         <td>2</td>
         <td>99999</td>
-        <td>131</td>
-        <td>131</td>
+        <td>132</td>
+        <td>132</td>
         <td>+11</td>
-        <td>0042,80</td>
-        <td>0778,98</td>
+        <td>0044,62</td>
+        <td>0786,05</td>
       </tr>
       <tr>
         <td>
-          <img src="96_Luxembourg.png"/>
+          <img src="98_Luxembourg.png"/>
         </td>
         <td>
-          <a href="96_Luxembourg.png" target="_blank">96</a>
+          <a href="98_Luxembourg.png" target="_blank">98</a>
         </td>
         <td>Luxembourg</td>
         <td>Europe</td>
         <td>8</td>
         <td>2</td>
         <td>35</td>
-        <td>148</td>
-        <td>148</td>
-        <td>+11</td>
-        <td>0067,16</td>
-        <td>1363,93</td>
+        <td>149</td>
+        <td>149</td>
+        <td>+20</td>
+        <td>0070,05</td>
+        <td>1377,71</td>
       </tr>
       <tr>
         <td>
-          <img src="97_Ecuador.png"/>
+          <img src="99_Ecuador.png"/>
         </td>
         <td>
-          <a href="97_Ecuador.png" target="_blank">97</a>
+          <a href="99_Ecuador.png" target="_blank">99</a>
         </td>
         <td>Ecuador</td>
         <td>nan</td>
         <td>8</td>
         <td>2</td>
         <td>16</td>
-        <td>163</td>
-        <td>163</td>
-        <td>-20</td>
-        <td>0040,68</td>
-        <td>0779,23</td>
+        <td>164</td>
+        <td>164</td>
+        <td>+02</td>
+        <td>0042,29</td>
+        <td>0787,97</td>
       </tr>
       <tr>
         <td>
-          <img src="98_Maldives.png"/>
+          <img src="100_Maldives.png"/>
         </td>
         <td>
-          <a href="98_Maldives.png" target="_blank">98</a>
+          <a href="100_Maldives.png" target="_blank">100</a>
         </td>
         <td>Maldives</td>
         <td>nan</td>
         <td>8</td>
         <td>2</td>
         <td>42</td>
-        <td>163</td>
-        <td>163</td>
+        <td>164</td>
+        <td>164</td>
         <td>+14</td>
-        <td>0075,39</td>
-        <td>1910,84</td>
+        <td>0077,06</td>
+        <td>1922,54</td>
       </tr>
       <tr>
         <td>
-          <img src="99_Peru.png"/>
+          <img src="101_Peru.png"/>
         </td>
         <td>
-          <a href="99_Peru.png" target="_blank">99</a>
+          <a href="101_Peru.png" target="_blank">101</a>
         </td>
         <td>Peru</td>
         <td>nan</td>
         <td>8</td>
         <td>2</td>
         <td>99999</td>
-        <td>175</td>
-        <td>175</td>
-        <td>-20</td>
-        <td>0107,13</td>
-        <td>2469,11</td>
+        <td>176</td>
+        <td>176</td>
+        <td>-22</td>
+        <td>0097,74</td>
+        <td>2478,42</td>
       </tr>
       <tr>
         <td>
-          <img src="100_Kuwait.png"/>
+          <img src="102_Kuwait.png"/>
         </td>
         <td>
-          <a href="100_Kuwait.png" target="_blank">100</a>
+          <a href="102_Kuwait.png" target="_blank">102</a>
         </td>
         <td>Kuwait</td>
         <td>nan</td>
         <td>8</td>
         <td>2</td>
         <td>99999</td>
-        <td>177</td>
-        <td>177</td>
-        <td>-04</td>
-        <td>0091,20</td>
-        <td>2470,51</td>
+        <td>178</td>
+        <td>178</td>
+        <td>-09</td>
+        <td>0089,84</td>
+        <td>2482,12</td>
       </tr>
       <tr>
         <td>
-          <img src="101_Iran.png"/>
+          <img src="103_Iran.png"/>
         </td>
         <td>
-          <a href="101_Iran.png" target="_blank">101</a>
+          <a href="103_Iran.png" target="_blank">103</a>
         </td>
         <td>Iran</td>
         <td>nan</td>
         <td>8</td>
         <td>2</td>
         <td>99999</td>
-        <td>180</td>
-        <td>180</td>
-        <td>+18</td>
-        <td>0029,15</td>
-        <td>0545,79</td>
+        <td>181</td>
+        <td>181</td>
+        <td>+32</td>
+        <td>0029,51</td>
+        <td>0550,36</td>
       </tr>
       <tr>
         <td>
-          <img src="102_Burma.png"/>
+          <img src="104_Burma.png"/>
         </td>
         <td>
-          <a href="102_Burma.png" target="_blank">102</a>
+          <a href="104_Burma.png" target="_blank">104</a>
         </td>
         <td>Burma</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>2</td>
-        <td>2</td>
+        <td>3</td>
+        <td>3</td>
         <td>+36</td>
-        <td>0010,21</td>
-        <td>0024,61</td>
+        <td>0010,80</td>
+        <td>0026,47</td>
       </tr>
       <tr>
         <td>
-          <img src="103_Indonesia.png"/>
+          <img src="105_Indonesia.png"/>
         </td>
         <td>
-          <a href="103_Indonesia.png" target="_blank">103</a>
+          <a href="105_Indonesia.png" target="_blank">105</a>
         </td>
         <td>Indonesia</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>10</td>
-        <td>10</td>
-        <td>-30</td>
-        <td>0010,85</td>
-        <td>0105,16</td>
+        <td>11</td>
+        <td>11</td>
+        <td>-20</td>
+        <td>0010,68</td>
+        <td>0106,69</td>
       </tr>
       <tr>
         <td>
-          <img src="104_Jordan.png"/>
+          <img src="106_Jordan.png"/>
         </td>
         <td>
-          <a href="104_Jordan.png" target="_blank">104</a>
+          <a href="106_Jordan.png" target="_blank">106</a>
         </td>
         <td>Jordan</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>17</td>
-        <td>17</td>
-        <td>+32</td>
-        <td>0056,79</td>
-        <td>0116,13</td>
+        <td>18</td>
+        <td>18</td>
+        <td>+33</td>
+        <td>0063,93</td>
+        <td>0128,66</td>
       </tr>
       <tr>
         <td>
-          <img src="105_Georgia.png"/>
+          <img src="107_Georgia.png"/>
         </td>
         <td>
-          <a href="105_Georgia.png" target="_blank">105</a>
+          <a href="107_Georgia.png" target="_blank">107</a>
         </td>
         <td>Georgia</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>19</td>
-        <td>19</td>
-        <td>+43</td>
-        <td>0051,42</td>
-        <td>0155,16</td>
+        <td>20</td>
+        <td>20</td>
+        <td>+36</td>
+        <td>0056,16</td>
+        <td>0166,39</td>
       </tr>
       <tr>
         <td>
-          <img src="106_Tunisia.png"/>
+          <img src="108_Tunisia.png"/>
         </td>
         <td>
-          <a href="106_Tunisia.png" target="_blank">106</a>
+          <a href="108_Tunisia.png" target="_blank">108</a>
         </td>
         <td>Tunisia</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>26</td>
-        <td>26</td>
-        <td>+06</td>
-        <td>0050,32</td>
+        <td>27</td>
+        <td>27</td>
+        <td>-11</td>
+        <td>0043,31</td>
         <td>0156,13</td>
       </tr>
       <tr>
         <td>
-          <img src="107_Slovakia.png"/>
+          <img src="109_Slovakia.png"/>
         </td>
         <td>
-          <a href="107_Slovakia.png" target="_blank">107</a>
+          <a href="109_Slovakia.png" target="_blank">109</a>
         </td>
         <td>Slovakia</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>27</td>
-        <td>27</td>
-        <td>-01</td>
-        <td>0052,61</td>
-        <td>0185,76</td>
+        <td>28</td>
+        <td>28</td>
+        <td>+19</td>
+        <td>0060,61</td>
+        <td>0200,36</td>
       </tr>
       <tr>
         <td>
-          <img src="108_Hungary.png"/>
+          <img src="110_Hungary.png"/>
         </td>
         <td>
-          <a href="108_Hungary.png" target="_blank">108</a>
+          <a href="110_Hungary.png" target="_blank">110</a>
         </td>
         <td>Hungary</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>30</td>
-        <td>30</td>
-        <td>+01</td>
-        <td>0062,19</td>
-        <td>0273,78</td>
+        <td>31</td>
+        <td>31</td>
+        <td>-20</td>
+        <td>0063,21</td>
+        <td>0282,55</td>
       </tr>
       <tr>
         <td>
-          <img src="109_Greece.png"/>
+          <img src="111_Greece.png"/>
         </td>
         <td>
-          <a href="109_Greece.png" target="_blank">109</a>
+          <a href="111_Greece.png" target="_blank">111</a>
         </td>
         <td>Greece</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>51</td>
-        <td>51</td>
-        <td>+14</td>
-        <td>0020,98</td>
-        <td>0177,08</td>
+        <td>52</td>
+        <td>52</td>
+        <td>+34</td>
+        <td>0021,65</td>
+        <td>0181,02</td>
       </tr>
       <tr>
         <td>
-          <img src="110_Poland.png"/>
+          <img src="112_Poland.png"/>
         </td>
         <td>
-          <a href="110_Poland.png" target="_blank">110</a>
+          <a href="112_Poland.png" target="_blank">112</a>
         </td>
         <td>Poland</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>51</td>
-        <td>51</td>
-        <td>+12</td>
-        <td>0026,00</td>
-        <td>0241,75</td>
+        <td>52</td>
+        <td>52</td>
+        <td>+18</td>
+        <td>0028,19</td>
+        <td>0246,95</td>
       </tr>
       <tr>
         <td>
-          <img src="111_Morocco.png"/>
+          <img src="113_Morocco.png"/>
         </td>
         <td>
-          <a href="111_Morocco.png" target="_blank">111</a>
+          <a href="113_Morocco.png" target="_blank">113</a>
         </td>
         <td>Morocco</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>64</td>
-        <td>64</td>
-        <td>-15</td>
-        <td>0043,21</td>
-        <td>0335,82</td>
+        <td>65</td>
+        <td>65</td>
+        <td>-09</td>
+        <td>0043,30</td>
+        <td>0342,32</td>
       </tr>
       <tr>
         <td>
-          <img src="112_Lebanon.png"/>
+          <img src="114_Lebanon.png"/>
         </td>
         <td>
-          <a href="112_Lebanon.png" target="_blank">112</a>
+          <a href="114_Lebanon.png" target="_blank">114</a>
         </td>
         <td>Lebanon</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>69</td>
-        <td>69</td>
-        <td>+15</td>
-        <td>0114,79</td>
-        <td>0580,17</td>
+        <td>70</td>
+        <td>70</td>
+        <td>+16</td>
+        <td>0118,03</td>
+        <td>0598,44</td>
       </tr>
       <tr>
         <td>
-          <img src="113_Nepal.png"/>
+          <img src="115_Nepal.png"/>
         </td>
         <td>
-          <a href="113_Nepal.png" target="_blank">113</a>
+          <a href="115_Nepal.png" target="_blank">115</a>
         </td>
         <td>Nepal</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>69</td>
-        <td>69</td>
-        <td>+23</td>
-        <td>0034,50</td>
-        <td>0268,08</td>
+        <td>70</td>
+        <td>70</td>
+        <td>+36</td>
+        <td>0035,92</td>
+        <td>0274,67</td>
       </tr>
       <tr>
         <td>
-          <img src="114_Paraguay.png"/>
+          <img src="116_Paraguay.png"/>
         </td>
         <td>
-          <a href="114_Paraguay.png" target="_blank">114</a>
+          <a href="116_Paraguay.png" target="_blank">116</a>
         </td>
         <td>Paraguay</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>80</td>
-        <td>80</td>
-        <td>-43</td>
-        <td>0072,91</td>
-        <td>0572,88</td>
+        <td>81</td>
+        <td>81</td>
+        <td>+15</td>
+        <td>0075,83</td>
+        <td>0587,52</td>
       </tr>
       <tr>
         <td>
-          <img src="115_Czechia.png"/>
+          <img src="117_Czechia.png"/>
         </td>
         <td>
-          <a href="115_Czechia.png" target="_blank">115</a>
+          <a href="117_Czechia.png" target="_blank">117</a>
         </td>
         <td>Czechia</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>99</td>
-        <td>99</td>
-        <td>-43</td>
-        <td>0125,69</td>
-        <td>0643,80</td>
+        <td>100</td>
+        <td>100</td>
+        <td>+16</td>
+        <td>0148,35</td>
+        <td>0693,65</td>
       </tr>
       <tr>
         <td>
-          <img src="116_Costa_Rica.png"/>
+          <img src="118_Costa_Rica.png"/>
         </td>
         <td>
-          <a href="116_Costa_Rica.png" target="_blank">116</a>
+          <a href="118_Costa_Rica.png" target="_blank">118</a>
         </td>
         <td>Costa_Rica</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>101</td>
-        <td>101</td>
-        <td>-09</td>
-        <td>0151,46</td>
-        <td>1489,98</td>
+        <td>102</td>
+        <td>102</td>
+        <td>+00</td>
+        <td>0144,93</td>
+        <td>1510,98</td>
       </tr>
       <tr>
         <td>
-          <img src="117_West_Bank_and_Gaza.png"/>
+          <img src="119_Ukraine.png"/>
         </td>
         <td>
-          <a href="117_West_Bank_and_Gaza.png" target="_blank">117</a>
-        </td>
-        <td>West_Bank_and_Gaza</td>
-        <td>nan</td>
-        <td>9</td>
-        <td>0</td>
-        <td>99999</td>
-        <td>101</td>
-        <td>101</td>
-        <td>-12</td>
-        <td>0061,98</td>
-        <td>0878,23</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="118_Ukraine.png"/>
-        </td>
-        <td>
-          <a href="118_Ukraine.png" target="_blank">118</a>
+          <a href="119_Ukraine.png" target="_blank">119</a>
         </td>
         <td>Ukraine</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>108</td>
-        <td>108</td>
-        <td>+08</td>
-        <td>0057,00</td>
-        <td>0489,77</td>
+        <td>109</td>
+        <td>109</td>
+        <td>+20</td>
+        <td>0058,60</td>
+        <td>0499,31</td>
       </tr>
       <tr>
         <td>
-          <img src="119_Argentina.png"/>
+          <img src="120_Argentina.png"/>
         </td>
         <td>
-          <a href="119_Argentina.png" target="_blank">119</a>
+          <a href="120_Argentina.png" target="_blank">120</a>
         </td>
         <td>Argentina</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>127</td>
-        <td>127</td>
-        <td>+09</td>
-        <td>0191,09</td>
-        <td>1664,78</td>
+        <td>128</td>
+        <td>128</td>
+        <td>+28</td>
+        <td>0192,27</td>
+        <td>1695,81</td>
       </tr>
       <tr>
         <td>
-          <img src="120_Romania.png"/>
+          <img src="121_Romania.png"/>
         </td>
         <td>
-          <a href="120_Romania.png" target="_blank">120</a>
+          <a href="121_Romania.png" target="_blank">121</a>
         </td>
         <td>Romania</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>143</td>
-        <td>143</td>
-        <td>+13</td>
-        <td>0057,92</td>
-        <td>0662,27</td>
+        <td>144</td>
+        <td>144</td>
+        <td>+32</td>
+        <td>0060,24</td>
+        <td>0673,10</td>
       </tr>
       <tr>
         <td>
-          <img src="121_Israel.png"/>
+          <img src="122_Israel.png"/>
         </td>
         <td>
-          <a href="121_Israel.png" target="_blank">121</a>
+          <a href="122_Israel.png" target="_blank">122</a>
         </td>
         <td>Israel</td>
         <td>nan</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>155</td>
-        <td>155</td>
-        <td>-13</td>
-        <td>0472,96</td>
-        <td>2845,50</td>
+        <td>156</td>
+        <td>156</td>
+        <td>+08</td>
+        <td>0479,57</td>
+        <td>2938,18</td>
       </tr>
       <tr>
         <td>
-          <img src="122_Moldova.png"/>
+          <img src="123_Moldova.png"/>
         </td>
         <td>
-          <a href="122_Moldova.png" target="_blank">122</a>
+          <a href="123_Moldova.png" target="_blank">123</a>
         </td>
         <td>Moldova</td>
         <td>Europe</td>
         <td>9</td>
         <td>0</td>
         <td>99999</td>
-        <td>180</td>
-        <td>180</td>
-        <td>+09</td>
-        <td>0119,18</td>
-        <td>1314,28</td>
+        <td>181</td>
+        <td>181</td>
+        <td>+27</td>
+        <td>0126,64</td>
+        <td>1339,61</td>
       </tr>
     </table>
   </body>
