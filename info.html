@@ -1,25 +1,75 @@
 <!doctype html><html>
   <head>
-    <title>L&#228;ndervergleich des Fallverlaufs Covid-19</title>
+    <title>L&#228;ndervergleich des Fallverlaufs Covid-19, Erl&#228;uterung</title>
   </head>
   <body>
     <h1 class="title">L&#228;ndervergleich des Fallverlaufs Covid-19</h1>
-    <h2>Erl&#228;uterungen</h2>
-    <p>Region ist eine vorl&#228;ufige manuelle Zuordnung. Nan bedeutet, dass noch keinen Daten erfasst wurden.</p>
-    <p>Die Daten sind mit gleitendem Mittelwert jeweils 7 Tage r&#252;ckwirkend gegl&#228;ttet um Verzerrungen auszugleichen. </p>
-    <p>Kurzfristige &#196;nderungen werden also teilweise &#252;berdeckt.</p>
-    <p>Peaks werden bei 30% Abweichung von der Umgebung erkannt, sofern sie klar vor dem Ende der Aufzeichnung liegen.</p>
-    <p>Die Dauer eines Peaks wird berechnet, wenn 20% der H&#246;he des Peaks wieder unterschritten sind (rote Line).</p>
-    <p>Ein Rating wird durch Zuordnung und Summieren erstellt. Dabei ist {1 : 'In control', 2 : 'One peak', 3: 'Multiple peaks', 4: 'No peak', 5: 'Not in control'}</p>
-    <p>Mehrere Werte sind m&#246;glich. Je niedriger das Rating desto besser die Infektionskontrolle.</p>
-    <p>In Control wird zugewiesen, wenn die w&#246;chentliche Inzidenz unter 10 liegt.</p>
-    <p>Tage au&#223;er Kontrolle sind die Tage in denen die w&#246;chentliche Inzidenz &#252;ber 10 liegt.</p>
-    <p>Steigung letzte 7 Tage ist ein Ma&#223; f&#252;r den aktuellen Verlauf ohne Gl&#228;ttung und daher aktueller - je h&#246;her der positive Wert, desto steiler der Anstieg der Neuinfektionen der letzten Tage. Negative Werte bedeuten Sinken.</p>
-    <p>Die Fl&#228;che unter der Verlaufsgrafik wird mit einem Farbverlauf von Rot &#252;ber Gelb nach Gr&#252;n dargestellt. Rot entspricht hoher Steigung und damit einer Verschlechterung der Prognose.</p>
-    <p>Gr&#252;n entspricht hohem Gef&#228;lle und damit Aussicht auf Besserung.</p>
-    <p>Inzidenz / Woche / 100.000 ist die Summe der Neuerkrankungen der letzten 7 Tage pro 100.000 Einwohner. (0000nan bedeutet dass keine Einwohnerzahl verf&#252;gbar ist)</p>
-    <p>F&#228;lle Gesamt / 100.000  ist Anzahl der Insgesamt gemeldeten F&#228;lle pro 100.000 Einwohner. (0000nan bedeutet dass keine Einwohnerzahl verf&#252;gbar ist)</p>
-    <p>Ausbreitungsbeginn ist das Datum an dem erstmals die Summe der Neuerkrankungen der letzten 7 Tage pro 100.000 Einwohner &#252;ber 1 lag.</p>
-    <p>Tage in Kontrolle ist die Anzahl der Tage seit Ausbreitungsbeginn in den die Inzidenz &#252;ber 10 lag.</p>
+    <table style="width:80%">
+      <caption>
+        <h2 align="left">Erl&#228;uterungen</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th align="left">Spalte</th>
+          <th align="left">Beschreibung</th>
+        </tr>
+      </thead>
+      <tr>
+        <td valign="top">Verlauf</td>
+        <td valign="top">Graphik zum Verlauf der Neuerkrankungen, Durchschnitt der letzten 7 Tage.</td>
+      </tr>
+      <tr>
+        <td valign="top">Position</td>
+        <td valign="top">Absteigende Sortierung nach Anzahl der Tage seit Ausbreitungsbeginn in denen die Inzidenz unter 10 lag.</td>
+      </tr>
+      <tr>
+        <td valign="top">Name</td>
+        <td valign="top">Name des Landes.</td>
+      </tr>
+      <tr>
+        <td valign="top">Region</td>
+        <td valign="top">Region ist eine vorl&#228;ufige manuelle Zuordnung. Nan bedeutet, dass noch keinen Daten erfasst wurden.</td>
+      </tr>
+      <tr>
+        <td valign="top">Rating</td>
+        <td valign="top">Rating wird durch Zuordnung und Summieren erstellt. Dabei ist 1 : In control, 2 : One peak, 3: Multiple peaks, 4: No peak, 5: Not in control. In Control wird zugewiesen, wenn die w&#246;chentliche Inzidenz unter 10 liegt.</td>
+      </tr>
+      <tr>
+        <td valign="top">Peaks</td>
+        <td valign="top">Peaks werden bei 30% Abweichung von der Umgebung erkannt, sofern sie klar vor dem Ende der Aufzeichnung liegen.</td>
+      </tr>
+      <tr>
+        <td valign="top">Dauer 1. Peak /Tage</td>
+        <td valign="top">Die Dauer eines Peaks wird berechnet, wenn 20% der H&#246;he des Peaks wieder unterschritten sind (rote Line).</td>
+      </tr>
+      <tr>
+        <td valign="top">Tage au&#223;er Kontrolle</td>
+        <td valign="top">Tage au&#223;er Kontrolle sind die Tage in denen die w&#246;chentliche Inzidenz &#252;ber 10 liegt.</td>
+      </tr>
+      <tr>
+        <td valign="top">Differenz zu Top 10</td>
+        <td valign="top">Differenz der Tage au&#223;er Kontrolle im Vergleich zum Mittelwert der Top 10 Positionen </td>
+      </tr>
+      <tr>
+        <td valign="top">Steigung letzte 7 Tage / Grad</td>
+        <td valign="top">Ma&#223; f&#252;r den aktuellen Verlauf der letzten 7 Tage ohne Gl&#228;ttung und daher aktueller - je h&#246;her der positive Wert, desto steiler der Anstieg der Neuinfektionen der letzten Tage. Negative Werte bedeuten Sinken.</td>
+      </tr>
+      <tr>
+        <td valign="top">Inzidenz /Woche /100.0000</td>
+        <td valign="top">Summe der Neuerkrankungen der letzten 7 Tage pro 100.000 Einwohner. (0000nan bedeutet dass keine Einwohnerzahl verf&#252;gbar ist)</td>
+      </tr>
+      <tr>
+        <td valign="top">F&#228;lle Gesamt /100.0000</td>
+        <td valign="top">Anzahl der Insgesamt gemeldeten F&#228;lle pro 100.000 Einwohner. (0000nan bedeutet dass keine Einwohnerzahl verf&#252;gbar ist)</td>
+      </tr>
+      <tr>
+        <td valign="top">Ausbreitungsbeginn</td>
+        <td valign="top">Datum an dem erstmals die Summe der Neuerkrankungen der letzten 7 Tage pro 100.000 Einwohner &#252;ber 1 lag.</td>
+      </tr>
+      <tr>
+        <td valign="top">Tage in Kontrolle</td>
+        <td valign="top">Anzahl der Tage seit Ausbreitungsbeginn in den die Inzidenz unter 10 lag.</td>
+      </tr>
+    </table>
   </body>
 </html>
