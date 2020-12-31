@@ -1,0 +1,1409 @@
+<!doctype html><html>
+  <head>
+    <title>L&#228;ndervergleich Rauhigkeit</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.colVis.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"></link>
+    <style>
+      div.dataTables_wrapper div.dataTables_filter{
+      float:left;
+      left:0;
+      margin-left:10px;
+      }
+      </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+                  $(document).ready(function() {
+                 $('#countries').DataTable( {
+                   "pageLength": 50,
+                   dom: 'Blfrtip',
+                   buttons: [
+                     'columnsToggle'
+                   ],
+                   stateSave: true,
+                initComplete: function () {
+                this.api().columns([2, 3, 4, 5, 6,7]).every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+               $( select ).click( function(e) {
+                 e.stopPropagation();
+           });
+        }
+                 } );
+                
+             } );  
+        </script>
+    <h1 class="title">L&#228;ndervergleich des Fallverlaufs Covid-19, Rauhigkeit</h1>
+    <h2>Berechnung der Distanz zwischen dem 4 Tages- und 7 Tagesdurchschnitt mittels FastDTW.</h2>
+    <p>Sortierung der Grafiken aufsteigend beginned mit der niedrigsten Distanz</p>
+    <p>Auff&#228;llig: Auch hochentwickelte L&#228;nder haben gro&#223;e Distanzen, hier kommt der Meldeverzug an Wochenenden und Feiertagen zum Tragen</p>
+    <p>Spalten ein- und ausblenden</p>
+    <table id="countries" CLASS="display" style="width:100%">
+      <caption>
+        <h2>L&#228;nder</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Distanz</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>
+          <img src="1_DTW_Russia.png"/>
+        </td>
+        <td>Russia</td>
+        <td>0.9770721106453323</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="2_DTW_Iran.png"/>
+        </td>
+        <td>Iran</td>
+        <td>1.3892121984823869</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="3_DTW_Uruguay.png"/>
+        </td>
+        <td>Uruguay</td>
+        <td>1.4587741592292687</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="4_DTW_Belarus.png"/>
+        </td>
+        <td>Belarus</td>
+        <td>1.4912376580318436</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="5_DTW_Algeria.png"/>
+        </td>
+        <td>Algeria</td>
+        <td>1.534460424486001</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="6_DTW_Denmark.png"/>
+        </td>
+        <td>Denmark</td>
+        <td>1.6774950320158977</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="7_DTW_Saudi_Arabia.png"/>
+        </td>
+        <td>Saudi_Arabia</td>
+        <td>1.7012698412698404</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="8_DTW_Azerbaijan.png"/>
+        </td>
+        <td>Azerbaijan</td>
+        <td>1.7043210383635905</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="9_DTW_Tajikistan.png"/>
+        </td>
+        <td>Tajikistan</td>
+        <td>1.879280525769632</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="10_DTW_Serbia.png"/>
+        </td>
+        <td>Serbia</td>
+        <td>1.879971339688183</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="11_DTW_Albania.png"/>
+        </td>
+        <td>Albania</td>
+        <td>1.8916388817645564</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="12_DTW_Diamond_Princess.png"/>
+        </td>
+        <td>Diamond_Princess</td>
+        <td>1.909438775510204</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="13_DTW_Netherlands.png"/>
+        </td>
+        <td>Netherlands</td>
+        <td>1.9351698649609093</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="14_DTW_United_Kingdom.png"/>
+        </td>
+        <td>United_Kingdom</td>
+        <td>1.9658801757107365</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="15_DTW_Georgia.png"/>
+        </td>
+        <td>Georgia</td>
+        <td>2.0024907811179347</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="16_DTW_Qatar.png"/>
+        </td>
+        <td>Qatar</td>
+        <td>2.067606632969762</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="17_DTW_China.png"/>
+        </td>
+        <td>China</td>
+        <td>2.1869501547609813</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="18_DTW_Egypt.png"/>
+        </td>
+        <td>Egypt</td>
+        <td>2.194662719575107</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="19_DTW_India.png"/>
+        </td>
+        <td>India</td>
+        <td>2.3268301261602105</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="20_DTW_Syria.png"/>
+        </td>
+        <td>Syria</td>
+        <td>2.42104062072113</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="21_DTW_Burma.png"/>
+        </td>
+        <td>Burma</td>
+        <td>2.443566333215484</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="22_DTW_Austria.png"/>
+        </td>
+        <td>Austria</td>
+        <td>2.4586643872208587</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="23_DTW_New_Zealand.png"/>
+        </td>
+        <td>New_Zealand</td>
+        <td>2.499784203711694</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="24_DTW_Australia.png"/>
+        </td>
+        <td>Australia</td>
+        <td>2.5406089802976917</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="25_DTW_Korea_South.png"/>
+        </td>
+        <td>Korea_South</td>
+        <td>2.555251817070819</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="26_DTW_Belgium.png"/>
+        </td>
+        <td>Belgium</td>
+        <td>2.5632936992224247</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="27_DTW_Canada.png"/>
+        </td>
+        <td>Canada</td>
+        <td>2.5859968772984763</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="28_DTW_Jordan.png"/>
+        </td>
+        <td>Jordan</td>
+        <td>2.5932392869595056</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="29_DTW_West_Bank_and_Gaza.png"/>
+        </td>
+        <td>West_Bank_and_Gaza</td>
+        <td>2.6355991919951136</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="30_DTW_Italy.png"/>
+        </td>
+        <td>Italy</td>
+        <td>2.70355608217105</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="31_DTW_Turkey.png"/>
+        </td>
+        <td>Turkey</td>
+        <td>2.7311776145686135</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="32_DTW_Singapore.png"/>
+        </td>
+        <td>Singapore</td>
+        <td>2.7939620292561456</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="33_DTW_Poland.png"/>
+        </td>
+        <td>Poland</td>
+        <td>2.8856704485160174</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="34_DTW_Nepal.png"/>
+        </td>
+        <td>Nepal</td>
+        <td>2.960843069256929</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="35_DTW_US.png"/>
+        </td>
+        <td>US</td>
+        <td>2.968039018215315</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="36_DTW_Thailand.png"/>
+        </td>
+        <td>Thailand</td>
+        <td>2.9895298499949683</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="37_DTW_MS_Zaandam.png"/>
+        </td>
+        <td>MS_Zaandam</td>
+        <td>3.0</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="38_DTW_Vanuatu.png"/>
+        </td>
+        <td>Vanuatu</td>
+        <td>3.000000000000001</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="39_DTW_Indonesia.png"/>
+        </td>
+        <td>Indonesia</td>
+        <td>3.0542217721116787</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="40_DTW_Cyprus.png"/>
+        </td>
+        <td>Cyprus</td>
+        <td>3.124972820178299</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="41_DTW_Pakistan.png"/>
+        </td>
+        <td>Pakistan</td>
+        <td>3.1344523239621616</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="42_DTW_Hungary.png"/>
+        </td>
+        <td>Hungary</td>
+        <td>3.3319272445820434</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="43_DTW_Kyrgyzstan.png"/>
+        </td>
+        <td>Kyrgyzstan</td>
+        <td>3.367317303158887</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="44_DTW_Ukraine.png"/>
+        </td>
+        <td>Ukraine</td>
+        <td>3.3837436543032586</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="45_DTW_Ethiopia.png"/>
+        </td>
+        <td>Ethiopia</td>
+        <td>3.4083083104707157</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="46_DTW_Panama.png"/>
+        </td>
+        <td>Panama</td>
+        <td>3.424505808029344</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="47_DTW_Eswatini.png"/>
+        </td>
+        <td>Eswatini</td>
+        <td>3.4348065285164107</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="48_DTW_Malaysia.png"/>
+        </td>
+        <td>Malaysia</td>
+        <td>3.4538934020210035</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="49_DTW_Afghanistan.png"/>
+        </td>
+        <td>Afghanistan</td>
+        <td>3.4588825278480413</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="50_DTW_Namibia.png"/>
+        </td>
+        <td>Namibia</td>
+        <td>3.4889746015573837</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="51_DTW_Mauritania.png"/>
+        </td>
+        <td>Mauritania</td>
+        <td>3.55069124423963</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="52_DTW_Greece.png"/>
+        </td>
+        <td>Greece</td>
+        <td>3.5629097870303887</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="53_DTW_Ireland.png"/>
+        </td>
+        <td>Ireland</td>
+        <td>3.646392332041535</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="54_DTW_Venezuela.png"/>
+        </td>
+        <td>Venezuela</td>
+        <td>3.6639231404705823</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="55_DTW_Brunei.png"/>
+        </td>
+        <td>Brunei</td>
+        <td>3.7109634551495</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="56_DTW_Uganda.png"/>
+        </td>
+        <td>Uganda</td>
+        <td>3.735801217038541</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="57_DTW_Colombia.png"/>
+        </td>
+        <td>Colombia</td>
+        <td>3.7507440476190492</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="58_DTW_Lithuania.png"/>
+        </td>
+        <td>Lithuania</td>
+        <td>3.7814919880395608</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="59_DTW_Uzbekistan.png"/>
+        </td>
+        <td>Uzbekistan</td>
+        <td>3.8400500277932084</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="60_DTW_Estonia.png"/>
+        </td>
+        <td>Estonia</td>
+        <td>3.8444732248437417</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="61_DTW_Holy_See.png"/>
+        </td>
+        <td>Holy_See</td>
+        <td>3.8775510204081622</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="62_DTW_United_Arab_Emirates.png"/>
+        </td>
+        <td>United_Arab_Emirates</td>
+        <td>3.9523963880527866</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="63_DTW_Bangladesh.png"/>
+        </td>
+        <td>Bangladesh</td>
+        <td>3.9571797473024075</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="64_DTW_Sri_Lanka.png"/>
+        </td>
+        <td>Sri_Lanka</td>
+        <td>3.962303664921467</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="65_DTW_Yemen.png"/>
+        </td>
+        <td>Yemen</td>
+        <td>3.983754512635378</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="66_DTW_Cuba.png"/>
+        </td>
+        <td>Cuba</td>
+        <td>4.061167563259618</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="67_DTW_Portugal.png"/>
+        </td>
+        <td>Portugal</td>
+        <td>4.194823036043526</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="68_DTW_Grenada.png"/>
+        </td>
+        <td>Grenada</td>
+        <td>4.255102040816325</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="69_DTW_Gambia.png"/>
+        </td>
+        <td>Gambia</td>
+        <td>4.288814691151916</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="70_DTW_Belize.png"/>
+        </td>
+        <td>Belize</td>
+        <td>4.324729578515479</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="71_DTW_Kazakhstan.png"/>
+        </td>
+        <td>Kazakhstan</td>
+        <td>4.371188398136069</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="72_DTW_Angola.png"/>
+        </td>
+        <td>Angola</td>
+        <td>4.3767572633552</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="73_DTW_Iraq.png"/>
+        </td>
+        <td>Iraq</td>
+        <td>4.464833473590043</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="74_DTW_Burkina_Faso.png"/>
+        </td>
+        <td>Burkina_Faso</td>
+        <td>4.470931229634711</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="75_DTW_Djibouti.png"/>
+        </td>
+        <td>Djibouti</td>
+        <td>4.47729149463255</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="76_DTW_Marshall_Islands.png"/>
+        </td>
+        <td>Marshall_Islands</td>
+        <td>4.499999999999999</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="77_DTW_South_Africa.png"/>
+        </td>
+        <td>South_Africa</td>
+        <td>4.505739201291222</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="78_DTW_Japan.png"/>
+        </td>
+        <td>Japan</td>
+        <td>4.563081099423142</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="79_DTW_Niger.png"/>
+        </td>
+        <td>Niger</td>
+        <td>4.579999999999995</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="80_DTW_Norway.png"/>
+        </td>
+        <td>Norway</td>
+        <td>4.5840782122905015</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="81_DTW_Kosovo.png"/>
+        </td>
+        <td>Kosovo</td>
+        <td>4.5915528578654525</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="82_DTW_Iceland.png"/>
+        </td>
+        <td>Iceland</td>
+        <td>4.630316248636859</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="83_DTW_France.png"/>
+        </td>
+        <td>France</td>
+        <td>4.692495896036006</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="84_DTW_Israel.png"/>
+        </td>
+        <td>Israel</td>
+        <td>4.760462417011007</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="85_DTW_Bahrain.png"/>
+        </td>
+        <td>Bahrain</td>
+        <td>4.766006471222666</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="86_DTW_Liechtenstein.png"/>
+        </td>
+        <td>Liechtenstein</td>
+        <td>4.766034985422742</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="87_DTW_Philippines.png"/>
+        </td>
+        <td>Philippines</td>
+        <td>4.790655884995505</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="88_DTW_Finland.png"/>
+        </td>
+        <td>Finland</td>
+        <td>4.824807605251248</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="89_DTW_Latvia.png"/>
+        </td>
+        <td>Latvia</td>
+        <td>4.905717782829167</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="90_DTW_Bolivia.png"/>
+        </td>
+        <td>Bolivia</td>
+        <td>4.910976177543267</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="91_DTW_Cote_d'Ivoire.png"/>
+        </td>
+        <td>Cote_d'Ivoire</td>
+        <td>4.956793988728867</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="92_DTW_Rwanda.png"/>
+        </td>
+        <td>Rwanda</td>
+        <td>4.967918475184</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="93_DTW_Jamaica.png"/>
+        </td>
+        <td>Jamaica</td>
+        <td>4.984396671289878</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="94_DTW_Morocco.png"/>
+        </td>
+        <td>Morocco</td>
+        <td>5.009787877660829</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="95_DTW_Timor-Leste.png"/>
+        </td>
+        <td>Timor-Leste</td>
+        <td>5.044642857142865</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="96_DTW_Madagascar.png"/>
+        </td>
+        <td>Madagascar</td>
+        <td>5.056963725929242</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="97_DTW_Malta.png"/>
+        </td>
+        <td>Malta</td>
+        <td>5.079553723017218</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="98_DTW_Montenegro.png"/>
+        </td>
+        <td>Montenegro</td>
+        <td>5.124433600557685</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="99_DTW_Suriname.png"/>
+        </td>
+        <td>Suriname</td>
+        <td>5.153873489694381</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="100_DTW_Nigeria.png"/>
+        </td>
+        <td>Nigeria</td>
+        <td>5.167370663200834</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="101_DTW_Croatia.png"/>
+        </td>
+        <td>Croatia</td>
+        <td>5.1928098498751005</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="102_DTW_Tanzania.png"/>
+        </td>
+        <td>Tanzania</td>
+        <td>5.3417521704814535</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="103_DTW_Monaco.png"/>
+        </td>
+        <td>Monaco</td>
+        <td>5.370262390670557</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="104_DTW_Lebanon.png"/>
+        </td>
+        <td>Lebanon</td>
+        <td>5.377222231258436</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="105_DTW_Czechia.png"/>
+        </td>
+        <td>Czechia</td>
+        <td>5.432252730822676</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="106_DTW_Romania.png"/>
+        </td>
+        <td>Romania</td>
+        <td>5.448608619224374</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="107_DTW_Bhutan.png"/>
+        </td>
+        <td>Bhutan</td>
+        <td>5.475786924939466</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="108_DTW_Mali.png"/>
+        </td>
+        <td>Mali</td>
+        <td>5.5297619047619095</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="109_DTW_Trinidad_and_Tobago.png"/>
+        </td>
+        <td>Trinidad_and_Tobago</td>
+        <td>5.590476190476191</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="110_DTW_Bosnia_and_Herzegovina.png"/>
+        </td>
+        <td>Bosnia_and_Herzegovina</td>
+        <td>5.632012371931184</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="111_DTW_Eritrea.png"/>
+        </td>
+        <td>Eritrea</td>
+        <td>5.660439560439549</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="112_DTW_Mauritius.png"/>
+        </td>
+        <td>Mauritius</td>
+        <td>5.7046548956661285</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="113_DTW_Paraguay.png"/>
+        </td>
+        <td>Paraguay</td>
+        <td>5.788010517090271</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="114_DTW_Laos.png"/>
+        </td>
+        <td>Laos</td>
+        <td>5.908163265306127</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="115_DTW_Taiwan.png"/>
+        </td>
+        <td>Taiwan</td>
+        <td>5.935960591133011</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="116_DTW_Samoa.png"/>
+        </td>
+        <td>Samoa</td>
+        <td>6.000000000000003</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="117_DTW_Haiti.png"/>
+        </td>
+        <td>Haiti</td>
+        <td>6.00061977068484</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="118_DTW_Vietnam.png"/>
+        </td>
+        <td>Vietnam</td>
+        <td>6.097001763668426</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="119_DTW_Mozambique.png"/>
+        </td>
+        <td>Mozambique</td>
+        <td>6.158746505811388</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="120_DTW_North_Macedonia.png"/>
+        </td>
+        <td>North_Macedonia</td>
+        <td>6.208051016341173</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="121_DTW_Central_African_Republic.png"/>
+        </td>
+        <td>Central_African_Republic</td>
+        <td>6.232079308591773</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="122_DTW_Libya.png"/>
+        </td>
+        <td>Libya</td>
+        <td>6.250085348064924</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="123_DTW_Luxembourg.png"/>
+        </td>
+        <td>Luxembourg</td>
+        <td>6.38869181984306</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="124_DTW_Kenya.png"/>
+        </td>
+        <td>Kenya</td>
+        <td>6.47747019599919</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="125_DTW_Kuwait.png"/>
+        </td>
+        <td>Kuwait</td>
+        <td>6.479727751756444</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="126_DTW_Mongolia.png"/>
+        </td>
+        <td>Mongolia</td>
+        <td>6.481792717086824</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="127_DTW_Argentina.png"/>
+        </td>
+        <td>Argentina</td>
+        <td>6.538925605321436</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="128_DTW_Bulgaria.png"/>
+        </td>
+        <td>Bulgaria</td>
+        <td>6.5392153497631655</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="129_DTW_Germany.png"/>
+        </td>
+        <td>Germany</td>
+        <td>6.56333747130796</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="130_DTW_Zimbabwe.png"/>
+        </td>
+        <td>Zimbabwe</td>
+        <td>6.6126113961652715</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="131_DTW_Saint_Lucia.png"/>
+        </td>
+        <td>Saint_Lucia</td>
+        <td>6.644599303135887</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="132_DTW_Armenia.png"/>
+        </td>
+        <td>Armenia</td>
+        <td>6.670653516014344</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="133_DTW_Tunisia.png"/>
+        </td>
+        <td>Tunisia</td>
+        <td>6.684353741496599</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="134_DTW_Slovakia.png"/>
+        </td>
+        <td>Slovakia</td>
+        <td>6.787293276822072</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="135_DTW_Switzerland.png"/>
+        </td>
+        <td>Switzerland</td>
+        <td>6.824893196870068</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="136_DTW_Maldives.png"/>
+        </td>
+        <td>Maldives</td>
+        <td>6.880261723009817</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="137_DTW_South_Sudan.png"/>
+        </td>
+        <td>South_Sudan</td>
+        <td>6.893911007025758</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="138_DTW_Ghana.png"/>
+        </td>
+        <td>Ghana</td>
+        <td>6.930342683632154</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="139_DTW_Antigua_and_Barbuda.png"/>
+        </td>
+        <td>Antigua_and_Barbuda</td>
+        <td>6.987012987012964</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="140_DTW_Seychelles.png"/>
+        </td>
+        <td>Seychelles</td>
+        <td>7.008163265306127</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="141_DTW_Slovenia.png"/>
+        </td>
+        <td>Slovenia</td>
+        <td>7.100774684873949</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="142_DTW_Chile.png"/>
+        </td>
+        <td>Chile</td>
+        <td>7.251523751011773</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="143_DTW_Sierra_Leone.png"/>
+        </td>
+        <td>Sierra_Leone</td>
+        <td>7.336291038154383</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="144_DTW_Dominican_Republic.png"/>
+        </td>
+        <td>Dominican_Republic</td>
+        <td>7.337571532618873</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="145_DTW_Congo_(Kinshasa).png"/>
+        </td>
+        <td>Congo_(Kinshasa)</td>
+        <td>7.450307300254834</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="146_DTW_Malawi.png"/>
+        </td>
+        <td>Malawi</td>
+        <td>7.563142857142854</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="147_DTW_Bahamas.png"/>
+        </td>
+        <td>Bahamas</td>
+        <td>7.597656249999998</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="148_DTW_Equatorial_Guinea.png"/>
+        </td>
+        <td>Equatorial_Guinea</td>
+        <td>7.737795918367353</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="149_DTW_Guyana.png"/>
+        </td>
+        <td>Guyana</td>
+        <td>7.766666666666653</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="150_DTW_Zambia.png"/>
+        </td>
+        <td>Zambia</td>
+        <td>7.82379954078067</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="151_DTW_El_Salvador.png"/>
+        </td>
+        <td>El_Salvador</td>
+        <td>8.407707412862043</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="152_DTW_Mexico.png"/>
+        </td>
+        <td>Mexico</td>
+        <td>8.524314563832222</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="153_DTW_Barbados.png"/>
+        </td>
+        <td>Barbados</td>
+        <td>8.526315789473696</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="154_DTW_Chad.png"/>
+        </td>
+        <td>Chad</td>
+        <td>8.590225563909774</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="155_DTW_Saint_Kitts_and_Nevis.png"/>
+        </td>
+        <td>Saint_Kitts_and_Nevis</td>
+        <td>8.714285714285708</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="156_DTW_Solomon_Islands.png"/>
+        </td>
+        <td>Solomon_Islands</td>
+        <td>8.74285714285714</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="157_DTW_Senegal.png"/>
+        </td>
+        <td>Senegal</td>
+        <td>8.753943908851866</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="158_DTW_Peru.png"/>
+        </td>
+        <td>Peru</td>
+        <td>8.770037447850664</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="159_DTW_Sudan.png"/>
+        </td>
+        <td>Sudan</td>
+        <td>8.890510204081638</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="160_DTW_Ecuador.png"/>
+        </td>
+        <td>Ecuador</td>
+        <td>9.012873601226492</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="161_DTW_Sao_Tome_and_Principe.png"/>
+        </td>
+        <td>Sao_Tome_and_Principe</td>
+        <td>9.095928226363023</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="162_DTW_Gabon.png"/>
+        </td>
+        <td>Gabon</td>
+        <td>9.118748981918879</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="163_DTW_Andorra.png"/>
+        </td>
+        <td>Andorra</td>
+        <td>9.177153659195255</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="164_DTW_Cambodia.png"/>
+        </td>
+        <td>Cambodia</td>
+        <td>9.179999999999987</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="165_DTW_Moldova.png"/>
+        </td>
+        <td>Moldova</td>
+        <td>9.366523858767916</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="166_DTW_Honduras.png"/>
+        </td>
+        <td>Honduras</td>
+        <td>9.443913811905391</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="167_DTW_Guinea-Bissau.png"/>
+        </td>
+        <td>Guinea-Bissau</td>
+        <td>9.463006049325259</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="168_DTW_Papua_New_Guinea.png"/>
+        </td>
+        <td>Papua_New_Guinea</td>
+        <td>9.546897546897547</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="169_DTW_Oman.png"/>
+        </td>
+        <td>Oman</td>
+        <td>9.789144686690044</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="170_DTW_Cabo_Verde.png"/>
+        </td>
+        <td>Cabo_Verde</td>
+        <td>9.93449781659389</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="171_DTW_Lesotho.png"/>
+        </td>
+        <td>Lesotho</td>
+        <td>9.948896631823464</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="172_DTW_Spain.png"/>
+        </td>
+        <td>Spain</td>
+        <td>10.628464685712446</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="173_DTW_Guatemala.png"/>
+        </td>
+        <td>Guatemala</td>
+        <td>10.749432157800355</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="174_DTW_Burundi.png"/>
+        </td>
+        <td>Burundi</td>
+        <td>11.169642857142845</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="175_DTW_Fiji.png"/>
+        </td>
+        <td>Fiji</td>
+        <td>11.196428571428589</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="176_DTW_Sweden.png"/>
+        </td>
+        <td>Sweden</td>
+        <td>11.261452086257501</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="177_DTW_Benin.png"/>
+        </td>
+        <td>Benin</td>
+        <td>11.372670807453419</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="178_DTW_Dominica.png"/>
+        </td>
+        <td>Dominica</td>
+        <td>11.8021978021978</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="179_DTW_Togo.png"/>
+        </td>
+        <td>Togo</td>
+        <td>12.791116446578625</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="180_DTW_Botswana.png"/>
+        </td>
+        <td>Botswana</td>
+        <td>12.807428240549264</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="181_DTW_Costa_Rica.png"/>
+        </td>
+        <td>Costa_Rica</td>
+        <td>13.08873226710038</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="182_DTW_San_Marino.png"/>
+        </td>
+        <td>San_Marino</td>
+        <td>13.115415657788537</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="183_DTW_Saint_Vincent_and_the_Grenadines.png"/>
+        </td>
+        <td>Saint_Vincent_and_the_Grenadines</td>
+        <td>13.476190476190451</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="184_DTW_Cameroon.png"/>
+        </td>
+        <td>Cameroon</td>
+        <td>13.564298008359973</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="185_DTW_Guinea.png"/>
+        </td>
+        <td>Guinea</td>
+        <td>14.423704551961059</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="186_DTW_Brazil.png"/>
+        </td>
+        <td>Brazil</td>
+        <td>14.784563477210348</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="187_DTW_Liberia.png"/>
+        </td>
+        <td>Liberia</td>
+        <td>14.829870129870125</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="188_DTW_Comoros.png"/>
+        </td>
+        <td>Comoros</td>
+        <td>16.20469083155651</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="189_DTW_Somalia.png"/>
+        </td>
+        <td>Somalia</td>
+        <td>18.432043650793652</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="190_DTW_Congo_(Brazzaville).png"/>
+        </td>
+        <td>Congo_(Brazzaville)</td>
+        <td>20.43979749064495</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="191_DTW_Nicaragua.png"/>
+        </td>
+        <td>Nicaragua</td>
+        <td>40.98839285714286</td>
+      </tr>
+    </table>
+  </body>
+</html>
