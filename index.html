@@ -21,7 +21,10 @@
                    "pageLength": 50,
                    dom: 'Blfrtip',
                    buttons: [
-                     'columnsToggle'
+                     'colvis'
+                   ],
+                   columnDefs: [
+                      { targets: [1], visible: false}
                    ],
                    stateSave: true,
                 initComplete: function () {
@@ -43,9 +46,6 @@
                     select.append( '<option value="'+d+'">'+d+'</option>' )
                 } );
             } );
-               $( select ).click( function(e) {
-                 e.stopPropagation();
-           });
         }
                  } );
                 
@@ -56,7 +56,7 @@
       <b>Sortierung nach Anzahl der Tage in denen die w&#246;chentliche Inzidenz seit dem Nachweis von 10 F&#228;llen unter 10 lag (in control).</b>
     </h2>
     <h2>Sortierung anpassen durch Klick auf Spalten&#252;berschriften</h2>
-    <p>Datenstand: <b>2021-11-30 00:00:00</b></p>
+    <p>Datenstand: <b>2021-12-01 00:00:00</b></p>
     <p>Quelle: <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv">Johns Hopkins</a></p>
     <p>Betrachtet sind L&#228;nder mit mindestens 2000 gemeldeten F&#228;llen</p>
     <p>Die besten 10 L&#228;nder lagen im Durchschnitt 5 Tage &#252;ber einer w&#246;chentlichen Inzidenz von 10 Neuerkrankungen je 100.00 Einwohner</p>
@@ -70,6 +70,7 @@
       <thead>
         <tr>
           <th>Verlauf</th>
+          <th>Inzidenz</th>
           <th>Position</th>
           <th>Name</th>
           <th>Region</th>
@@ -90,6 +91,9 @@
           <img src="1_China.png"/>
         </td>
         <td>
+          <img src="1_INF_China.png"/>
+        </td>
+        <td>
           <a href="1_China.png" target="_blank">1</a>
         </td>
         <td>China</td>
@@ -99,15 +103,18 @@
         <td>24</td>
         <td>0</td>
         <td>-5</td>
-        <td>+36</td>
+        <td>+38</td>
         <td>0000,02</td>
-        <td>000007,74</td>
+        <td>000007,75</td>
         <td>2020-01-23</td>
-        <td>678</td>
+        <td>679</td>
       </tr>
       <tr>
         <td>
           <img src="2_Burkina_Faso.png"/>
+        </td>
+        <td>
+          <img src="2_INF_Burkina_Faso.png"/>
         </td>
         <td>
           <a href="2_Burkina_Faso.png" target="_blank">2</a>
@@ -119,15 +126,18 @@
         <td>39</td>
         <td>0</td>
         <td>-5</td>
-        <td>+32</td>
+        <td>+15</td>
         <td>0002,34</td>
         <td>000077,00</td>
         <td>2020-03-16</td>
-        <td>625</td>
+        <td>626</td>
       </tr>
       <tr>
         <td>
           <img src="3_Egypt.png"/>
+        </td>
+        <td>
+          <img src="3_INF_Egypt.png"/>
         </td>
         <td>
           <a href="3_Egypt.png" target="_blank">3</a>
@@ -139,15 +149,18 @@
         <td>89</td>
         <td>15</td>
         <td>10</td>
-        <td>+40</td>
-        <td>0006,33</td>
-        <td>000351,79</td>
+        <td>+34</td>
+        <td>0006,37</td>
+        <td>000352,71</td>
         <td>2020-03-06</td>
-        <td>620</td>
+        <td>621</td>
       </tr>
       <tr>
         <td>
           <img src="4_Nigeria.png"/>
+        </td>
+        <td>
+          <img src="4_INF_Nigeria.png"/>
         </td>
         <td>
           <a href="4_Nigeria.png" target="_blank">4</a>
@@ -159,15 +172,18 @@
         <td>122</td>
         <td>0</td>
         <td>-5</td>
-        <td>+13</td>
-        <td>0000,26</td>
-        <td>000104,47</td>
+        <td>-09</td>
+        <td>0000,29</td>
+        <td>000104,50</td>
         <td>2020-03-21</td>
-        <td>620</td>
+        <td>621</td>
       </tr>
       <tr>
         <td>
           <img src="5_Niger.png"/>
+        </td>
+        <td>
+          <img src="5_INF_Niger.png"/>
         </td>
         <td>
           <a href="5_Niger.png" target="_blank">5</a>
@@ -179,15 +195,18 @@
         <td>22</td>
         <td>0</td>
         <td>-5</td>
-        <td>+00</td>
-        <td>0000,54</td>
+        <td>-08</td>
+        <td>0000,44</td>
         <td>000029,18</td>
         <td>2020-04-01</td>
-        <td>609</td>
+        <td>610</td>
       </tr>
       <tr>
         <td>
           <img src="6_Guinea.png"/>
+        </td>
+        <td>
+          <img src="6_INF_Guinea.png"/>
         </td>
         <td>
           <a href="6_Guinea.png" target="_blank">6</a>
@@ -199,15 +218,18 @@
         <td>70</td>
         <td>1</td>
         <td>-4</td>
-        <td>-06</td>
-        <td>0000,18</td>
+        <td>-18</td>
+        <td>0000,15</td>
         <td>000235,67</td>
         <td>2020-04-02</td>
-        <td>607</td>
+        <td>608</td>
       </tr>
       <tr>
         <td>
           <img src="7_Cote_d'Ivoire.png"/>
+        </td>
+        <td>
+          <img src="7_INF_Cote_d'Ivoire.png"/>
         </td>
         <td>
           <a href="7_Cote_d'Ivoire.png" target="_blank">7</a>
@@ -219,15 +241,18 @@
         <td>4</td>
         <td>12</td>
         <td>7</td>
-        <td>-05</td>
-        <td>0000,27</td>
-        <td>000235,24</td>
+        <td>+21</td>
+        <td>0000,37</td>
+        <td>000235,36</td>
         <td>2020-03-23</td>
-        <td>606</td>
+        <td>607</td>
       </tr>
       <tr>
         <td>
           <img src="8_Taiwan.png"/>
+        </td>
+        <td>
+          <img src="8_INF_Taiwan.png"/>
         </td>
         <td>
           <a href="8_Taiwan.png" target="_blank">8</a>
@@ -239,15 +264,18 @@
         <td>25</td>
         <td>19</td>
         <td>14</td>
-        <td>-10</td>
-        <td>0000,26</td>
-        <td>000069,73</td>
+        <td>-36</td>
+        <td>0000,27</td>
+        <td>000069,76</td>
         <td>2020-03-17</td>
-        <td>605</td>
+        <td>606</td>
       </tr>
       <tr>
         <td>
           <img src="9_Mali.png"/>
+        </td>
+        <td>
+          <img src="9_INF_Mali.png"/>
         </td>
         <td>
           <a href="9_Mali.png" target="_blank">9</a>
@@ -259,15 +287,18 @@
         <td>90</td>
         <td>0</td>
         <td>-5</td>
-        <td>-18</td>
-        <td>0002,04</td>
-        <td>000086,63</td>
+        <td>-02</td>
+        <td>0002,01</td>
+        <td>000086,96</td>
         <td>2020-04-09</td>
-        <td>601</td>
+        <td>602</td>
       </tr>
       <tr>
         <td>
           <img src="10_Somalia.png"/>
+        </td>
+        <td>
+          <img src="10_INF_Somalia.png"/>
         </td>
         <td>
           <a href="10_Somalia.png" target="_blank">10</a>
@@ -279,15 +310,18 @@
         <td>75</td>
         <td>0</td>
         <td>-5</td>
-        <td>-23</td>
+        <td>-32</td>
         <td>0000,30</td>
         <td>000145,69</td>
         <td>2020-04-13</td>
-        <td>597</td>
+        <td>598</td>
       </tr>
       <tr>
         <td>
           <img src="11_Sudan.png"/>
+        </td>
+        <td>
+          <img src="11_INF_Sudan.png"/>
         </td>
         <td>
           <a href="11_Sudan.png" target="_blank">11</a>
@@ -299,15 +333,18 @@
         <td>89</td>
         <td>0</td>
         <td>-5</td>
-        <td>+28</td>
-        <td>0002,74</td>
-        <td>000098,74</td>
+        <td>+21</td>
+        <td>0002,91</td>
+        <td>000099,08</td>
         <td>2020-04-14</td>
-        <td>596</td>
+        <td>597</td>
       </tr>
       <tr>
         <td>
           <img src="12_Madagascar.png"/>
+        </td>
+        <td>
+          <img src="12_INF_Madagascar.png"/>
         </td>
         <td>
           <a href="12_Madagascar.png" target="_blank">12</a>
@@ -319,15 +356,18 @@
         <td>52</td>
         <td>17</td>
         <td>12</td>
-        <td>+23</td>
+        <td>+12</td>
         <td>0000,94</td>
         <td>000160,97</td>
         <td>2020-03-29</td>
-        <td>595</td>
+        <td>596</td>
       </tr>
       <tr>
         <td>
           <img src="13_Sierra_Leone.png"/>
+        </td>
+        <td>
+          <img src="13_INF_Sierra_Leone.png"/>
         </td>
         <td>
           <a href="13_Sierra_Leone.png" target="_blank">13</a>
@@ -339,15 +379,18 @@
         <td>108</td>
         <td>0</td>
         <td>-5</td>
-        <td>+12</td>
+        <td>-12</td>
         <td>0000,03</td>
         <td>000080,60</td>
         <td>2020-04-17</td>
-        <td>593</td>
+        <td>594</td>
       </tr>
       <tr>
         <td>
           <img src="14_Tanzania.png"/>
+        </td>
+        <td>
+          <img src="14_INF_Tanzania.png"/>
         </td>
         <td>
           <a href="14_Tanzania.png" target="_blank">14</a>
@@ -359,15 +402,18 @@
         <td>7</td>
         <td>7</td>
         <td>2</td>
-        <td>+32</td>
+        <td>+23</td>
         <td>0000,02</td>
         <td>000044,25</td>
         <td>2020-04-13</td>
-        <td>590</td>
+        <td>591</td>
       </tr>
       <tr>
         <td>
           <img src="15_Chad.png"/>
+        </td>
+        <td>
+          <img src="15_INF_Chad.png"/>
         </td>
         <td>
           <a href="15_Chad.png" target="_blank">15</a>
@@ -383,11 +429,14 @@
         <td>0000,00</td>
         <td>000031,28</td>
         <td>2020-04-30</td>
-        <td>580</td>
+        <td>581</td>
       </tr>
       <tr>
         <td>
           <img src="16_Liberia.png"/>
+        </td>
+        <td>
+          <img src="16_INF_Liberia.png"/>
         </td>
         <td>
           <a href="16_Liberia.png" target="_blank">16</a>
@@ -399,15 +448,18 @@
         <td>68</td>
         <td>21</td>
         <td>16</td>
-        <td>+17</td>
+        <td>-12</td>
         <td>0000,10</td>
         <td>000115,73</td>
         <td>2020-04-09</td>
-        <td>580</td>
+        <td>581</td>
       </tr>
       <tr>
         <td>
           <img src="17_Haiti.png"/>
+        </td>
+        <td>
+          <img src="17_INF_Haiti.png"/>
         </td>
         <td>
           <a href="17_Haiti.png" target="_blank">17</a>
@@ -419,15 +471,18 @@
         <td>66</td>
         <td>16</td>
         <td>11</td>
-        <td>+13</td>
-        <td>0001,98</td>
-        <td>000221,34</td>
+        <td>+34</td>
+        <td>0003,31</td>
+        <td>000222,89</td>
         <td>2020-04-22</td>
-        <td>572</td>
+        <td>573</td>
       </tr>
       <tr>
         <td>
           <img src="18_South_Sudan.png"/>
+        </td>
+        <td>
+          <img src="18_INF_South_Sudan.png"/>
         </td>
         <td>
           <a href="18_South_Sudan.png" target="_blank">18</a>
@@ -439,15 +494,18 @@
         <td>12</td>
         <td>10</td>
         <td>5</td>
-        <td>+00</td>
-        <td>0000,66</td>
-        <td>000114,25</td>
+        <td>+16</td>
+        <td>0000,68</td>
+        <td>000114,42</td>
         <td>2020-04-28</td>
-        <td>572</td>
+        <td>573</td>
       </tr>
       <tr>
         <td>
           <img src="19_Yemen.png"/>
+        </td>
+        <td>
+          <img src="19_INF_Yemen.png"/>
         </td>
         <td>
           <a href="19_Yemen.png" target="_blank">19</a>
@@ -459,15 +517,18 @@
         <td>72</td>
         <td>0</td>
         <td>-5</td>
-        <td>+33</td>
-        <td>0000,12</td>
+        <td>+18</td>
+        <td>0000,11</td>
         <td>000033,70</td>
         <td>2020-05-10</td>
-        <td>570</td>
+        <td>571</td>
       </tr>
       <tr>
         <td>
           <img src="20_New_Zealand.png"/>
+        </td>
+        <td>
+          <img src="20_INF_New_Zealand.png"/>
         </td>
         <td>
           <a href="20_New_Zealand.png" target="_blank">20</a>
@@ -477,17 +538,20 @@
         <td>8</td>
         <td>6</td>
         <td>26</td>
-        <td>52</td>
-        <td>47</td>
-        <td>-32</td>
-        <td>0023,14</td>
-        <td>000243,53</td>
+        <td>53</td>
+        <td>48</td>
+        <td>-07</td>
+        <td>0022,97</td>
+        <td>000247,10</td>
         <td>2020-03-20</td>
         <td>569</td>
       </tr>
       <tr>
         <td>
           <img src="21_Tajikistan.png"/>
+        </td>
+        <td>
+          <img src="21_INF_Tajikistan.png"/>
         </td>
         <td>
           <a href="21_Tajikistan.png" target="_blank">21</a>
@@ -503,11 +567,14 @@
         <td>0000,00</td>
         <td>000184,29</td>
         <td>2020-05-01</td>
-        <td>565</td>
+        <td>566</td>
       </tr>
       <tr>
         <td>
           <img src="22_Uganda.png"/>
+        </td>
+        <td>
+          <img src="22_INF_Uganda.png"/>
         </td>
         <td>
           <a href="22_Uganda.png" target="_blank">22</a>
@@ -519,15 +586,18 @@
         <td>34</td>
         <td>47</td>
         <td>42</td>
-        <td>+00</td>
-        <td>0000,62</td>
-        <td>000280,78</td>
+        <td>-02</td>
+        <td>0000,63</td>
+        <td>000280,86</td>
         <td>2020-03-31</td>
-        <td>563</td>
+        <td>564</td>
       </tr>
       <tr>
         <td>
           <img src="23_Benin.png"/>
+        </td>
+        <td>
+          <img src="23_INF_Benin.png"/>
         </td>
         <td>
           <a href="23_Benin.png" target="_blank">23</a>
@@ -539,15 +609,18 @@
         <td>22</td>
         <td>35</td>
         <td>30</td>
-        <td>-32</td>
-        <td>0000,03</td>
-        <td>000206,13</td>
+        <td>+32</td>
+        <td>0000,11</td>
+        <td>000206,24</td>
         <td>2020-04-20</td>
-        <td>555</td>
+        <td>556</td>
       </tr>
       <tr>
         <td>
           <img src="24_Algeria.png"/>
+        </td>
+        <td>
+          <img src="24_INF_Algeria.png"/>
         </td>
         <td>
           <a href="24_Algeria.png" target="_blank">24</a>
@@ -559,15 +632,18 @@
         <td>35</td>
         <td>74</td>
         <td>69</td>
-        <td>+22</td>
-        <td>0002,86</td>
-        <td>000481,92</td>
+        <td>+36</td>
+        <td>0002,88</td>
+        <td>000482,36</td>
         <td>2020-03-14</td>
-        <td>553</td>
+        <td>554</td>
       </tr>
       <tr>
         <td>
           <img src="25_Congo_(Brazzaville).png"/>
+        </td>
+        <td>
+          <img src="25_INF_Congo_(Brazzaville).png"/>
         </td>
         <td>
           <a href="25_Congo_(Brazzaville).png" target="_blank">25</a>
@@ -579,15 +655,18 @@
         <td>7</td>
         <td>64</td>
         <td>59</td>
-        <td>+46</td>
+        <td>+31</td>
         <td>0002,54</td>
         <td>000361,72</td>
         <td>2020-03-29</td>
-        <td>548</td>
+        <td>549</td>
       </tr>
       <tr>
         <td>
           <img src="26_Cameroon.png"/>
+        </td>
+        <td>
+          <img src="26_INF_Cameroon.png"/>
         </td>
         <td>
           <a href="26_Cameroon.png" target="_blank">26</a>
@@ -599,15 +678,18 @@
         <td>42</td>
         <td>77</td>
         <td>72</td>
-        <td>-32</td>
-        <td>0002,29</td>
-        <td>000404,44</td>
+        <td>+32</td>
+        <td>0001,34</td>
+        <td>000405,78</td>
         <td>2020-03-22</td>
-        <td>542</td>
+        <td>543</td>
       </tr>
       <tr>
         <td>
           <img src="27_Central_African_Republic.png"/>
+        </td>
+        <td>
+          <img src="27_INF_Central_African_Republic.png"/>
         </td>
         <td>
           <a href="27_Central_African_Republic.png" target="_blank">27</a>
@@ -623,11 +705,14 @@
         <td>0000,00</td>
         <td>000243,30</td>
         <td>2020-04-28</td>
-        <td>541</td>
+        <td>542</td>
       </tr>
       <tr>
         <td>
           <img src="28_Ethiopia.png"/>
+        </td>
+        <td>
+          <img src="28_INF_Ethiopia.png"/>
         </td>
         <td>
           <a href="28_Ethiopia.png" target="_blank">28</a>
@@ -639,15 +724,18 @@
         <td>40</td>
         <td>33</td>
         <td>28</td>
-        <td>-28</td>
-        <td>0000,89</td>
-        <td>000324,89</td>
+        <td>-12</td>
+        <td>0000,84</td>
+        <td>000325,01</td>
         <td>2020-05-06</td>
-        <td>541</td>
+        <td>542</td>
       </tr>
       <tr>
         <td>
           <img src="29_Senegal.png"/>
+        </td>
+        <td>
+          <img src="29_INF_Senegal.png"/>
         </td>
         <td>
           <a href="29_Senegal.png" target="_blank">29</a>
@@ -659,15 +747,18 @@
         <td>11</td>
         <td>87</td>
         <td>82</td>
-        <td>-10</td>
+        <td>-02</td>
         <td>0000,10</td>
-        <td>000444,38</td>
+        <td>000444,40</td>
         <td>2020-03-15</td>
-        <td>539</td>
+        <td>540</td>
       </tr>
       <tr>
         <td>
           <img src="30_Guinea-Bissau.png"/>
+        </td>
+        <td>
+          <img src="30_INF_Guinea-Bissau.png"/>
         </td>
         <td>
           <a href="30_Guinea-Bissau.png" target="_blank">30</a>
@@ -679,15 +770,18 @@
         <td>29</td>
         <td>66</td>
         <td>61</td>
-        <td>-40</td>
-        <td>0000,15</td>
-        <td>000328,88</td>
+        <td>+17</td>
+        <td>0000,20</td>
+        <td>000328,99</td>
         <td>2020-04-07</td>
-        <td>537</td>
+        <td>538</td>
       </tr>
       <tr>
         <td>
           <img src="31_Togo.png"/>
+        </td>
+        <td>
+          <img src="31_INF_Togo.png"/>
         </td>
         <td>
           <a href="31_Togo.png" target="_blank">31</a>
@@ -699,15 +793,18 @@
         <td>24</td>
         <td>69</td>
         <td>64</td>
-        <td>+25</td>
-        <td>0000,56</td>
-        <td>000318,84</td>
+        <td>+08</td>
+        <td>0000,66</td>
+        <td>000318,94</td>
         <td>2020-04-06</td>
-        <td>535</td>
+        <td>536</td>
       </tr>
       <tr>
         <td>
           <img src="32_Afghanistan.png"/>
+        </td>
+        <td>
+          <img src="32_INF_Afghanistan.png"/>
         </td>
         <td>
           <a href="32_Afghanistan.png" target="_blank">32</a>
@@ -719,15 +816,18 @@
         <td>68</td>
         <td>86</td>
         <td>81</td>
-        <td>-13</td>
-        <td>0000,71</td>
-        <td>000405,98</td>
+        <td>-12</td>
+        <td>0000,84</td>
+        <td>000406,16</td>
         <td>2020-03-22</td>
-        <td>533</td>
+        <td>534</td>
       </tr>
       <tr>
         <td>
           <img src="33_Angola.png"/>
+        </td>
+        <td>
+          <img src="33_INF_Angola.png"/>
         </td>
         <td>
           <a href="33_Angola.png" target="_blank">33</a>
@@ -739,15 +839,18 @@
         <td>13</td>
         <td>7</td>
         <td>2</td>
-        <td>-35</td>
-        <td>0000,33</td>
-        <td>000199,63</td>
+        <td>-29</td>
+        <td>0000,32</td>
+        <td>000199,67</td>
         <td>2020-06-10</td>
-        <td>532</td>
+        <td>533</td>
       </tr>
       <tr>
         <td>
           <img src="34_Nicaragua.png"/>
+        </td>
+        <td>
+          <img src="34_INF_Nicaragua.png"/>
         </td>
         <td>
           <a href="34_Nicaragua.png" target="_blank">34</a>
@@ -759,15 +862,18 @@
         <td>133</td>
         <td>30</td>
         <td>25</td>
-        <td>+32</td>
+        <td>+23</td>
         <td>0001,54</td>
         <td>000261,09</td>
         <td>2020-05-19</td>
-        <td>531</td>
+        <td>532</td>
       </tr>
       <tr>
         <td>
           <img src="35_Burundi.png"/>
+        </td>
+        <td>
+          <img src="35_INF_Burundi.png"/>
         </td>
         <td>
           <a href="35_Burundi.png" target="_blank">35</a>
@@ -779,15 +885,18 @@
         <td>21</td>
         <td>37</td>
         <td>32</td>
-        <td>+05</td>
-        <td>0000,54</td>
-        <td>000172,80</td>
+        <td>+00</td>
+        <td>0000,69</td>
+        <td>000172,94</td>
         <td>2020-05-18</td>
-        <td>525</td>
+        <td>526</td>
       </tr>
       <tr>
         <td>
           <img src="36_Syria.png"/>
+        </td>
+        <td>
+          <img src="36_INF_Syria.png"/>
         </td>
         <td>
           <a href="36_Syria.png" target="_blank">36</a>
@@ -800,14 +909,17 @@
         <td>42</td>
         <td>37</td>
         <td>+04</td>
-        <td>0004,15</td>
-        <td>000276,68</td>
+        <td>0004,07</td>
+        <td>000277,23</td>
         <td>2020-05-23</td>
-        <td>515</td>
+        <td>516</td>
       </tr>
       <tr>
         <td>
           <img src="37_Malawi.png"/>
+        </td>
+        <td>
+          <img src="37_INF_Malawi.png"/>
         </td>
         <td>
           <a href="37_Malawi.png" target="_blank">37</a>
@@ -819,15 +931,18 @@
         <td>68</td>
         <td>73</td>
         <td>68</td>
-        <td>+27</td>
-        <td>0000,27</td>
-        <td>000325,46</td>
+        <td>+17</td>
+        <td>0000,31</td>
+        <td>000325,51</td>
         <td>2020-04-23</td>
-        <td>514</td>
+        <td>515</td>
       </tr>
       <tr>
         <td>
           <img src="38_Ghana.png"/>
+        </td>
+        <td>
+          <img src="38_INF_Ghana.png"/>
         </td>
         <td>
           <a href="38_Ghana.png" target="_blank">38</a>
@@ -843,11 +958,14 @@
         <td>0000,00</td>
         <td>000423,19</td>
         <td>2020-03-24</td>
-        <td>513</td>
+        <td>514</td>
       </tr>
       <tr>
         <td>
           <img src="39_Australia.png"/>
+        </td>
+        <td>
+          <img src="39_INF_Australia.png"/>
         </td>
         <td>
           <a href="39_Australia.png" target="_blank">39</a>
@@ -857,17 +975,20 @@
         <td>8</td>
         <td>3</td>
         <td>24</td>
-        <td>130</td>
-        <td>125</td>
-        <td>-34</td>
-        <td>0037,50</td>
-        <td>000832,00</td>
+        <td>131</td>
+        <td>126</td>
+        <td>+00</td>
+        <td>0038,19</td>
+        <td>000838,70</td>
         <td>2020-02-29</td>
         <td>511</td>
       </tr>
       <tr>
         <td>
           <img src="40_Brunei.png"/>
+        </td>
+        <td>
+          <img src="40_INF_Brunei.png"/>
         </td>
         <td>
           <a href="40_Brunei.png" target="_blank">40</a>
@@ -877,17 +998,20 @@
         <td>8</td>
         <td>2</td>
         <td>23</td>
-        <td>121</td>
-        <td>116</td>
-        <td>-18</td>
-        <td>0081,76</td>
-        <td>003448,73</td>
+        <td>122</td>
+        <td>117</td>
+        <td>-11</td>
+        <td>0077,87</td>
+        <td>003460,87</td>
         <td>2020-03-11</td>
         <td>509</td>
       </tr>
       <tr>
         <td>
           <img src="41_Eritrea.png"/>
+        </td>
+        <td>
+          <img src="41_INF_Eritrea.png"/>
         </td>
         <td>
           <a href="41_Eritrea.png" target="_blank">41</a>
@@ -899,15 +1023,18 @@
         <td>17</td>
         <td>32</td>
         <td>27</td>
-        <td>-20</td>
-        <td>0003,82</td>
-        <td>000208,07</td>
+        <td>+27</td>
+        <td>0004,04</td>
+        <td>000209,06</td>
         <td>2020-06-13</td>
-        <td>504</td>
+        <td>505</td>
       </tr>
       <tr>
         <td>
           <img src="42_Comoros.png"/>
+        </td>
+        <td>
+          <img src="42_INF_Comoros.png"/>
         </td>
         <td>
           <a href="42_Comoros.png" target="_blank">42</a>
@@ -919,15 +1046,18 @@
         <td>9</td>
         <td>57</td>
         <td>52</td>
-        <td>-21</td>
-        <td>0004,04</td>
-        <td>000519,93</td>
+        <td>+15</td>
+        <td>0003,47</td>
+        <td>000520,74</td>
         <td>2020-05-20</td>
-        <td>503</td>
+        <td>504</td>
       </tr>
       <tr>
         <td>
           <img src="43_Kenya.png"/>
+        </td>
+        <td>
+          <img src="43_INF_Kenya.png"/>
         </td>
         <td>
           <a href="43_Kenya.png" target="_blank">43</a>
@@ -939,38 +1069,21 @@
         <td>59</td>
         <td>110</td>
         <td>105</td>
-        <td>+18</td>
-        <td>0000,57</td>
-        <td>000476,61</td>
+        <td>+25</td>
+        <td>0000,65</td>
+        <td>000476,75</td>
         <td>2020-04-01</td>
-        <td>499</td>
+        <td>500</td>
       </tr>
       <tr>
         <td>
-          <img src="44_Vietnam.png"/>
+          <img src="44_Rwanda.png"/>
         </td>
         <td>
-          <a href="44_Vietnam.png" target="_blank">44</a>
-        </td>
-        <td>Vietnam</td>
-        <td>Asia</td>
-        <td>7</td>
-        <td>1</td>
-        <td>nan</td>
-        <td>143</td>
-        <td>138</td>
-        <td>+24</td>
-        <td>0096,87</td>
-        <td>001274,27</td>
-        <td>2020-03-08</td>
-        <td>490</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="45_Rwanda.png"/>
+          <img src="44_INF_Rwanda.png"/>
         </td>
         <td>
-          <a href="45_Rwanda.png" target="_blank">45</a>
+          <a href="44_Rwanda.png" target="_blank">44</a>
         </td>
         <td>Rwanda</td>
         <td>Africa</td>
@@ -979,15 +1092,41 @@
         <td>27</td>
         <td>129</td>
         <td>124</td>
-        <td>-38</td>
-        <td>0000,73</td>
-        <td>000778,87</td>
+        <td>-24</td>
+        <td>0000,66</td>
+        <td>000778,97</td>
         <td>2020-03-23</td>
-        <td>489</td>
+        <td>490</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="45_Vietnam.png"/>
+        </td>
+        <td>
+          <img src="45_INF_Vietnam.png"/>
+        </td>
+        <td>
+          <a href="45_Vietnam.png" target="_blank">45</a>
+        </td>
+        <td>Vietnam</td>
+        <td>Asia</td>
+        <td>7</td>
+        <td>1</td>
+        <td>nan</td>
+        <td>144</td>
+        <td>139</td>
+        <td>+18</td>
+        <td>0099,64</td>
+        <td>001289,20</td>
+        <td>2020-03-08</td>
+        <td>490</td>
       </tr>
       <tr>
         <td>
           <img src="46_Pakistan.png"/>
+        </td>
+        <td>
+          <img src="46_INF_Pakistan.png"/>
         </td>
         <td>
           <a href="46_Pakistan.png" target="_blank">46</a>
@@ -999,15 +1138,18 @@
         <td>78</td>
         <td>150</td>
         <td>145</td>
-        <td>+14</td>
+        <td>+21</td>
         <td>0001,09</td>
-        <td>000584,23</td>
+        <td>000584,40</td>
         <td>2020-03-09</td>
-        <td>482</td>
+        <td>483</td>
       </tr>
       <tr>
         <td>
           <img src="47_Mozambique.png"/>
+        </td>
+        <td>
+          <img src="47_INF_Mozambique.png"/>
         </td>
         <td>
           <a href="47_Mozambique.png" target="_blank">47</a>
@@ -1019,15 +1161,18 @@
         <td>67</td>
         <td>114</td>
         <td>109</td>
-        <td>+18</td>
-        <td>0000,17</td>
-        <td>000487,80</td>
+        <td>+34</td>
+        <td>0000,29</td>
+        <td>000487,95</td>
         <td>2020-04-24</td>
-        <td>472</td>
+        <td>473</td>
       </tr>
       <tr>
         <td>
           <img src="48_Korea_South.png"/>
+        </td>
+        <td>
+          <img src="48_INF_Korea_South.png"/>
         </td>
         <td>
           <a href="48_Korea_South.png" target="_blank">48</a>
@@ -1037,17 +1182,20 @@
         <td>8</td>
         <td>5</td>
         <td>18</td>
-        <td>179</td>
-        <td>174</td>
-        <td>+06</td>
-        <td>0053,23</td>
-        <td>000882,46</td>
+        <td>180</td>
+        <td>175</td>
+        <td>+26</td>
+        <td>0055,81</td>
+        <td>000892,72</td>
         <td>2020-02-20</td>
         <td>471</td>
       </tr>
       <tr>
         <td>
           <img src="49_Uzbekistan.png"/>
+        </td>
+        <td>
+          <img src="49_INF_Uzbekistan.png"/>
         </td>
         <td>
           <a href="49_Uzbekistan.png" target="_blank">49</a>
@@ -1059,15 +1207,18 @@
         <td>18</td>
         <td>156</td>
         <td>151</td>
-        <td>-17</td>
-        <td>0004,37</td>
-        <td>000579,01</td>
+        <td>-15</td>
+        <td>0004,40</td>
+        <td>000579,65</td>
         <td>2020-03-20</td>
-        <td>465</td>
+        <td>466</td>
       </tr>
       <tr>
         <td>
           <img src="50_Mauritius.png"/>
+        </td>
+        <td>
+          <img src="50_INF_Mauritius.png"/>
         </td>
         <td>
           <a href="50_Mauritius.png" target="_blank">50</a>
@@ -1077,9 +1228,9 @@
         <td>8</td>
         <td>4</td>
         <td>24</td>
-        <td>161</td>
-        <td>156</td>
-        <td>-12</td>
+        <td>162</td>
+        <td>157</td>
+        <td>-23</td>
         <td>0162,11</td>
         <td>001654,94</td>
         <td>2020-03-22</td>
@@ -1088,6 +1239,9 @@
       <tr>
         <td>
           <img src="51_Bhutan.png"/>
+        </td>
+        <td>
+          <img src="51_INF_Bhutan.png"/>
         </td>
         <td>
           <a href="51_Bhutan.png" target="_blank">51</a>
@@ -1099,15 +1253,18 @@
         <td>25</td>
         <td>100</td>
         <td>95</td>
-        <td>+09</td>
+        <td>-12</td>
         <td>0000,91</td>
         <td>000342,92</td>
         <td>2020-05-31</td>
-        <td>449</td>
+        <td>450</td>
       </tr>
       <tr>
         <td>
           <img src="52_Cambodia.png"/>
+        </td>
+        <td>
+          <img src="52_INF_Cambodia.png"/>
         </td>
         <td>
           <a href="52_Cambodia.png" target="_blank">52</a>
@@ -1119,35 +1276,41 @@
         <td>nan</td>
         <td>186</td>
         <td>181</td>
-        <td>-44</td>
-        <td>0001,15</td>
-        <td>000720,61</td>
+        <td>-35</td>
+        <td>0001,10</td>
+        <td>000720,76</td>
         <td>2020-03-17</td>
-        <td>438</td>
+        <td>439</td>
       </tr>
       <tr>
         <td>
           <img src="53_Zimbabwe.png"/>
         </td>
         <td>
+          <img src="53_INF_Zimbabwe.png"/>
+        </td>
+        <td>
           <a href="53_Zimbabwe.png" target="_blank">53</a>
         </td>
         <td>Zimbabwe</td>
         <td>Africa</td>
-        <td>4</td>
+        <td>8</td>
         <td>5</td>
         <td>60</td>
-        <td>123</td>
-        <td>118</td>
-        <td>+39</td>
-        <td>0006,42</td>
-        <td>000908,51</td>
+        <td>124</td>
+        <td>119</td>
+        <td>+42</td>
+        <td>0010,73</td>
+        <td>000913,32</td>
         <td>2020-05-27</td>
         <td>430</td>
       </tr>
       <tr>
         <td>
           <img src="54_Djibouti.png"/>
+        </td>
+        <td>
+          <img src="54_INF_Djibouti.png"/>
         </td>
         <td>
           <a href="54_Djibouti.png" target="_blank">54</a>
@@ -1159,15 +1322,18 @@
         <td>27</td>
         <td>186</td>
         <td>181</td>
-        <td>-23</td>
+        <td>-32</td>
         <td>0000,10</td>
         <td>001370,93</td>
         <td>2020-03-31</td>
-        <td>424</td>
+        <td>425</td>
       </tr>
       <tr>
         <td>
           <img src="55_Gambia.png"/>
+        </td>
+        <td>
+          <img src="55_INF_Gambia.png"/>
         </td>
         <td>
           <a href="55_Gambia.png" target="_blank">55</a>
@@ -1179,15 +1345,18 @@
         <td>42</td>
         <td>85</td>
         <td>80</td>
-        <td>-23</td>
+        <td>-32</td>
         <td>0000,04</td>
         <td>000415,85</td>
         <td>2020-07-16</td>
-        <td>418</td>
+        <td>419</td>
       </tr>
       <tr>
         <td>
           <img src="56_Zambia.png"/>
+        </td>
+        <td>
+          <img src="56_INF_Zambia.png"/>
         </td>
         <td>
           <a href="56_Zambia.png" target="_blank">56</a>
@@ -1199,15 +1368,18 @@
         <td>65</td>
         <td>165</td>
         <td>160</td>
-        <td>+13</td>
-        <td>0000,43</td>
-        <td>001150,14</td>
+        <td>+27</td>
+        <td>0000,53</td>
+        <td>001150,28</td>
         <td>2020-05-02</td>
-        <td>413</td>
+        <td>414</td>
       </tr>
       <tr>
         <td>
           <img src="57_Equatorial_Guinea.png"/>
+        </td>
+        <td>
+          <img src="57_INF_Equatorial_Guinea.png"/>
         </td>
         <td>
           <a href="57_Equatorial_Guinea.png" target="_blank">57</a>
@@ -1219,15 +1391,18 @@
         <td>30</td>
         <td>184</td>
         <td>179</td>
-        <td>+02</td>
+        <td>-14</td>
         <td>0003,23</td>
         <td>000975,77</td>
         <td>2020-04-14</td>
-        <td>412</td>
+        <td>413</td>
       </tr>
       <tr>
         <td>
           <img src="58_Japan.png"/>
+        </td>
+        <td>
+          <img src="58_INF_Japan.png"/>
         </td>
         <td>
           <a href="58_Japan.png" target="_blank">58</a>
@@ -1240,14 +1415,17 @@
         <td>244</td>
         <td>239</td>
         <td>-19</td>
-        <td>0000,50</td>
-        <td>001364,36</td>
+        <td>0000,53</td>
+        <td>001364,45</td>
         <td>2020-02-14</td>
-        <td>412</td>
+        <td>413</td>
       </tr>
       <tr>
         <td>
           <img src="59_Thailand.png"/>
+        </td>
+        <td>
+          <img src="59_INF_Thailand.png"/>
         </td>
         <td>
           <a href="59_Thailand.png" target="_blank">59</a>
@@ -1257,17 +1435,20 @@
         <td>8</td>
         <td>4</td>
         <td>18</td>
-        <td>230</td>
-        <td>225</td>
-        <td>-19</td>
-        <td>0056,96</td>
-        <td>003032,86</td>
+        <td>231</td>
+        <td>226</td>
+        <td>-20</td>
+        <td>0055,57</td>
+        <td>003039,86</td>
         <td>2020-03-12</td>
         <td>399</td>
       </tr>
       <tr>
         <td>
           <img src="60_Bangladesh.png"/>
+        </td>
+        <td>
+          <img src="60_INF_Bangladesh.png"/>
         </td>
         <td>
           <a href="60_Bangladesh.png" target="_blank">60</a>
@@ -1279,15 +1460,18 @@
         <td>229</td>
         <td>210</td>
         <td>205</td>
-        <td>-13</td>
-        <td>0001,00</td>
-        <td>000959,08</td>
+        <td>+24</td>
+        <td>0000,98</td>
+        <td>000959,25</td>
         <td>2020-04-05</td>
-        <td>395</td>
+        <td>396</td>
       </tr>
       <tr>
         <td>
           <img src="61_Timor-Leste.png"/>
+        </td>
+        <td>
+          <img src="61_INF_Timor-Leste.png"/>
         </td>
         <td>
           <a href="61_Timor-Leste.png" target="_blank">61</a>
@@ -1299,15 +1483,18 @@
         <td>10</td>
         <td>200</td>
         <td>195</td>
-        <td>+23</td>
-        <td>0000,23</td>
-        <td>001509,54</td>
+        <td>+28</td>
+        <td>0000,38</td>
+        <td>001509,69</td>
         <td>2020-04-16</td>
-        <td>394</td>
+        <td>395</td>
       </tr>
       <tr>
         <td>
           <img src="62_Lesotho.png"/>
+        </td>
+        <td>
+          <img src="62_INF_Lesotho.png"/>
         </td>
         <td>
           <a href="62_Lesotho.png" target="_blank">62</a>
@@ -1319,38 +1506,21 @@
         <td>13</td>
         <td>127</td>
         <td>122</td>
-        <td>+22</td>
-        <td>0002,06</td>
-        <td>001018,28</td>
+        <td>+31</td>
+        <td>0003,37</td>
+        <td>001019,59</td>
         <td>2020-07-05</td>
-        <td>387</td>
+        <td>388</td>
       </tr>
       <tr>
         <td>
-          <img src="63_Singapore.png"/>
+          <img src="63_Papua_New_Guinea.png"/>
         </td>
         <td>
-          <a href="63_Singapore.png" target="_blank">63</a>
-        </td>
-        <td>Singapore</td>
-        <td>Asia</td>
-        <td>8</td>
-        <td>4</td>
-        <td>71</td>
-        <td>253</td>
-        <td>248</td>
-        <td>-27</td>
-        <td>0159,12</td>
-        <td>004532,19</td>
-        <td>2020-03-06</td>
-        <td>382</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="64_Papua_New_Guinea.png"/>
+          <img src="63_INF_Papua_New_Guinea.png"/>
         </td>
         <td>
-          <a href="64_Papua_New_Guinea.png" target="_blank">64</a>
+          <a href="63_Papua_New_Guinea.png" target="_blank">63</a>
         </td>
         <td>Papua_New_Guinea</td>
         <td>Oceania</td>
@@ -1359,35 +1529,64 @@
         <td>40</td>
         <td>112</td>
         <td>107</td>
-        <td>-11</td>
-        <td>0006,44</td>
-        <td>000394,76</td>
+        <td>-10</td>
+        <td>0005,95</td>
+        <td>000395,41</td>
         <td>2020-07-26</td>
-        <td>381</td>
+        <td>382</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="64_Singapore.png"/>
+        </td>
+        <td>
+          <img src="64_INF_Singapore.png"/>
+        </td>
+        <td>
+          <a href="64_Singapore.png" target="_blank">64</a>
+        </td>
+        <td>Singapore</td>
+        <td>Asia</td>
+        <td>8</td>
+        <td>4</td>
+        <td>71</td>
+        <td>254</td>
+        <td>249</td>
+        <td>-02</td>
+        <td>0146,19</td>
+        <td>004554,86</td>
+        <td>2020-03-06</td>
+        <td>382</td>
       </tr>
       <tr>
         <td>
           <img src="65_Mauritania.png"/>
         </td>
         <td>
+          <img src="65_INF_Mauritania.png"/>
+        </td>
+        <td>
           <a href="65_Mauritania.png" target="_blank">65</a>
         </td>
         <td>Mauritania</td>
         <td>Africa</td>
-        <td>8</td>
+        <td>4</td>
         <td>4</td>
         <td>57</td>
         <td>189</td>
         <td>184</td>
-        <td>-38</td>
-        <td>0010,17</td>
-        <td>000849,26</td>
+        <td>-22</td>
+        <td>0009,91</td>
+        <td>000850,84</td>
         <td>2020-05-16</td>
-        <td>375</td>
+        <td>376</td>
       </tr>
       <tr>
         <td>
           <img src="66_Burma.png"/>
+        </td>
+        <td>
+          <img src="66_INF_Burma.png"/>
         </td>
         <td>
           <a href="66_Burma.png" target="_blank">66</a>
@@ -1399,15 +1598,18 @@
         <td>137</td>
         <td>234</td>
         <td>229</td>
-        <td>-32</td>
-        <td>0006,07</td>
-        <td>000961,43</td>
+        <td>-26</td>
+        <td>0005,69</td>
+        <td>000962,21</td>
         <td>2020-04-11</td>
-        <td>365</td>
+        <td>366</td>
       </tr>
       <tr>
         <td>
           <img src="67_Congo_(Kinshasa).png"/>
+        </td>
+        <td>
+          <img src="67_INF_Congo_(Kinshasa).png"/>
         </td>
         <td>
           <a href="67_Congo_(Kinshasa).png" target="_blank">67</a>
@@ -1419,15 +1621,18 @@
         <td>81</td>
         <td>260</td>
         <td>255</td>
-        <td>+09</td>
-        <td>0003,73</td>
-        <td>001060,88</td>
+        <td>+22</td>
+        <td>0004,48</td>
+        <td>001062,20</td>
         <td>2020-03-19</td>
-        <td>362</td>
+        <td>363</td>
       </tr>
       <tr>
         <td>
           <img src="68_Sao_Tome_and_Principe.png"/>
+        </td>
+        <td>
+          <img src="68_INF_Sao_Tome_and_Principe.png"/>
         </td>
         <td>
           <a href="68_Sao_Tome_and_Principe.png" target="_blank">68</a>
@@ -1443,11 +1648,14 @@
         <td>0000,00</td>
         <td>001703,65</td>
         <td>2020-05-05</td>
-        <td>349</td>
+        <td>350</td>
       </tr>
       <tr>
         <td>
           <img src="69_Mongolia.png"/>
+        </td>
+        <td>
+          <img src="69_INF_Mongolia.png"/>
         </td>
         <td>
           <a href="69_Mongolia.png" target="_blank">69</a>
@@ -1457,17 +1665,20 @@
         <td>8</td>
         <td>3</td>
         <td>30</td>
-        <td>270</td>
-        <td>265</td>
-        <td>-22</td>
-        <td>0118,84</td>
-        <td>011694,05</td>
+        <td>271</td>
+        <td>266</td>
+        <td>+04</td>
+        <td>0091,18</td>
+        <td>011707,55</td>
         <td>2020-04-14</td>
         <td>326</td>
       </tr>
       <tr>
         <td>
           <img src="70_Saudi_Arabia.png"/>
+        </td>
+        <td>
+          <img src="70_INF_Saudi_Arabia.png"/>
         </td>
         <td>
           <a href="70_Saudi_Arabia.png" target="_blank">70</a>
@@ -1479,15 +1690,18 @@
         <td>136</td>
         <td>308</td>
         <td>303</td>
-        <td>-14</td>
+        <td>+32</td>
         <td>0000,56</td>
-        <td>001584,24</td>
+        <td>001584,33</td>
         <td>2020-03-12</td>
-        <td>321</td>
+        <td>322</td>
       </tr>
       <tr>
         <td>
           <img src="71_Morocco.png"/>
+        </td>
+        <td>
+          <img src="71_INF_Morocco.png"/>
         </td>
         <td>
           <a href="71_Morocco.png" target="_blank">71</a>
@@ -1499,15 +1713,18 @@
         <td>153</td>
         <td>312</td>
         <td>307</td>
-        <td>-21</td>
-        <td>0002,13</td>
-        <td>002579,84</td>
+        <td>+06</td>
+        <td>0002,24</td>
+        <td>002580,31</td>
         <td>2020-03-14</td>
-        <td>315</td>
+        <td>316</td>
       </tr>
       <tr>
         <td>
           <img src="72_Barbados.png"/>
+        </td>
+        <td>
+          <img src="72_INF_Barbados.png"/>
         </td>
         <td>
           <a href="72_Barbados.png" target="_blank">72</a>
@@ -1517,17 +1734,20 @@
         <td>8</td>
         <td>2</td>
         <td>49</td>
-        <td>299</td>
-        <td>294</td>
-        <td>+06</td>
-        <td>0376,60</td>
-        <td>008811,54</td>
+        <td>300</td>
+        <td>295</td>
+        <td>+08</td>
+        <td>0347,02</td>
+        <td>008850,87</td>
         <td>2020-04-02</td>
         <td>309</td>
       </tr>
       <tr>
         <td>
           <img src="73_Indonesia.png"/>
+        </td>
+        <td>
+          <img src="73_INF_Indonesia.png"/>
         </td>
         <td>
           <a href="73_Indonesia.png" target="_blank">73</a>
@@ -1539,15 +1759,18 @@
         <td>103</td>
         <td>340</td>
         <td>335</td>
-        <td>-38</td>
-        <td>0000,89</td>
-        <td>001559,51</td>
+        <td>-32</td>
+        <td>0000,82</td>
+        <td>001559,62</td>
         <td>2020-03-09</td>
-        <td>292</td>
+        <td>293</td>
       </tr>
       <tr>
         <td>
           <img src="74_Cuba.png"/>
+        </td>
+        <td>
+          <img src="74_INF_Cuba.png"/>
         </td>
         <td>
           <a href="74_Cuba.png" target="_blank">74</a>
@@ -1557,17 +1780,20 @@
         <td>7</td>
         <td>1</td>
         <td>116</td>
-        <td>338</td>
-        <td>333</td>
-        <td>-37</td>
-        <td>0010,68</td>
-        <td>008496,53</td>
+        <td>339</td>
+        <td>334</td>
+        <td>-41</td>
+        <td>0010,33</td>
+        <td>008497,78</td>
         <td>2020-03-22</td>
         <td>281</td>
       </tr>
       <tr>
         <td>
           <img src="75_Gabon.png"/>
+        </td>
+        <td>
+          <img src="75_INF_Gabon.png"/>
         </td>
         <td>
           <a href="75_Gabon.png" target="_blank">75</a>
@@ -1579,15 +1805,18 @@
         <td>105</td>
         <td>331</td>
         <td>326</td>
-        <td>-16</td>
-        <td>0008,31</td>
+        <td>-05</td>
+        <td>0005,37</td>
         <td>001686,18</td>
         <td>2020-04-09</td>
-        <td>270</td>
+        <td>271</td>
       </tr>
       <tr>
         <td>
           <img src="76_Antigua_and_Barbuda.png"/>
+        </td>
+        <td>
+          <img src="76_INF_Antigua_and_Barbuda.png"/>
         </td>
         <td>
           <a href="76_Antigua_and_Barbuda.png" target="_blank">76</a>
@@ -1599,15 +1828,18 @@
         <td>7</td>
         <td>258</td>
         <td>253</td>
-        <td>-23</td>
+        <td>-32</td>
         <td>0003,07</td>
         <td>004235,71</td>
         <td>2020-06-25</td>
-        <td>269</td>
+        <td>270</td>
       </tr>
       <tr>
         <td>
           <img src="77_Trinidad_and_Tobago.png"/>
+        </td>
+        <td>
+          <img src="77_INF_Trinidad_and_Tobago.png"/>
         </td>
         <td>
           <a href="77_Trinidad_and_Tobago.png" target="_blank">77</a>
@@ -1617,17 +1849,20 @@
         <td>8</td>
         <td>4</td>
         <td>67</td>
-        <td>358</td>
-        <td>353</td>
-        <td>-14</td>
-        <td>0313,60</td>
-        <td>005102,39</td>
+        <td>359</td>
+        <td>354</td>
+        <td>+00</td>
+        <td>0311,39</td>
+        <td>005149,44</td>
         <td>2020-03-21</td>
         <td>262</td>
       </tr>
       <tr>
         <td>
           <img src="78_Poland.png"/>
+        </td>
+        <td>
+          <img src="78_INF_Poland.png"/>
         </td>
         <td>
           <a href="78_Poland.png" target="_blank">78</a>
@@ -1637,17 +1872,20 @@
         <td>8</td>
         <td>3</td>
         <td>nan</td>
-        <td>374</td>
-        <td>369</td>
-        <td>-41</td>
-        <td>0428,91</td>
-        <td>009351,68</td>
+        <td>375</td>
+        <td>370</td>
+        <td>-19</td>
+        <td>0430,61</td>
+        <td>009428,49</td>
         <td>2020-03-12</td>
         <td>255</td>
       </tr>
       <tr>
         <td>
           <img src="79_Sri_Lanka.png"/>
+        </td>
+        <td>
+          <img src="79_INF_Sri_Lanka.png"/>
         </td>
         <td>
           <a href="79_Sri_Lanka.png" target="_blank">79</a>
@@ -1657,17 +1895,20 @@
         <td>8</td>
         <td>4</td>
         <td>23</td>
-        <td>374</td>
-        <td>369</td>
-        <td>-09</td>
+        <td>375</td>
+        <td>370</td>
+        <td>+19</td>
         <td>0023,97</td>
-        <td>002636,05</td>
+        <td>002639,53</td>
         <td>2020-03-16</td>
         <td>251</td>
       </tr>
       <tr>
         <td>
           <img src="80_Hungary.png"/>
+        </td>
+        <td>
+          <img src="80_INF_Hungary.png"/>
         </td>
         <td>
           <a href="80_Hungary.png" target="_blank">80</a>
@@ -1677,17 +1918,20 @@
         <td>8</td>
         <td>2</td>
         <td>61</td>
-        <td>377</td>
-        <td>372</td>
-        <td>+00</td>
-        <td>0733,49</td>
-        <td>011413,20</td>
+        <td>378</td>
+        <td>373</td>
+        <td>+06</td>
+        <td>0718,12</td>
+        <td>011528,59</td>
         <td>2020-03-14</td>
         <td>250</td>
       </tr>
       <tr>
         <td>
           <img src="81_Iceland.png"/>
+        </td>
+        <td>
+          <img src="81_INF_Iceland.png"/>
         </td>
         <td>
           <a href="81_Iceland.png" target="_blank">81</a>
@@ -1697,57 +1941,66 @@
         <td>8</td>
         <td>6</td>
         <td>32</td>
-        <td>389</td>
-        <td>384</td>
-        <td>+05</td>
-        <td>0261,74</td>
-        <td>005250,66</td>
+        <td>390</td>
+        <td>385</td>
+        <td>+12</td>
+        <td>0264,97</td>
+        <td>005297,91</td>
         <td>2020-03-04</td>
         <td>248</td>
       </tr>
       <tr>
         <td>
-          <img src="82_Eswatini.png"/>
+          <img src="82_India.png"/>
         </td>
         <td>
-          <a href="82_Eswatini.png" target="_blank">82</a>
+          <img src="82_INF_India.png"/>
+        </td>
+        <td>
+          <a href="82_India.png" target="_blank">82</a>
+        </td>
+        <td>India</td>
+        <td>Asia</td>
+        <td>4</td>
+        <td>2</td>
+        <td>154</td>
+        <td>394</td>
+        <td>389</td>
+        <td>-33</td>
+        <td>0003,77</td>
+        <td>002512,05</td>
+        <td>2020-03-04</td>
+        <td>244</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="83_Eswatini.png"/>
+        </td>
+        <td>
+          <img src="83_INF_Eswatini.png"/>
+        </td>
+        <td>
+          <a href="83_Eswatini.png" target="_blank">83</a>
         </td>
         <td>Eswatini</td>
         <td>Africa</td>
         <td>8</td>
         <td>4</td>
         <td>80</td>
-        <td>342</td>
-        <td>337</td>
-        <td>+39</td>
-        <td>0013,65</td>
-        <td>004030,04</td>
+        <td>343</td>
+        <td>338</td>
+        <td>+45</td>
+        <td>0021,34</td>
+        <td>004038,41</td>
         <td>2020-04-25</td>
         <td>243</td>
       </tr>
       <tr>
         <td>
-          <img src="83_India.png"/>
-        </td>
-        <td>
-          <a href="83_India.png" target="_blank">83</a>
-        </td>
-        <td>India</td>
-        <td>Asia</td>
-        <td>4</td>
-        <td>3</td>
-        <td>154</td>
-        <td>394</td>
-        <td>389</td>
-        <td>-35</td>
-        <td>0003,78</td>
-        <td>002511,40</td>
-        <td>2020-03-04</td>
-        <td>243</td>
-      </tr>
-      <tr>
-        <td>
           <img src="84_Laos.png"/>
+        </td>
+        <td>
+          <img src="84_INF_Laos.png"/>
         </td>
         <td>
           <a href="84_Laos.png" target="_blank">84</a>
@@ -1757,17 +2010,20 @@
         <td>8</td>
         <td>3</td>
         <td>33</td>
-        <td>134</td>
-        <td>129</td>
-        <td>-30</td>
-        <td>0127,60</td>
-        <td>001016,55</td>
+        <td>135</td>
+        <td>130</td>
+        <td>-24</td>
+        <td>0128,83</td>
+        <td>001036,20</td>
         <td>2020-11-23</td>
         <td>239</td>
       </tr>
       <tr>
         <td>
           <img src="85_Uruguay.png"/>
+        </td>
+        <td>
+          <img src="85_INF_Uruguay.png"/>
         </td>
         <td>
           <a href="85_Uruguay.png" target="_blank">85</a>
@@ -1777,17 +2033,20 @@
         <td>8</td>
         <td>4</td>
         <td>29</td>
-        <td>388</td>
-        <td>383</td>
-        <td>-26</td>
-        <td>0042,69</td>
-        <td>011514,23</td>
+        <td>389</td>
+        <td>384</td>
+        <td>-07</td>
+        <td>0044,08</td>
+        <td>011522,03</td>
         <td>2020-03-16</td>
         <td>237</td>
       </tr>
       <tr>
         <td>
           <img src="86_Kyrgyzstan.png"/>
+        </td>
+        <td>
+          <img src="86_INF_Kyrgyzstan.png"/>
         </td>
         <td>
           <a href="86_Kyrgyzstan.png" target="_blank">86</a>
@@ -1799,15 +2058,18 @@
         <td>17</td>
         <td>384</td>
         <td>379</td>
-        <td>-09</td>
-        <td>0006,12</td>
-        <td>002820,00</td>
+        <td>-29</td>
+        <td>0006,28</td>
+        <td>002820,82</td>
         <td>2020-03-24</td>
-        <td>233</td>
+        <td>234</td>
       </tr>
       <tr>
         <td>
           <img src="87_Grenada.png"/>
+        </td>
+        <td>
+          <img src="87_INF_Grenada.png"/>
         </td>
         <td>
           <a href="87_Grenada.png" target="_blank">87</a>
@@ -1817,17 +2079,20 @@
         <td>7</td>
         <td>1</td>
         <td>36</td>
-        <td>123</td>
-        <td>118</td>
-        <td>+22</td>
-        <td>0016,90</td>
-        <td>005245,60</td>
+        <td>124</td>
+        <td>119</td>
+        <td>+12</td>
+        <td>0016,01</td>
+        <td>005246,49</td>
         <td>2020-12-13</td>
         <td>230</td>
       </tr>
       <tr>
         <td>
           <img src="88_Slovakia.png"/>
+        </td>
+        <td>
+          <img src="88_INF_Slovakia.png"/>
         </td>
         <td>
           <a href="88_Slovakia.png" target="_blank">88</a>
@@ -1837,17 +2102,20 @@
         <td>8</td>
         <td>2</td>
         <td>21</td>
-        <td>404</td>
-        <td>399</td>
-        <td>-40</td>
-        <td>1419,57</td>
-        <td>021435,70</td>
+        <td>405</td>
+        <td>400</td>
+        <td>-21</td>
+        <td>1403,01</td>
+        <td>021662,15</td>
         <td>2020-03-13</td>
         <td>224</td>
       </tr>
       <tr>
         <td>
           <img src="89_Malaysia.png"/>
+        </td>
+        <td>
+          <img src="89_INF_Malaysia.png"/>
         </td>
         <td>
           <a href="89_Malaysia.png" target="_blank">89</a>
@@ -1857,17 +2125,20 @@
         <td>8</td>
         <td>3</td>
         <td>64</td>
-        <td>416</td>
-        <td>411</td>
-        <td>-39</td>
-        <td>0110,60</td>
-        <td>008155,92</td>
+        <td>417</td>
+        <td>412</td>
+        <td>-24</td>
+        <td>0109,62</td>
+        <td>008172,77</td>
         <td>2020-03-04</td>
         <td>221</td>
       </tr>
       <tr>
         <td>
           <img src="90_Nepal.png"/>
+        </td>
+        <td>
+          <img src="90_INF_Nepal.png"/>
         </td>
         <td>
           <a href="90_Nepal.png" target="_blank">90</a>
@@ -1879,15 +2150,18 @@
         <td>37</td>
         <td>376</td>
         <td>371</td>
-        <td>-26</td>
-        <td>0005,74</td>
-        <td>002829,63</td>
+        <td>+05</td>
+        <td>0005,67</td>
+        <td>002830,61</td>
         <td>2020-04-17</td>
-        <td>217</td>
+        <td>218</td>
       </tr>
       <tr>
         <td>
           <img src="91_Tunisia.png"/>
+        </td>
+        <td>
+          <img src="91_INF_Tunisia.png"/>
         </td>
         <td>
           <a href="91_Tunisia.png" target="_blank">91</a>
@@ -1899,15 +2173,18 @@
         <td>40</td>
         <td>413</td>
         <td>408</td>
-        <td>+14</td>
-        <td>0008,17</td>
-        <td>006084,56</td>
+        <td>+04</td>
+        <td>0008,55</td>
+        <td>006085,73</td>
         <td>2020-03-19</td>
-        <td>209</td>
+        <td>210</td>
       </tr>
       <tr>
         <td>
           <img src="92_Paraguay.png"/>
+        </td>
+        <td>
+          <img src="92_INF_Paraguay.png"/>
         </td>
         <td>
           <a href="92_Paraguay.png" target="_blank">92</a>
@@ -1919,15 +2196,18 @@
         <td>59</td>
         <td>412</td>
         <td>407</td>
-        <td>+16</td>
-        <td>0009,40</td>
-        <td>006508,63</td>
+        <td>+09</td>
+        <td>0009,39</td>
+        <td>006509,51</td>
         <td>2020-03-24</td>
-        <td>205</td>
+        <td>206</td>
       </tr>
       <tr>
         <td>
           <img src="93_Venezuela.png"/>
+        </td>
+        <td>
+          <img src="93_INF_Venezuela.png"/>
         </td>
         <td>
           <a href="93_Venezuela.png" target="_blank">93</a>
@@ -1937,17 +2217,20 @@
         <td>8</td>
         <td>6</td>
         <td>86</td>
-        <td>423</td>
-        <td>418</td>
-        <td>-31</td>
-        <td>0018,56</td>
-        <td>001515,88</td>
+        <td>424</td>
+        <td>419</td>
+        <td>-22</td>
+        <td>0020,09</td>
+        <td>001520,16</td>
         <td>2020-03-17</td>
         <td>201</td>
       </tr>
       <tr>
         <td>
           <img src="94_Latvia.png"/>
+        </td>
+        <td>
+          <img src="94_INF_Latvia.png"/>
         </td>
         <td>
           <a href="94_Latvia.png" target="_blank">94</a>
@@ -1957,17 +2240,20 @@
         <td>8</td>
         <td>3</td>
         <td>216</td>
-        <td>434</td>
-        <td>429</td>
-        <td>-33</td>
-        <td>0312,19</td>
-        <td>013419,56</td>
+        <td>435</td>
+        <td>430</td>
+        <td>-10</td>
+        <td>0299,07</td>
+        <td>013474,11</td>
         <td>2020-03-17</td>
         <td>190</td>
       </tr>
       <tr>
         <td>
           <img src="95_Jordan.png"/>
+        </td>
+        <td>
+          <img src="95_INF_Jordan.png"/>
         </td>
         <td>
           <a href="95_Jordan.png" target="_blank">95</a>
@@ -1977,60 +2263,23 @@
         <td>8</td>
         <td>4</td>
         <td>70</td>
-        <td>443</td>
-        <td>438</td>
-        <td>+16</td>
-        <td>0296,80</td>
-        <td>009368,51</td>
+        <td>444</td>
+        <td>439</td>
+        <td>+26</td>
+        <td>0301,83</td>
+        <td>009418,07</td>
         <td>2020-03-17</td>
         <td>181</td>
       </tr>
       <tr>
         <td>
-          <img src="96_Cyprus.png"/>
+          <img src="96_Philippines.png"/>
         </td>
         <td>
-          <a href="96_Cyprus.png" target="_blank">96</a>
-        </td>
-        <td>Cyprus</td>
-        <td>Asia</td>
-        <td>8</td>
-        <td>5</td>
-        <td>37</td>
-        <td>445</td>
-        <td>440</td>
-        <td>+23</td>
-        <td>0285,76</td>
-        <td>011154,24</td>
-        <td>2020-03-17</td>
-        <td>179</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="97_Lithuania.png"/>
+          <img src="96_INF_Philippines.png"/>
         </td>
         <td>
-          <a href="97_Lithuania.png" target="_blank">97</a>
-        </td>
-        <td>Lithuania</td>
-        <td>Europe</td>
-        <td>8</td>
-        <td>4</td>
-        <td>101</td>
-        <td>442</td>
-        <td>437</td>
-        <td>-32</td>
-        <td>0439,63</td>
-        <td>017229,85</td>
-        <td>2020-03-20</td>
-        <td>179</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="98_Philippines.png"/>
-        </td>
-        <td>
-          <a href="98_Philippines.png" target="_blank">98</a>
+          <a href="96_Philippines.png" target="_blank">96</a>
         </td>
         <td>Philippines</td>
         <td>Asia</td>
@@ -2039,15 +2288,64 @@
         <td>97</td>
         <td>453</td>
         <td>448</td>
-        <td>-40</td>
-        <td>0004,50</td>
-        <td>002592,17</td>
+        <td>-44</td>
+        <td>0004,01</td>
+        <td>002592,45</td>
         <td>2020-03-09</td>
+        <td>180</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="97_Cyprus.png"/>
+        </td>
+        <td>
+          <img src="97_INF_Cyprus.png"/>
+        </td>
+        <td>
+          <a href="97_Cyprus.png" target="_blank">97</a>
+        </td>
+        <td>Cyprus</td>
+        <td>Asia</td>
+        <td>8</td>
+        <td>5</td>
+        <td>37</td>
+        <td>446</td>
+        <td>441</td>
+        <td>+22</td>
+        <td>0290,57</td>
+        <td>011195,05</td>
+        <td>2020-03-17</td>
+        <td>179</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="98_Lithuania.png"/>
+        </td>
+        <td>
+          <img src="98_INF_Lithuania.png"/>
+        </td>
+        <td>
+          <a href="98_Lithuania.png" target="_blank">98</a>
+        </td>
+        <td>Lithuania</td>
+        <td>Europe</td>
+        <td>8</td>
+        <td>4</td>
+        <td>101</td>
+        <td>443</td>
+        <td>438</td>
+        <td>-16</td>
+        <td>0431,28</td>
+        <td>017300,96</td>
+        <td>2020-03-20</td>
         <td>179</td>
       </tr>
       <tr>
         <td>
           <img src="99_Azerbaijan.png"/>
+        </td>
+        <td>
+          <img src="99_INF_Azerbaijan.png"/>
         </td>
         <td>
           <a href="99_Azerbaijan.png" target="_blank">99</a>
@@ -2057,17 +2355,20 @@
         <td>8</td>
         <td>4</td>
         <td>70</td>
-        <td>444</td>
-        <td>439</td>
-        <td>-30</td>
-        <td>0114,77</td>
-        <td>005813,10</td>
+        <td>445</td>
+        <td>440</td>
+        <td>-17</td>
+        <td>0113,49</td>
+        <td>005830,84</td>
         <td>2020-03-19</td>
         <td>178</td>
       </tr>
       <tr>
         <td>
           <img src="100_Albania.png"/>
+        </td>
+        <td>
+          <img src="100_INF_Albania.png"/>
         </td>
         <td>
           <a href="100_Albania.png" target="_blank">100</a>
@@ -2077,40 +2378,23 @@
         <td>8</td>
         <td>4</td>
         <td>19</td>
-        <td>456</td>
-        <td>451</td>
-        <td>-44</td>
-        <td>0096,51</td>
-        <td>006946,35</td>
+        <td>457</td>
+        <td>452</td>
+        <td>-46</td>
+        <td>0083,27</td>
+        <td>006954,27</td>
         <td>2020-03-12</td>
         <td>173</td>
       </tr>
       <tr>
         <td>
-          <img src="101_Dominica.png"/>
+          <img src="101_Kosovo.png"/>
         </td>
         <td>
-          <a href="101_Dominica.png" target="_blank">101</a>
-        </td>
-        <td>Dominica</td>
-        <td>Americas</td>
-        <td>8</td>
-        <td>3</td>
-        <td>7</td>
-        <td>189</td>
-        <td>184</td>
-        <td>+00</td>
-        <td>0536,48</td>
-        <td>008378,04</td>
-        <td>2021-01-06</td>
-        <td>171</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="102_Kosovo.png"/>
+          <img src="101_INF_Kosovo.png"/>
         </td>
         <td>
-          <a href="102_Kosovo.png" target="_blank">102</a>
+          <a href="101_Kosovo.png" target="_blank">101</a>
         </td>
         <td>Kosovo</td>
         <td>Europe</td>
@@ -2119,15 +2403,41 @@
         <td>73</td>
         <td>446</td>
         <td>441</td>
-        <td>-19</td>
-        <td>0003,16</td>
-        <td>008478,47</td>
+        <td>-27</td>
+        <td>0003,26</td>
+        <td>008478,89</td>
         <td>2020-03-24</td>
+        <td>172</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="102_Dominica.png"/>
+        </td>
+        <td>
+          <img src="102_INF_Dominica.png"/>
+        </td>
+        <td>
+          <a href="102_Dominica.png" target="_blank">102</a>
+        </td>
+        <td>Dominica</td>
+        <td>Americas</td>
+        <td>8</td>
+        <td>3</td>
+        <td>7</td>
+        <td>190</td>
+        <td>185</td>
+        <td>-24</td>
+        <td>0536,48</td>
+        <td>008378,04</td>
+        <td>2021-01-06</td>
         <td>171</td>
       </tr>
       <tr>
         <td>
           <img src="103_Georgia.png"/>
+        </td>
+        <td>
+          <img src="103_INF_Georgia.png"/>
         </td>
         <td>
           <a href="103_Georgia.png" target="_blank">103</a>
@@ -2137,17 +2447,20 @@
         <td>8</td>
         <td>4</td>
         <td>73</td>
-        <td>445</td>
-        <td>440</td>
-        <td>-01</td>
-        <td>0663,07</td>
-        <td>021190,44</td>
+        <td>446</td>
+        <td>441</td>
+        <td>-02</td>
+        <td>0694,59</td>
+        <td>021302,18</td>
         <td>2020-03-30</td>
         <td>166</td>
       </tr>
       <tr>
         <td>
           <img src="104_Germany.png"/>
+        </td>
+        <td>
+          <img src="104_INF_Germany.png"/>
         </td>
         <td>
           <a href="104_Germany.png" target="_blank">104</a>
@@ -2157,17 +2470,20 @@
         <td>8</td>
         <td>4</td>
         <td>43</td>
-        <td>483</td>
-        <td>478</td>
-        <td>-24</td>
-        <td>0486,01</td>
-        <td>007074,58</td>
+        <td>484</td>
+        <td>479</td>
+        <td>+03</td>
+        <td>0481,72</td>
+        <td>007164,70</td>
         <td>2020-02-26</td>
         <td>161</td>
       </tr>
       <tr>
         <td>
           <img src="105_Greece.png"/>
+        </td>
+        <td>
+          <img src="105_INF_Greece.png"/>
         </td>
         <td>
           <a href="105_Greece.png" target="_blank">105</a>
@@ -2177,17 +2493,20 @@
         <td>8</td>
         <td>3</td>
         <td>55</td>
-        <td>477</td>
-        <td>472</td>
-        <td>-02</td>
-        <td>0425,07</td>
-        <td>008999,33</td>
+        <td>478</td>
+        <td>473</td>
+        <td>+06</td>
+        <td>0416,31</td>
+        <td>009058,68</td>
         <td>2020-03-05</td>
         <td>159</td>
       </tr>
       <tr>
         <td>
           <img src="106_Finland.png"/>
+        </td>
+        <td>
+          <img src="106_INF_Finland.png"/>
         </td>
         <td>
           <a href="106_Finland.png" target="_blank">106</a>
@@ -2197,17 +2516,20 @@
         <td>8</td>
         <td>5</td>
         <td>68</td>
-        <td>474</td>
-        <td>469</td>
-        <td>+08</td>
-        <td>0144,63</td>
-        <td>003367,72</td>
+        <td>475</td>
+        <td>470</td>
+        <td>+11</td>
+        <td>0154,79</td>
+        <td>003396,06</td>
         <td>2020-03-10</td>
         <td>157</td>
       </tr>
       <tr>
         <td>
           <img src="107_Seychelles.png"/>
+        </td>
+        <td>
+          <img src="107_INF_Seychelles.png"/>
         </td>
         <td>
           <a href="107_Seychelles.png" target="_blank">107</a>
@@ -2217,17 +2539,20 @@
         <td>8</td>
         <td>5</td>
         <td>7</td>
-        <td>375</td>
-        <td>370</td>
-        <td>-04</td>
-        <td>0406,21</td>
-        <td>023840,41</td>
+        <td>376</td>
+        <td>371</td>
+        <td>+33</td>
+        <td>0346,15</td>
+        <td>023962,58</td>
         <td>2020-06-28</td>
         <td>149</td>
       </tr>
       <tr>
         <td>
           <img src="108_Slovenia.png"/>
+        </td>
+        <td>
+          <img src="108_INF_Slovenia.png"/>
         </td>
         <td>
           <a href="108_Slovenia.png" target="_blank">108</a>
@@ -2237,17 +2562,20 @@
         <td>8</td>
         <td>4</td>
         <td>nan</td>
-        <td>482</td>
-        <td>477</td>
-        <td>-32</td>
-        <td>0741,79</td>
-        <td>020246,37</td>
+        <td>483</td>
+        <td>478</td>
+        <td>-15</td>
+        <td>0699,37</td>
+        <td>020355,28</td>
         <td>2020-03-10</td>
         <td>149</td>
       </tr>
       <tr>
         <td>
           <img src="109_Austria.png"/>
+        </td>
+        <td>
+          <img src="109_INF_Austria.png"/>
         </td>
         <td>
           <a href="109_Austria.png" target="_blank">109</a>
@@ -2257,17 +2585,20 @@
         <td>8</td>
         <td>4</td>
         <td>29</td>
-        <td>488</td>
-        <td>483</td>
-        <td>-44</td>
-        <td>0889,98</td>
-        <td>012894,53</td>
+        <td>489</td>
+        <td>484</td>
+        <td>-39</td>
+        <td>0834,42</td>
+        <td>013009,77</td>
         <td>2020-03-05</td>
         <td>148</td>
       </tr>
       <tr>
         <td>
           <img src="110_Norway.png"/>
+        </td>
+        <td>
+          <img src="110_INF_Norway.png"/>
         </td>
         <td>
           <a href="110_Norway.png" target="_blank">110</a>
@@ -2277,17 +2608,20 @@
         <td>8</td>
         <td>6</td>
         <td>49</td>
-        <td>496</td>
-        <td>491</td>
-        <td>-12</td>
-        <td>0388,37</td>
-        <td>004948,48</td>
+        <td>497</td>
+        <td>492</td>
+        <td>+27</td>
+        <td>0373,68</td>
+        <td>005018,32</td>
         <td>2020-03-04</td>
         <td>141</td>
       </tr>
       <tr>
         <td>
           <img src="111_Serbia.png"/>
+        </td>
+        <td>
+          <img src="111_INF_Serbia.png"/>
         </td>
         <td>
           <a href="111_Serbia.png" target="_blank">111</a>
@@ -2297,17 +2631,20 @@
         <td>8</td>
         <td>5</td>
         <td>37</td>
-        <td>487</td>
-        <td>482</td>
-        <td>-30</td>
-        <td>0182,79</td>
-        <td>014350,45</td>
+        <td>488</td>
+        <td>483</td>
+        <td>-19</td>
+        <td>0177,64</td>
+        <td>014375,38</td>
         <td>2020-03-13</td>
         <td>141</td>
       </tr>
       <tr>
         <td>
           <img src="112_Malta.png"/>
+        </td>
+        <td>
+          <img src="112_INF_Malta.png"/>
         </td>
         <td>
           <a href="112_Malta.png" target="_blank">112</a>
@@ -2317,17 +2654,20 @@
         <td>8</td>
         <td>6</td>
         <td>37</td>
-        <td>483</td>
-        <td>478</td>
-        <td>+23</td>
-        <td>0134,37</td>
-        <td>008935,94</td>
+        <td>484</td>
+        <td>479</td>
+        <td>+30</td>
+        <td>0136,41</td>
+        <td>008957,46</td>
         <td>2020-03-19</td>
         <td>139</td>
       </tr>
       <tr>
         <td>
           <img src="113_Guyana.png"/>
+        </td>
+        <td>
+          <img src="113_INF_Guyana.png"/>
         </td>
         <td>
           <a href="113_Guyana.png" target="_blank">113</a>
@@ -2337,17 +2677,20 @@
         <td>8</td>
         <td>5</td>
         <td>72</td>
-        <td>481</td>
-        <td>476</td>
-        <td>-35</td>
-        <td>0054,59</td>
-        <td>004819,88</td>
+        <td>482</td>
+        <td>477</td>
+        <td>-08</td>
+        <td>0054,34</td>
+        <td>004829,67</td>
         <td>2020-03-22</td>
         <td>138</td>
       </tr>
       <tr>
         <td>
           <img src="114_Lebanon.png"/>
+        </td>
+        <td>
+          <img src="114_INF_Lebanon.png"/>
         </td>
         <td>
           <a href="114_Lebanon.png" target="_blank">114</a>
@@ -2357,17 +2700,20 @@
         <td>8</td>
         <td>4</td>
         <td>39</td>
-        <td>495</td>
-        <td>490</td>
-        <td>-11</td>
-        <td>0149,51</td>
-        <td>009817,19</td>
+        <td>496</td>
+        <td>491</td>
+        <td>+10</td>
+        <td>0150,47</td>
+        <td>009844,89</td>
         <td>2020-03-08</td>
         <td>138</td>
       </tr>
       <tr>
         <td>
           <img src="115_Jamaica.png"/>
+        </td>
+        <td>
+          <img src="115_INF_Jamaica.png"/>
         </td>
         <td>
           <a href="115_Jamaica.png" target="_blank">115</a>
@@ -2377,11 +2723,11 @@
         <td>8</td>
         <td>4</td>
         <td>23</td>
-        <td>458</td>
-        <td>453</td>
-        <td>-16</td>
-        <td>0013,32</td>
-        <td>003084,23</td>
+        <td>459</td>
+        <td>454</td>
+        <td>-32</td>
+        <td>0012,40</td>
+        <td>003085,01</td>
         <td>2020-04-15</td>
         <td>137</td>
       </tr>
@@ -2390,24 +2736,30 @@
           <img src="116_Estonia.png"/>
         </td>
         <td>
+          <img src="116_INF_Estonia.png"/>
+        </td>
+        <td>
           <a href="116_Estonia.png" target="_blank">116</a>
         </td>
         <td>Estonia</td>
         <td>Europe</td>
         <td>8</td>
-        <td>3</td>
+        <td>4</td>
         <td>48</td>
-        <td>492</td>
-        <td>487</td>
-        <td>-18</td>
-        <td>0300,07</td>
-        <td>016781,61</td>
+        <td>493</td>
+        <td>488</td>
+        <td>-07</td>
+        <td>0294,94</td>
+        <td>016825,86</td>
         <td>2020-03-13</td>
         <td>136</td>
       </tr>
       <tr>
         <td>
           <img src="117_Bulgaria.png"/>
+        </td>
+        <td>
+          <img src="117_INF_Bulgaria.png"/>
         </td>
         <td>
           <a href="117_Bulgaria.png" target="_blank">117</a>
@@ -2417,17 +2769,20 @@
         <td>8</td>
         <td>4</td>
         <td>64</td>
-        <td>493</td>
-        <td>488</td>
-        <td>+00</td>
-        <td>0216,62</td>
-        <td>009988,42</td>
+        <td>494</td>
+        <td>489</td>
+        <td>+07</td>
+        <td>0209,96</td>
+        <td>010018,67</td>
         <td>2020-03-13</td>
         <td>135</td>
       </tr>
       <tr>
         <td>
           <img src="118_Romania.png"/>
+        </td>
+        <td>
+          <img src="118_INF_Romania.png"/>
         </td>
         <td>
           <a href="118_Romania.png" target="_blank">118</a>
@@ -2437,17 +2792,20 @@
         <td>8</td>
         <td>3</td>
         <td>210</td>
-        <td>496</td>
-        <td>491</td>
-        <td>-37</td>
-        <td>0065,83</td>
-        <td>009238,91</td>
+        <td>497</td>
+        <td>492</td>
+        <td>-41</td>
+        <td>0057,23</td>
+        <td>009244,84</td>
         <td>2020-03-10</td>
         <td>135</td>
       </tr>
       <tr>
         <td>
           <img src="119_Bosnia_and_Herzegovina.png"/>
+        </td>
+        <td>
+          <img src="119_INF_Bosnia_and_Herzegovina.png"/>
         </td>
         <td>
           <a href="119_Bosnia_and_Herzegovina.png" target="_blank">119</a>
@@ -2457,17 +2815,20 @@
         <td>8</td>
         <td>5</td>
         <td>13</td>
-        <td>493</td>
-        <td>488</td>
-        <td>+05</td>
-        <td>0139,03</td>
-        <td>008373,86</td>
+        <td>494</td>
+        <td>489</td>
+        <td>+17</td>
+        <td>0141,32</td>
+        <td>008401,26</td>
         <td>2020-03-18</td>
         <td>130</td>
       </tr>
       <tr>
         <td>
           <img src="120_Canada.png"/>
+        </td>
+        <td>
+          <img src="120_INF_Canada.png"/>
         </td>
         <td>
           <a href="120_Canada.png" target="_blank">120</a>
@@ -2477,17 +2838,20 @@
         <td>8</td>
         <td>4</td>
         <td>73</td>
-        <td>505</td>
-        <td>500</td>
-        <td>-11</td>
-        <td>0053,68</td>
-        <td>004780,03</td>
+        <td>506</td>
+        <td>501</td>
+        <td>-10</td>
+        <td>0055,14</td>
+        <td>004788,60</td>
         <td>2020-03-06</td>
         <td>130</td>
       </tr>
       <tr>
         <td>
           <img src="121_Czechia.png"/>
+        </td>
+        <td>
+          <img src="121_INF_Czechia.png"/>
         </td>
         <td>
           <a href="121_Czechia.png" target="_blank">121</a>
@@ -2497,17 +2861,20 @@
         <td>8</td>
         <td>2</td>
         <td>37</td>
-        <td>505</td>
-        <td>500</td>
-        <td>-27</td>
-        <td>1232,82</td>
-        <td>020084,44</td>
+        <td>506</td>
+        <td>501</td>
+        <td>-12</td>
+        <td>1196,32</td>
+        <td>020290,35</td>
         <td>2020-03-08</td>
         <td>128</td>
       </tr>
       <tr>
         <td>
           <img src="122_Italy.png"/>
+        </td>
+        <td>
+          <img src="122_INF_Italy.png"/>
         </td>
         <td>
           <a href="122_Italy.png" target="_blank">122</a>
@@ -2517,17 +2884,20 @@
         <td>8</td>
         <td>5</td>
         <td>59</td>
-        <td>521</td>
-        <td>516</td>
-        <td>-22</td>
-        <td>0142,88</td>
-        <td>008314,48</td>
+        <td>522</td>
+        <td>517</td>
+        <td>-04</td>
+        <td>0147,22</td>
+        <td>008339,40</td>
         <td>2020-02-21</td>
         <td>128</td>
       </tr>
       <tr>
         <td>
           <img src="123_Kuwait.png"/>
+        </td>
+        <td>
+          <img src="123_INF_Kuwait.png"/>
         </td>
         <td>
           <a href="123_Kuwait.png" target="_blank">123</a>
@@ -2539,15 +2909,18 @@
         <td>204</td>
         <td>525</td>
         <td>520</td>
-        <td>+17</td>
+        <td>+10</td>
         <td>0004,35</td>
-        <td>009709,04</td>
+        <td>009709,54</td>
         <td>2020-02-25</td>
-        <td>120</td>
+        <td>121</td>
       </tr>
       <tr>
         <td>
           <img src="124_Oman.png"/>
+        </td>
+        <td>
+          <img src="124_INF_Oman.png"/>
         </td>
         <td>
           <a href="124_Oman.png" target="_blank">124</a>
@@ -2559,15 +2932,18 @@
         <td>66</td>
         <td>505</td>
         <td>500</td>
-        <td>+26</td>
-        <td>0000,89</td>
-        <td>005996,42</td>
+        <td>+33</td>
+        <td>0001,14</td>
+        <td>005996,77</td>
         <td>2020-03-18</td>
-        <td>118</td>
+        <td>119</td>
       </tr>
       <tr>
         <td>
           <img src="125_South_Africa.png"/>
+        </td>
+        <td>
+          <img src="125_INF_South_Africa.png"/>
         </td>
         <td>
           <a href="125_South_Africa.png" target="_blank">125</a>
@@ -2577,17 +2953,20 @@
         <td>8</td>
         <td>3</td>
         <td>64</td>
-        <td>512</td>
-        <td>507</td>
-        <td>+31</td>
-        <td>0032,61</td>
-        <td>005017,43</td>
+        <td>513</td>
+        <td>508</td>
+        <td>+34</td>
+        <td>0044,93</td>
+        <td>005031,90</td>
         <td>2020-03-14</td>
         <td>115</td>
       </tr>
       <tr>
         <td>
           <img src="126_Israel.png"/>
+        </td>
+        <td>
+          <img src="126_INF_Israel.png"/>
         </td>
         <td>
           <a href="126_Israel.png" target="_blank">126</a>
@@ -2597,17 +2976,20 @@
         <td>8</td>
         <td>5</td>
         <td>38</td>
-        <td>523</td>
-        <td>518</td>
-        <td>+20</td>
-        <td>0042,57</td>
-        <td>015574,25</td>
+        <td>524</td>
+        <td>519</td>
+        <td>+10</td>
+        <td>0041,98</td>
+        <td>015579,39</td>
         <td>2020-03-06</td>
         <td>112</td>
       </tr>
       <tr>
         <td>
           <img src="127_France.png"/>
+        </td>
+        <td>
+          <img src="127_INF_France.png"/>
         </td>
         <td>
           <a href="127_France.png" target="_blank">127</a>
@@ -2617,17 +2999,20 @@
         <td>8</td>
         <td>5</td>
         <td>11</td>
-        <td>535</td>
-        <td>530</td>
-        <td>+04</td>
-        <td>0344,95</td>
-        <td>011922,17</td>
+        <td>536</td>
+        <td>531</td>
+        <td>+13</td>
+        <td>0372,29</td>
+        <td>011999,52</td>
         <td>2020-02-27</td>
         <td>108</td>
       </tr>
       <tr>
         <td>
           <img src="128_North_Macedonia.png"/>
+        </td>
+        <td>
+          <img src="128_INF_North_Macedonia.png"/>
         </td>
         <td>
           <a href="128_North_Macedonia.png" target="_blank">128</a>
@@ -2637,17 +3022,20 @@
         <td>8</td>
         <td>5</td>
         <td>32</td>
-        <td>514</td>
-        <td>509</td>
-        <td>-24</td>
-        <td>0130,56</td>
-        <td>010347,79</td>
+        <td>515</td>
+        <td>510</td>
+        <td>-16</td>
+        <td>0129,07</td>
+        <td>010367,47</td>
         <td>2020-03-19</td>
         <td>108</td>
       </tr>
       <tr>
         <td>
           <img src="129_Switzerland.png"/>
+        </td>
+        <td>
+          <img src="129_INF_Switzerland.png"/>
         </td>
         <td>
           <a href="129_Switzerland.png" target="_blank">129</a>
@@ -2657,17 +3045,20 @@
         <td>8</td>
         <td>5</td>
         <td>39</td>
-        <td>535</td>
-        <td>530</td>
-        <td>+08</td>
-        <td>0607,48</td>
-        <td>011741,35</td>
+        <td>536</td>
+        <td>531</td>
+        <td>+16</td>
+        <td>0629,22</td>
+        <td>011862,47</td>
         <td>2020-02-29</td>
         <td>106</td>
       </tr>
       <tr>
         <td>
           <img src="130_Monaco.png"/>
+        </td>
+        <td>
+          <img src="130_INF_Monaco.png"/>
         </td>
         <td>
           <a href="130_Monaco.png" target="_blank">130</a>
@@ -2677,17 +3068,20 @@
         <td>8</td>
         <td>4</td>
         <td>28</td>
-        <td>520</td>
-        <td>515</td>
-        <td>-17</td>
-        <td>0321,54</td>
-        <td>009539,12</td>
+        <td>521</td>
+        <td>516</td>
+        <td>-06</td>
+        <td>0472,11</td>
+        <td>009689,69</td>
         <td>2020-03-22</td>
         <td>105</td>
       </tr>
       <tr>
         <td>
           <img src="131_El_Salvador.png"/>
+        </td>
+        <td>
+          <img src="131_INF_El_Salvador.png"/>
         </td>
         <td>
           <a href="131_El_Salvador.png" target="_blank">131</a>
@@ -2697,9 +3091,9 @@
         <td>8</td>
         <td>6</td>
         <td>94</td>
-        <td>502</td>
-        <td>497</td>
-        <td>+12</td>
+        <td>503</td>
+        <td>498</td>
+        <td>-12</td>
         <td>0027,19</td>
         <td>001848,92</td>
         <td>2020-04-04</td>
@@ -2710,6 +3104,9 @@
           <img src="132_Croatia.png"/>
         </td>
         <td>
+          <img src="132_INF_Croatia.png"/>
+        </td>
+        <td>
           <a href="132_Croatia.png" target="_blank">132</a>
         </td>
         <td>Croatia</td>
@@ -2717,17 +3114,20 @@
         <td>8</td>
         <td>2</td>
         <td>88</td>
-        <td>526</td>
-        <td>521</td>
-        <td>-38</td>
-        <td>0768,14</td>
-        <td>014797,40</td>
+        <td>527</td>
+        <td>522</td>
+        <td>-20</td>
+        <td>0757,75</td>
+        <td>014936,30</td>
         <td>2020-03-13</td>
         <td>102</td>
       </tr>
       <tr>
         <td>
           <img src="133_Libya.png"/>
+        </td>
+        <td>
+          <img src="133_INF_Libya.png"/>
         </td>
         <td>
           <a href="133_Libya.png" target="_blank">133</a>
@@ -2737,17 +3137,20 @@
         <td>8</td>
         <td>4</td>
         <td>171</td>
-        <td>495</td>
-        <td>490</td>
-        <td>-01</td>
-        <td>0053,25</td>
-        <td>005438,35</td>
+        <td>496</td>
+        <td>491</td>
+        <td>-02</td>
+        <td>0054,80</td>
+        <td>005446,72</td>
         <td>2020-04-15</td>
         <td>100</td>
       </tr>
       <tr>
         <td>
           <img src="134_Bolivia.png"/>
+        </td>
+        <td>
+          <img src="134_INF_Bolivia.png"/>
         </td>
         <td>
           <a href="134_Bolivia.png" target="_blank">134</a>
@@ -2757,17 +3160,20 @@
         <td>8</td>
         <td>5</td>
         <td>130</td>
-        <td>516</td>
-        <td>511</td>
-        <td>-07</td>
-        <td>0052,67</td>
-        <td>004618,14</td>
+        <td>517</td>
+        <td>512</td>
+        <td>-21</td>
+        <td>0062,02</td>
+        <td>004627,49</td>
         <td>2020-03-26</td>
         <td>99</td>
       </tr>
       <tr>
         <td>
           <img src="135_Kazakhstan.png"/>
+        </td>
+        <td>
+          <img src="135_INF_Kazakhstan.png"/>
         </td>
         <td>
           <a href="135_Kazakhstan.png" target="_blank">135</a>
@@ -2777,17 +3183,20 @@
         <td>8</td>
         <td>5</td>
         <td>51</td>
-        <td>526</td>
-        <td>521</td>
-        <td>-39</td>
-        <td>0034,29</td>
-        <td>005632,35</td>
+        <td>527</td>
+        <td>522</td>
+        <td>-34</td>
+        <td>0032,79</td>
+        <td>005636,66</td>
         <td>2020-03-17</td>
         <td>98</td>
       </tr>
       <tr>
         <td>
           <img src="136_Costa_Rica.png"/>
+        </td>
+        <td>
+          <img src="136_INF_Costa_Rica.png"/>
         </td>
         <td>
           <a href="136_Costa_Rica.png" target="_blank">136</a>
@@ -2797,17 +3206,20 @@
         <td>8</td>
         <td>7</td>
         <td>7</td>
-        <td>527</td>
-        <td>522</td>
-        <td>-03</td>
-        <td>0014,16</td>
-        <td>011148,07</td>
+        <td>528</td>
+        <td>523</td>
+        <td>+11</td>
+        <td>0013,04</td>
+        <td>011150,43</td>
         <td>2020-03-19</td>
         <td>95</td>
       </tr>
       <tr>
         <td>
           <img src="137_West_Bank_and_Gaza.png"/>
+        </td>
+        <td>
+          <img src="137_INF_West_Bank_and_Gaza.png"/>
         </td>
         <td>
           <a href="137_West_Bank_and_Gaza.png" target="_blank">137</a>
@@ -2817,17 +3229,20 @@
         <td>8</td>
         <td>4</td>
         <td>28</td>
-        <td>520</td>
-        <td>515</td>
-        <td>-08</td>
-        <td>0029,83</td>
-        <td>010126,35</td>
+        <td>521</td>
+        <td>516</td>
+        <td>+23</td>
+        <td>0040,57</td>
+        <td>010142,77</td>
         <td>2020-03-26</td>
         <td>95</td>
       </tr>
       <tr>
         <td>
           <img src="138_Netherlands.png"/>
+        </td>
+        <td>
+          <img src="138_INF_Netherlands.png"/>
         </td>
         <td>
           <a href="138_Netherlands.png" target="_blank">138</a>
@@ -2837,17 +3252,20 @@
         <td>8</td>
         <td>4</td>
         <td>55</td>
-        <td>544</td>
-        <td>539</td>
-        <td>-25</td>
-        <td>0906,78</td>
-        <td>015673,57</td>
+        <td>545</td>
+        <td>540</td>
+        <td>-29</td>
+        <td>0876,49</td>
+        <td>015782,13</td>
         <td>2020-03-04</td>
         <td>93</td>
       </tr>
       <tr>
         <td>
           <img src="139_Denmark.png"/>
+        </td>
+        <td>
+          <img src="139_INF_Denmark.png"/>
         </td>
         <td>
           <a href="139_Denmark.png" target="_blank">139</a>
@@ -2857,17 +3275,20 @@
         <td>8</td>
         <td>6</td>
         <td>56</td>
-        <td>544</td>
-        <td>539</td>
-        <td>-07</td>
-        <td>0517,37</td>
-        <td>008508,53</td>
+        <td>545</td>
+        <td>540</td>
+        <td>+24</td>
+        <td>0529,41</td>
+        <td>008598,06</td>
         <td>2020-03-06</td>
         <td>91</td>
       </tr>
       <tr>
         <td>
           <img src="140_Iraq.png"/>
+        </td>
+        <td>
+          <img src="140_INF_Iraq.png"/>
         </td>
         <td>
           <a href="140_Iraq.png" target="_blank">140</a>
@@ -2877,17 +3298,20 @@
         <td>8</td>
         <td>3</td>
         <td>175</td>
-        <td>543</td>
-        <td>538</td>
-        <td>-11</td>
-        <td>0012,56</td>
-        <td>005198,82</td>
+        <td>544</td>
+        <td>539</td>
+        <td>+14</td>
+        <td>0012,84</td>
+        <td>005201,04</td>
         <td>2020-03-07</td>
         <td>91</td>
       </tr>
       <tr>
         <td>
           <img src="141_Honduras.png"/>
+        </td>
+        <td>
+          <img src="141_INF_Honduras.png"/>
         </td>
         <td>
           <a href="141_Honduras.png" target="_blank">141</a>
@@ -2899,15 +3323,18 @@
         <td>89</td>
         <td>532</td>
         <td>527</td>
-        <td>-39</td>
-        <td>0003,36</td>
+        <td>-23</td>
+        <td>0001,49</td>
         <td>003827,62</td>
         <td>2020-03-20</td>
-        <td>89</td>
+        <td>90</td>
       </tr>
       <tr>
         <td>
           <img src="142_Suriname.png"/>
+        </td>
+        <td>
+          <img src="142_INF_Suriname.png"/>
         </td>
         <td>
           <a href="142_Suriname.png" target="_blank">142</a>
@@ -2917,17 +3344,20 @@
         <td>8</td>
         <td>4</td>
         <td>72</td>
-        <td>460</td>
-        <td>455</td>
-        <td>-26</td>
-        <td>0054,14</td>
-        <td>008683,64</td>
+        <td>461</td>
+        <td>456</td>
+        <td>-01</td>
+        <td>0043,21</td>
+        <td>008689,44</td>
         <td>2020-06-01</td>
         <td>88</td>
       </tr>
       <tr>
         <td>
           <img src="143_Ireland.png"/>
+        </td>
+        <td>
+          <img src="143_INF_Ireland.png"/>
         </td>
         <td>
           <a href="143_Ireland.png" target="_blank">143</a>
@@ -2937,17 +3367,20 @@
         <td>8</td>
         <td>4</td>
         <td>45</td>
-        <td>548</td>
-        <td>543</td>
-        <td>+23</td>
-        <td>0646,71</td>
-        <td>011572,46</td>
+        <td>549</td>
+        <td>544</td>
+        <td>-10</td>
+        <td>0644,66</td>
+        <td>011649,39</td>
         <td>2020-03-06</td>
         <td>87</td>
       </tr>
       <tr>
         <td>
           <img src="144_Ukraine.png"/>
+        </td>
+        <td>
+          <img src="144_INF_Ukraine.png"/>
         </td>
         <td>
           <a href="144_Ukraine.png" target="_blank">144</a>
@@ -2957,17 +3390,20 @@
         <td>8</td>
         <td>3</td>
         <td>84</td>
-        <td>534</td>
-        <td>529</td>
-        <td>-39</td>
-        <td>0207,79</td>
-        <td>008237,09</td>
+        <td>535</td>
+        <td>530</td>
+        <td>-33</td>
+        <td>0201,56</td>
+        <td>008265,87</td>
         <td>2020-03-20</td>
         <td>87</td>
       </tr>
       <tr>
         <td>
           <img src="145_Ecuador.png"/>
+        </td>
+        <td>
+          <img src="145_INF_Ecuador.png"/>
         </td>
         <td>
           <a href="145_Ecuador.png" target="_blank">145</a>
@@ -2977,9 +3413,9 @@
         <td>8</td>
         <td>7</td>
         <td>16</td>
-        <td>543</td>
-        <td>538</td>
-        <td>+26</td>
+        <td>544</td>
+        <td>539</td>
+        <td>+14</td>
         <td>0013,86</td>
         <td>002995,70</td>
         <td>2020-03-14</td>
@@ -2990,6 +3426,9 @@
           <img src="146_Montenegro.png"/>
         </td>
         <td>
+          <img src="146_INF_Montenegro.png"/>
+        </td>
+        <td>
           <a href="146_Montenegro.png" target="_blank">146</a>
         </td>
         <td>Montenegro</td>
@@ -2997,17 +3436,20 @@
         <td>8</td>
         <td>6</td>
         <td>29</td>
-        <td>539</td>
-        <td>534</td>
-        <td>-27</td>
-        <td>0320,20</td>
-        <td>025057,88</td>
+        <td>540</td>
+        <td>535</td>
+        <td>-26</td>
+        <td>0305,23</td>
+        <td>025095,29</td>
         <td>2020-03-20</td>
         <td>82</td>
       </tr>
       <tr>
         <td>
           <img src="147_Spain.png"/>
+        </td>
+        <td>
+          <img src="147_INF_Spain.png"/>
         </td>
         <td>
           <a href="147_Spain.png" target="_blank">147</a>
@@ -3017,40 +3459,23 @@
         <td>8</td>
         <td>5</td>
         <td>38</td>
-        <td>563</td>
-        <td>558</td>
-        <td>+11</td>
-        <td>0130,20</td>
-        <td>011046,11</td>
+        <td>564</td>
+        <td>559</td>
+        <td>+14</td>
+        <td>0134,50</td>
+        <td>011068,64</td>
         <td>2020-02-28</td>
         <td>79</td>
       </tr>
       <tr>
         <td>
-          <img src="148_Turkey.png"/>
+          <img src="148_United_Arab_Emirates.png"/>
         </td>
         <td>
-          <a href="148_Turkey.png" target="_blank">148</a>
-        </td>
-        <td>Turkey</td>
-        <td>Asia</td>
-        <td>8</td>
-        <td>4</td>
-        <td>16</td>
-        <td>547</td>
-        <td>542</td>
-        <td>-19</td>
-        <td>0203,21</td>
-        <td>010454,21</td>
-        <td>2020-03-16</td>
-        <td>78</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="149_United_Arab_Emirates.png"/>
+          <img src="148_INF_United_Arab_Emirates.png"/>
         </td>
         <td>
-          <a href="149_United_Arab_Emirates.png" target="_blank">149</a>
+          <a href="148_United_Arab_Emirates.png" target="_blank">148</a>
         </td>
         <td>United_Arab_Emirates</td>
         <td>Asia</td>
@@ -3059,15 +3484,41 @@
         <td>94</td>
         <td>556</td>
         <td>551</td>
-        <td>-39</td>
-        <td>0004,77</td>
-        <td>007521,31</td>
+        <td>-27</td>
+        <td>0004,72</td>
+        <td>007522,00</td>
         <td>2020-03-07</td>
+        <td>79</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="149_Turkey.png"/>
+        </td>
+        <td>
+          <img src="149_INF_Turkey.png"/>
+        </td>
+        <td>
+          <a href="149_Turkey.png" target="_blank">149</a>
+        </td>
+        <td>Turkey</td>
+        <td>Asia</td>
+        <td>8</td>
+        <td>4</td>
+        <td>16</td>
+        <td>548</td>
+        <td>543</td>
+        <td>-09</td>
+        <td>0197,23</td>
+        <td>010481,01</td>
+        <td>2020-03-16</td>
         <td>78</td>
       </tr>
       <tr>
         <td>
           <img src="150_United_Kingdom.png"/>
+        </td>
+        <td>
+          <img src="150_INF_United_Kingdom.png"/>
         </td>
         <td>
           <a href="150_United_Kingdom.png" target="_blank">150</a>
@@ -3077,17 +3528,20 @@
         <td>8</td>
         <td>4</td>
         <td>74</td>
-        <td>565</td>
-        <td>560</td>
-        <td>-25</td>
-        <td>0442,19</td>
-        <td>015167,56</td>
+        <td>566</td>
+        <td>561</td>
+        <td>-12</td>
+        <td>0449,53</td>
+        <td>015238,24</td>
         <td>2020-02-28</td>
         <td>77</td>
       </tr>
       <tr>
         <td>
           <img src="151_Argentina.png"/>
+        </td>
+        <td>
+          <img src="151_INF_Argentina.png"/>
         </td>
         <td>
           <a href="151_Argentina.png" target="_blank">151</a>
@@ -3097,17 +3551,20 @@
         <td>8</td>
         <td>3</td>
         <td>95</td>
-        <td>553</td>
-        <td>548</td>
-        <td>-11</td>
-        <td>0029,07</td>
-        <td>011816,90</td>
+        <td>554</td>
+        <td>549</td>
+        <td>+01</td>
+        <td>0028,29</td>
+        <td>011821,07</td>
         <td>2020-03-13</td>
         <td>75</td>
       </tr>
       <tr>
         <td>
           <img src="152_Botswana.png"/>
+        </td>
+        <td>
+          <img src="152_INF_Botswana.png"/>
         </td>
         <td>
           <a href="152_Botswana.png" target="_blank">152</a>
@@ -3117,9 +3574,9 @@
         <td>8</td>
         <td>6</td>
         <td>7</td>
-        <td>461</td>
-        <td>456</td>
-        <td>-09</td>
+        <td>462</td>
+        <td>457</td>
+        <td>-27</td>
         <td>0017,77</td>
         <td>008330,37</td>
         <td>2020-06-13</td>
@@ -3130,6 +3587,9 @@
           <img src="153_San_Marino.png"/>
         </td>
         <td>
+          <img src="153_INF_San_Marino.png"/>
+        </td>
+        <td>
           <a href="153_San_Marino.png" target="_blank">153</a>
         </td>
         <td>San_Marino</td>
@@ -3137,17 +3597,20 @@
         <td>8</td>
         <td>7</td>
         <td>26</td>
-        <td>566</td>
-        <td>561</td>
-        <td>+13</td>
-        <td>6074,90</td>
-        <td>178089,06</td>
+        <td>567</td>
+        <td>562</td>
+        <td>+28</td>
+        <td>6251,84</td>
+        <td>179416,10</td>
         <td>2020-03-09</td>
         <td>75</td>
       </tr>
       <tr>
         <td>
           <img src="154_Colombia.png"/>
+        </td>
+        <td>
+          <img src="154_INF_Colombia.png"/>
         </td>
         <td>
           <a href="154_Colombia.png" target="_blank">154</a>
@@ -3157,17 +3620,20 @@
         <td>8</td>
         <td>5</td>
         <td>56</td>
-        <td>557</td>
-        <td>552</td>
-        <td>-37</td>
-        <td>0033,31</td>
-        <td>009985,14</td>
+        <td>558</td>
+        <td>553</td>
+        <td>-41</td>
+        <td>0032,62</td>
+        <td>009989,42</td>
         <td>2020-03-15</td>
         <td>69</td>
       </tr>
       <tr>
         <td>
           <img src="155_Namibia.png"/>
+        </td>
+        <td>
+          <img src="155_INF_Namibia.png"/>
         </td>
         <td>
           <a href="155_Namibia.png" target="_blank">155</a>
@@ -3179,15 +3645,18 @@
         <td>57</td>
         <td>461</td>
         <td>456</td>
-        <td>-28</td>
-        <td>0003,24</td>
-        <td>005103,60</td>
+        <td>+23</td>
+        <td>0004,62</td>
+        <td>005105,82</td>
         <td>2020-06-25</td>
-        <td>63</td>
+        <td>64</td>
       </tr>
       <tr>
         <td>
           <img src="156_Mexico.png"/>
+        </td>
+        <td>
+          <img src="156_INF_Mexico.png"/>
         </td>
         <td>
           <a href="156_Mexico.png" target="_blank">156</a>
@@ -3197,17 +3666,20 @@
         <td>8</td>
         <td>5</td>
         <td>88</td>
-        <td>566</td>
-        <td>561</td>
-        <td>-32</td>
-        <td>0015,77</td>
-        <td>003019,35</td>
+        <td>567</td>
+        <td>562</td>
+        <td>-14</td>
+        <td>0018,07</td>
+        <td>003024,52</td>
         <td>2020-03-13</td>
         <td>62</td>
       </tr>
       <tr>
         <td>
           <img src="157_Andorra.png"/>
+        </td>
+        <td>
+          <img src="157_INF_Andorra.png"/>
         </td>
         <td>
           <a href="157_Andorra.png" target="_blank">157</a>
@@ -3217,17 +3689,20 @@
         <td>8</td>
         <td>8</td>
         <td>35</td>
-        <td>564</td>
-        <td>559</td>
-        <td>+15</td>
-        <td>1000,78</td>
-        <td>022158,21</td>
+        <td>565</td>
+        <td>560</td>
+        <td>+28</td>
+        <td>1294,67</td>
+        <td>022560,85</td>
         <td>2020-03-17</td>
         <td>60</td>
       </tr>
       <tr>
         <td>
           <img src="158_Belgium.png"/>
+        </td>
+        <td>
+          <img src="158_INF_Belgium.png"/>
         </td>
         <td>
           <a href="158_Belgium.png" target="_blank">158</a>
@@ -3237,17 +3712,20 @@
         <td>8</td>
         <td>3</td>
         <td>55</td>
-        <td>577</td>
-        <td>572</td>
-        <td>+03</td>
-        <td>1125,78</td>
-        <td>015251,42</td>
+        <td>578</td>
+        <td>573</td>
+        <td>+09</td>
+        <td>1100,39</td>
+        <td>015427,67</td>
         <td>2020-03-04</td>
         <td>60</td>
       </tr>
       <tr>
         <td>
           <img src="159_Guatemala.png"/>
+        </td>
+        <td>
+          <img src="159_INF_Guatemala.png"/>
         </td>
         <td>
           <a href="159_Guatemala.png" target="_blank">159</a>
@@ -3257,17 +3735,20 @@
         <td>8</td>
         <td>7</td>
         <td>77</td>
-        <td>550</td>
-        <td>545</td>
-        <td>-41</td>
-        <td>0017,22</td>
-        <td>003462,82</td>
+        <td>551</td>
+        <td>546</td>
+        <td>-25</td>
+        <td>0015,19</td>
+        <td>003465,36</td>
         <td>2020-04-04</td>
         <td>56</td>
       </tr>
       <tr>
         <td>
           <img src="160_Luxembourg.png"/>
+        </td>
+        <td>
+          <img src="160_INF_Luxembourg.png"/>
         </td>
         <td>
           <a href="160_Luxembourg.png" target="_blank">160</a>
@@ -3277,17 +3758,20 @@
         <td>8</td>
         <td>6</td>
         <td>35</td>
-        <td>573</td>
-        <td>568</td>
-        <td>-07</td>
-        <td>0382,30</td>
-        <td>014295,01</td>
+        <td>574</td>
+        <td>569</td>
+        <td>+14</td>
+        <td>0386,95</td>
+        <td>014388,78</td>
         <td>2020-03-12</td>
         <td>56</td>
       </tr>
       <tr>
         <td>
           <img src="161_Cabo_Verde.png"/>
+        </td>
+        <td>
+          <img src="161_INF_Cabo_Verde.png"/>
         </td>
         <td>
           <a href="161_Cabo_Verde.png" target="_blank">161</a>
@@ -3299,15 +3783,18 @@
         <td>19</td>
         <td>543</td>
         <td>538</td>
-        <td>-23</td>
-        <td>0006,13</td>
-        <td>006916,63</td>
+        <td>+30</td>
+        <td>0008,65</td>
+        <td>006920,78</td>
         <td>2020-04-15</td>
-        <td>52</td>
+        <td>53</td>
       </tr>
       <tr>
         <td>
           <img src="162_Belarus.png"/>
+        </td>
+        <td>
+          <img src="162_INF_Belarus.png"/>
         </td>
         <td>
           <a href="162_Belarus.png" target="_blank">162</a>
@@ -3317,17 +3804,20 @@
         <td>8</td>
         <td>5</td>
         <td>88</td>
-        <td>580</td>
-        <td>575</td>
-        <td>-40</td>
-        <td>0120,06</td>
-        <td>006928,28</td>
+        <td>581</td>
+        <td>576</td>
+        <td>-15</td>
+        <td>0121,07</td>
+        <td>006947,24</td>
         <td>2020-03-13</td>
         <td>48</td>
       </tr>
       <tr>
         <td>
           <img src="163_Belize.png"/>
+        </td>
+        <td>
+          <img src="163_INF_Belize.png"/>
         </td>
         <td>
           <a href="163_Belize.png" target="_blank">163</a>
@@ -3337,40 +3827,23 @@
         <td>8</td>
         <td>3</td>
         <td>14</td>
-        <td>438</td>
-        <td>433</td>
-        <td>+01</td>
-        <td>0143,90</td>
-        <td>007682,27</td>
+        <td>439</td>
+        <td>434</td>
+        <td>+09</td>
+        <td>0138,85</td>
+        <td>007703,98</td>
         <td>2020-08-05</td>
         <td>45</td>
       </tr>
       <tr>
         <td>
-          <img src="164_Brazil.png"/>
+          <img src="164_Fiji.png"/>
         </td>
         <td>
-          <a href="164_Brazil.png" target="_blank">164</a>
-        </td>
-        <td>Brazil</td>
-        <td>Americas</td>
-        <td>8</td>
-        <td>6</td>
-        <td>137</td>
-        <td>585</td>
-        <td>580</td>
-        <td>-39</td>
-        <td>0030,28</td>
-        <td>010409,48</td>
-        <td>2020-03-12</td>
-        <td>44</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="165_Fiji.png"/>
+          <img src="164_INF_Fiji.png"/>
         </td>
         <td>
-          <a href="165_Fiji.png" target="_blank">165</a>
+          <a href="164_Fiji.png" target="_blank">164</a>
         </td>
         <td>Fiji</td>
         <td>Oceania</td>
@@ -3379,15 +3852,41 @@
         <td>70</td>
         <td>175</td>
         <td>170</td>
-        <td>-08</td>
-        <td>0004,25</td>
-        <td>005865,75</td>
+        <td>+22</td>
+        <td>0006,48</td>
+        <td>005868,66</td>
         <td>2021-04-26</td>
+        <td>45</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="165_Brazil.png"/>
+        </td>
+        <td>
+          <img src="165_INF_Brazil.png"/>
+        </td>
+        <td>
+          <a href="165_Brazil.png" target="_blank">165</a>
+        </td>
+        <td>Brazil</td>
+        <td>Americas</td>
+        <td>8</td>
+        <td>6</td>
+        <td>137</td>
+        <td>586</td>
+        <td>581</td>
+        <td>-17</td>
+        <td>0029,57</td>
+        <td>010414,86</td>
+        <td>2020-03-12</td>
         <td>44</td>
       </tr>
       <tr>
         <td>
           <img src="166_Moldova.png"/>
+        </td>
+        <td>
+          <img src="166_INF_Moldova.png"/>
         </td>
         <td>
           <a href="166_Moldova.png" target="_blank">166</a>
@@ -3397,17 +3896,20 @@
         <td>8</td>
         <td>6</td>
         <td>21</td>
-        <td>582</td>
-        <td>577</td>
-        <td>-23</td>
-        <td>0108,35</td>
-        <td>009013,65</td>
+        <td>583</td>
+        <td>578</td>
+        <td>-08</td>
+        <td>0103,37</td>
+        <td>009029,98</td>
         <td>2020-03-15</td>
         <td>44</td>
       </tr>
       <tr>
         <td>
           <img src="167_Iran.png"/>
+        </td>
+        <td>
+          <img src="167_INF_Iran.png"/>
         </td>
         <td>
           <a href="167_Iran.png" target="_blank">167</a>
@@ -3417,17 +3919,20 @@
         <td>8</td>
         <td>4</td>
         <td>27</td>
-        <td>606</td>
-        <td>601</td>
-        <td>-21</td>
-        <td>0035,14</td>
-        <td>007302,53</td>
+        <td>607</td>
+        <td>602</td>
+        <td>-04</td>
+        <td>0034,54</td>
+        <td>007307,68</td>
         <td>2020-02-21</td>
         <td>43</td>
       </tr>
       <tr>
         <td>
           <img src="168_Bahrain.png"/>
+        </td>
+        <td>
+          <img src="168_INF_Bahrain.png"/>
         </td>
         <td>
           <a href="168_Bahrain.png" target="_blank">168</a>
@@ -3437,17 +3942,20 @@
         <td>8</td>
         <td>4</td>
         <td>60</td>
-        <td>603</td>
-        <td>598</td>
-        <td>+27</td>
-        <td>0014,57</td>
-        <td>016444,70</td>
+        <td>604</td>
+        <td>599</td>
+        <td>+26</td>
+        <td>0014,21</td>
+        <td>016446,54</td>
         <td>2020-02-25</td>
         <td>42</td>
       </tr>
       <tr>
         <td>
           <img src="169_Saint_Vincent_and_the_Grenadines.png"/>
+        </td>
+        <td>
+          <img src="169_INF_Saint_Vincent_and_the_Grenadines.png"/>
         </td>
         <td>
           <a href="169_Saint_Vincent_and_the_Grenadines.png" target="_blank">169</a>
@@ -3457,17 +3965,20 @@
         <td>8</td>
         <td>4</td>
         <td>43</td>
-        <td>303</td>
-        <td>298</td>
-        <td>-39</td>
-        <td>0092,50</td>
-        <td>004604,17</td>
+        <td>304</td>
+        <td>299</td>
+        <td>+01</td>
+        <td>0096,67</td>
+        <td>004635,00</td>
         <td>2021-01-06</td>
         <td>38</td>
       </tr>
       <tr>
         <td>
           <img src="170_Russia.png"/>
+        </td>
+        <td>
+          <img src="170_INF_Russia.png"/>
         </td>
         <td>
           <a href="170_Russia.png" target="_blank">170</a>
@@ -3477,17 +3988,20 @@
         <td>8</td>
         <td>3</td>
         <td>85</td>
-        <td>595</td>
-        <td>590</td>
-        <td>-13</td>
-        <td>0157,83</td>
-        <td>006488,84</td>
+        <td>596</td>
+        <td>591</td>
+        <td>-33</td>
+        <td>0157,58</td>
+        <td>006510,90</td>
         <td>2020-03-13</td>
         <td>33</td>
       </tr>
       <tr>
         <td>
           <img src="171_Armenia.png"/>
+        </td>
+        <td>
+          <img src="171_INF_Armenia.png"/>
         </td>
         <td>
           <a href="171_Armenia.png" target="_blank">171</a>
@@ -3497,17 +4011,20 @@
         <td>8</td>
         <td>5</td>
         <td>75</td>
-        <td>598</td>
-        <td>593</td>
-        <td>-38</td>
-        <td>0122,88</td>
-        <td>011428,17</td>
+        <td>599</td>
+        <td>594</td>
+        <td>-26</td>
+        <td>0110,80</td>
+        <td>011445,12</td>
         <td>2020-03-14</td>
         <td>29</td>
       </tr>
       <tr>
         <td>
           <img src="172_Peru.png"/>
+        </td>
+        <td>
+          <img src="172_INF_Peru.png"/>
         </td>
         <td>
           <a href="172_Peru.png" target="_blank">172</a>
@@ -3517,10 +4034,10 @@
         <td>8</td>
         <td>8</td>
         <td>nan</td>
-        <td>601</td>
-        <td>596</td>
-        <td>-30</td>
-        <td>0029,49</td>
+        <td>602</td>
+        <td>597</td>
+        <td>-36</td>
+        <td>0024,76</td>
         <td>006802,18</td>
         <td>2020-03-13</td>
         <td>27</td>
@@ -3530,6 +4047,9 @@
           <img src="173_Sweden.png"/>
         </td>
         <td>
+          <img src="173_INF_Sweden.png"/>
+        </td>
+        <td>
           <a href="173_Sweden.png" target="_blank">173</a>
         </td>
         <td>Sweden</td>
@@ -3537,17 +4057,20 @@
         <td>8</td>
         <td>5</td>
         <td>106</td>
-        <td>611</td>
-        <td>606</td>
-        <td>+11</td>
-        <td>0121,93</td>
-        <td>011945,23</td>
+        <td>612</td>
+        <td>607</td>
+        <td>+18</td>
+        <td>0127,52</td>
+        <td>011971,39</td>
         <td>2020-03-03</td>
         <td>27</td>
       </tr>
       <tr>
         <td>
           <img src="174_Dominican_Republic.png"/>
+        </td>
+        <td>
+          <img src="174_INF_Dominican_Republic.png"/>
         </td>
         <td>
           <a href="174_Dominican_Republic.png" target="_blank">174</a>
@@ -3557,17 +4080,20 @@
         <td>8</td>
         <td>6</td>
         <td>nan</td>
-        <td>600</td>
-        <td>595</td>
-        <td>-36</td>
-        <td>0027,41</td>
-        <td>003761,90</td>
+        <td>601</td>
+        <td>596</td>
+        <td>-41</td>
+        <td>0025,13</td>
+        <td>003763,96</td>
         <td>2020-03-17</td>
         <td>24</td>
       </tr>
       <tr>
         <td>
           <img src="175_Chile.png"/>
+        </td>
+        <td>
+          <img src="175_INF_Chile.png"/>
         </td>
         <td>
           <a href="175_Chile.png" target="_blank">175</a>
@@ -3577,17 +4103,20 @@
         <td>8</td>
         <td>3</td>
         <td>nan</td>
-        <td>609</td>
-        <td>604</td>
-        <td>-31</td>
-        <td>0082,20</td>
-        <td>009237,38</td>
+        <td>610</td>
+        <td>605</td>
+        <td>-48</td>
+        <td>0079,52</td>
+        <td>009245,36</td>
         <td>2020-03-11</td>
         <td>21</td>
       </tr>
       <tr>
         <td>
           <img src="176_US.png"/>
+        </td>
+        <td>
+          <img src="176_INF_US.png"/>
         </td>
         <td>
           <a href="176_US.png" target="_blank">176</a>
@@ -3597,17 +4126,20 @@
         <td>8</td>
         <td>5</td>
         <td>43</td>
-        <td>618</td>
-        <td>613</td>
-        <td>+21</td>
-        <td>0173,45</td>
-        <td>014686,43</td>
+        <td>619</td>
+        <td>614</td>
+        <td>+36</td>
+        <td>0181,38</td>
+        <td>014728,05</td>
         <td>2020-03-02</td>
         <td>21</td>
       </tr>
       <tr>
         <td>
           <img src="177_Saint_Lucia.png"/>
+        </td>
+        <td>
+          <img src="177_INF_Saint_Lucia.png"/>
         </td>
         <td>
           <a href="177_Saint_Lucia.png" target="_blank">177</a>
@@ -3617,17 +4149,20 @@
         <td>8</td>
         <td>4</td>
         <td>41</td>
-        <td>384</td>
-        <td>379</td>
-        <td>+00</td>
-        <td>0049,60</td>
-        <td>007086,09</td>
+        <td>385</td>
+        <td>380</td>
+        <td>+13</td>
+        <td>0049,06</td>
+        <td>007095,36</td>
         <td>2020-11-03</td>
         <td>19</td>
       </tr>
       <tr>
         <td>
           <img src="178_Qatar.png"/>
+        </td>
+        <td>
+          <img src="178_INF_Qatar.png"/>
         </td>
         <td>
           <a href="178_Qatar.png" target="_blank">178</a>
@@ -3637,17 +4172,20 @@
         <td>8</td>
         <td>5</td>
         <td>97</td>
-        <td>614</td>
-        <td>609</td>
+        <td>615</td>
+        <td>610</td>
         <td>+35</td>
-        <td>0037,34</td>
-        <td>008479,75</td>
+        <td>0037,93</td>
+        <td>008485,32</td>
         <td>2020-03-11</td>
         <td>16</td>
       </tr>
       <tr>
         <td>
           <img src="179_Panama.png"/>
+        </td>
+        <td>
+          <img src="179_INF_Panama.png"/>
         </td>
         <td>
           <a href="179_Panama.png" target="_blank">179</a>
@@ -3657,17 +4195,20 @@
         <td>8</td>
         <td>3</td>
         <td>60</td>
-        <td>615</td>
-        <td>610</td>
-        <td>-16</td>
-        <td>0032,53</td>
-        <td>011108,56</td>
+        <td>616</td>
+        <td>611</td>
+        <td>+01</td>
+        <td>0032,06</td>
+        <td>011114,32</td>
         <td>2020-03-13</td>
         <td>13</td>
       </tr>
       <tr>
         <td>
           <img src="180_Portugal.png"/>
+        </td>
+        <td>
+          <img src="180_INF_Portugal.png"/>
         </td>
         <td>
           <a href="180_Portugal.png" target="_blank">180</a>
@@ -3677,17 +4218,20 @@
         <td>8</td>
         <td>4</td>
         <td>38</td>
-        <td>620</td>
-        <td>615</td>
-        <td>-30</td>
-        <td>0205,15</td>
-        <td>011244,70</td>
+        <td>621</td>
+        <td>616</td>
+        <td>+08</td>
+        <td>0213,95</td>
+        <td>011290,48</td>
         <td>2020-03-08</td>
         <td>13</td>
       </tr>
       <tr>
         <td>
           <img src="181_Bahamas.png"/>
+        </td>
+        <td>
+          <img src="181_INF_Bahamas.png"/>
         </td>
         <td>
           <a href="181_Bahamas.png" target="_blank">181</a>
@@ -3697,17 +4241,20 @@
         <td>8</td>
         <td>7</td>
         <td>nan</td>
-        <td>492</td>
-        <td>487</td>
-        <td>+09</td>
-        <td>0032,10</td>
-        <td>005806,96</td>
+        <td>493</td>
+        <td>488</td>
+        <td>+22</td>
+        <td>0027,01</td>
+        <td>005809,77</td>
         <td>2020-07-19</td>
         <td>8</td>
       </tr>
       <tr>
         <td>
           <img src="182_Liechtenstein.png"/>
+        </td>
+        <td>
+          <img src="182_INF_Liechtenstein.png"/>
         </td>
         <td>
           <a href="182_Liechtenstein.png" target="_blank">182</a>
@@ -3717,17 +4264,20 @@
         <td>8</td>
         <td>5</td>
         <td>24</td>
-        <td>478</td>
-        <td>473</td>
-        <td>+15</td>
-        <td>0936,86</td>
-        <td>012276,28</td>
+        <td>479</td>
+        <td>474</td>
+        <td>+28</td>
+        <td>0915,87</td>
+        <td>012452,11</td>
         <td>2020-10-13</td>
         <td>5</td>
       </tr>
       <tr>
         <td>
           <img src="183_Maldives.png"/>
+        </td>
+        <td>
+          <img src="183_INF_Maldives.png"/>
         </td>
         <td>
           <a href="183_Maldives.png" target="_blank">183</a>
@@ -3737,17 +4287,20 @@
         <td>8</td>
         <td>5</td>
         <td>42</td>
-        <td>589</td>
-        <td>584</td>
+        <td>590</td>
+        <td>585</td>
         <td>-02</td>
-        <td>0131,09</td>
-        <td>017017,67</td>
+        <td>0130,72</td>
+        <td>017036,23</td>
         <td>2020-04-19</td>
         <td>2</td>
       </tr>
       <tr>
         <td>
           <img src="184_Saint_Kitts_and_Nevis.png"/>
+        </td>
+        <td>
+          <img src="184_INF_Saint_Kitts_and_Nevis.png"/>
         </td>
         <td>
           <a href="184_Saint_Kitts_and_Nevis.png" target="_blank">184</a>
@@ -3757,9 +4310,9 @@
         <td>8</td>
         <td>2</td>
         <td>17</td>
-        <td>197</td>
-        <td>192</td>
-        <td>+32</td>
+        <td>198</td>
+        <td>193</td>
+        <td>+00</td>
         <td>0022,64</td>
         <td>005256,60</td>
         <td>2021-05-24</td>
