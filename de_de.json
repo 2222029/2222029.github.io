@@ -56,7 +56,7 @@
         "fillHorizontal": "Alle horizontalen Zellen füllen",
         "fillVertical": "Alle vertikalen Zellen füllen"
     },
- /*   "decimal": ",", */
+    "decimal": ",",
     "search": "Suche:",
     "searchBuilder": {
         "add": "Bedingung hinzufügen",
