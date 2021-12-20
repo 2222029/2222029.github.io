@@ -3,7 +3,7 @@
     "info": "_START_ bis _END_ von _TOTAL_ Einträgen",
     "infoEmpty": "Keine Daten vorhanden",
     "infoFiltered": "(gefiltert von _MAX_ Einträgen)",
-    "infoThousands": ".",
+ /+   "infoThousands": ".", */
     "loadingRecords": "Wird geladen ..",
     "processing": "Bitte warten ..",
     "paginate": {
