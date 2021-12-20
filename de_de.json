@@ -131,7 +131,7 @@
         "title": "Aktive Filter: %d",
         "count": "Anzahl"
     },
-    "thousands": ".",
+ /*   "thousands": ".", */
     "zeroRecords": "Keine passenden Einträge gefunden",
     "lengthMenu": "_MENU_ Zeilen anzeigen",
     "datetime": {
