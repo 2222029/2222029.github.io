@@ -13,11 +13,13 @@
       margin-left:10px;
       }
       </style>
+    <link rel="stylesheet" href="style.css"></link>
   </head>
   <body>
     <script type="text/javascript">
                   $(document).ready(function() {
                  $('#countries').DataTable( {
+                   "language": {url: "https://2222029.github.io/de_de.json"},
                    "pageLength": 50,
                    dom: 'Bifrtlp',
                    buttons: [
@@ -56,7 +58,7 @@
       <b>Sortierung nach Anzahl der Tage in denen die w&#246;chentliche Inzidenz seit dem Nachweis von 10 F&#228;llen unter 10 lag (in control).</b>
     </h2>
     <h2>Sortierung anpassen durch Klick auf Spalten&#252;berschriften</h2>
-    <p>Datenstand: <b>2021-12-22 00:00:00</b></p>
+    <p>Datenstand: <b>2021-12-23 00:00:00</b></p>
     <p>Quelle: <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv">Johns Hopkins</a></p>
     <p>Betrachtet sind L&#228;nder mit mindestens 2000 gemeldeten F&#228;llen</p>
     <p>Die besten 10 L&#228;nder lagen im Durchschnitt 5 Tage &#252;ber einer w&#246;chentlichen Inzidenz von 10 Neuerkrankungen je 100.00 Einwohner</p>
@@ -102,11 +104,11 @@
         <td>24</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="37">-08</td>
+        <td data-order="17">-28</td>
         <td>0000,05</td>
         <td>000007,88</td>
         <td>2020-01-23</td>
-        <td>700</td>
+        <td>701</td>
       </tr>
       <tr>
         <td>
@@ -125,11 +127,11 @@
         <td>39</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="68">+23</td>
+        <td data-order="57">+12</td>
         <td>0001,77</td>
         <td>000082,00</td>
         <td>2020-03-16</td>
-        <td>647</td>
+        <td>648</td>
       </tr>
       <tr>
         <td>
@@ -148,11 +150,11 @@
         <td>89</td>
         <td>15</td>
         <td>10</td>
-        <td DATAORDER="16">-29</td>
-        <td>0006,14</td>
-        <td>000370,80</td>
+        <td data-order="15">-30</td>
+        <td>0006,13</td>
+        <td>000371,67</td>
         <td>2020-03-06</td>
-        <td>642</td>
+        <td>643</td>
       </tr>
       <tr>
         <td>
@@ -171,11 +173,11 @@
         <td>122</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="70">+25</td>
-        <td>0005,56</td>
-        <td>000112,86</td>
+        <td data-order="68">+23</td>
+        <td>0005,99</td>
+        <td>000113,80</td>
         <td>2020-03-21</td>
-        <td>642</td>
+        <td>643</td>
       </tr>
       <tr>
         <td>
@@ -194,11 +196,11 @@
         <td>22</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="66">+21</td>
-        <td>0000,25</td>
-        <td>000030,14</td>
+        <td data-order="62">+17</td>
+        <td>0000,24</td>
+        <td>000030,16</td>
         <td>2020-04-01</td>
-        <td>631</td>
+        <td>632</td>
       </tr>
       <tr>
         <td>
@@ -217,11 +219,11 @@
         <td>70</td>
         <td>1</td>
         <td>-4</td>
-        <td DATAORDER="77">+32</td>
-        <td>0000,57</td>
-        <td>000236,57</td>
+        <td data-order="85">+40</td>
+        <td>0000,95</td>
+        <td>000236,96</td>
         <td>2020-04-02</td>
-        <td>629</td>
+        <td>630</td>
       </tr>
       <tr>
         <td>
@@ -240,11 +242,11 @@
         <td>4</td>
         <td>12</td>
         <td>7</td>
-        <td DATAORDER="82">+37</td>
-        <td>0002,44</td>
-        <td>000238,51</td>
+        <td data-order="87">+42</td>
+        <td>0003,67</td>
+        <td>000239,95</td>
         <td>2020-03-23</td>
-        <td>628</td>
+        <td>629</td>
       </tr>
       <tr>
         <td>
@@ -263,11 +265,11 @@
         <td>25</td>
         <td>19</td>
         <td>14</td>
-        <td DATAORDER="37">-08</td>
+        <td data-order="45">+00</td>
         <td>0000,34</td>
-        <td>000070,73</td>
+        <td>000070,79</td>
         <td>2020-03-17</td>
-        <td>627</td>
+        <td>628</td>
       </tr>
       <tr>
         <td>
@@ -282,15 +284,15 @@
         <td>Mali</td>
         <td>Africa</td>
         <td>4</td>
-        <td>5</td>
+        <td>4</td>
         <td>90</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="26">-19</td>
-        <td>0003,47</td>
-        <td>000097,16</td>
+        <td data-order="56">+11</td>
+        <td>0004,07</td>
+        <td>000098,18</td>
         <td>2020-04-09</td>
-        <td>623</td>
+        <td>624</td>
       </tr>
       <tr>
         <td>
@@ -309,11 +311,11 @@
         <td>75</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="22">-23</td>
-        <td>0000,60</td>
-        <td>000146,66</td>
+        <td data-order="70">+25</td>
+        <td>0002,90</td>
+        <td>000148,96</td>
         <td>2020-04-13</td>
-        <td>619</td>
+        <td>620</td>
       </tr>
       <tr>
         <td>
@@ -332,11 +334,11 @@
         <td>89</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="63">+18</td>
-        <td>0002,12</td>
-        <td>000105,51</td>
+        <td data-order="52">+07</td>
+        <td>0002,26</td>
+        <td>000105,66</td>
         <td>2020-04-14</td>
-        <td>618</td>
+        <td>619</td>
       </tr>
       <tr>
         <td>
@@ -355,11 +357,11 @@
         <td>52</td>
         <td>17</td>
         <td>12</td>
-        <td DATAORDER="33">-12</td>
+        <td data-order="22">-23</td>
         <td>0005,45</td>
         <td>000171,74</td>
         <td>2020-03-29</td>
-        <td>617</td>
+        <td>618</td>
       </tr>
       <tr>
         <td>
@@ -378,11 +380,11 @@
         <td>108</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="73">+28</td>
-        <td>0001,75</td>
-        <td>000082,75</td>
+        <td data-order="70">+25</td>
+        <td>0002,22</td>
+        <td>000083,22</td>
         <td>2020-04-17</td>
-        <td>615</td>
+        <td>616</td>
       </tr>
       <tr>
         <td>
@@ -401,11 +403,11 @@
         <td>7</td>
         <td>7</td>
         <td>2</td>
-        <td DATAORDER="45">+00</td>
+        <td data-order="45">+00</td>
         <td>0000,00</td>
         <td>000044,61</td>
         <td>2020-04-13</td>
-        <td>612</td>
+        <td>613</td>
       </tr>
       <tr>
         <td>
@@ -424,11 +426,11 @@
         <td>38</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="45">+00</td>
+        <td data-order="45">+00</td>
         <td>0000,00</td>
         <td>000034,94</td>
         <td>2020-04-30</td>
-        <td>602</td>
+        <td>603</td>
       </tr>
       <tr>
         <td>
@@ -447,11 +449,11 @@
         <td>68</td>
         <td>21</td>
         <td>16</td>
-        <td DATAORDER="61">+16</td>
+        <td data-order="47">+02</td>
         <td>0001,69</td>
         <td>000117,81</td>
         <td>2020-04-09</td>
-        <td>602</td>
+        <td>603</td>
       </tr>
       <tr>
         <td>
@@ -470,11 +472,11 @@
         <td>66</td>
         <td>16</td>
         <td>11</td>
-        <td DATAORDER="28">-17</td>
-        <td>0000,55</td>
-        <td>000228,07</td>
+        <td data-order="59">+14</td>
+        <td>0000,33</td>
+        <td>000228,11</td>
         <td>2020-04-22</td>
-        <td>594</td>
+        <td>595</td>
       </tr>
       <tr>
         <td>
@@ -488,14 +490,14 @@
         </td>
         <td>South_Sudan</td>
         <td>Africa</td>
-        <td>4</td>
+        <td>8</td>
         <td>7</td>
         <td>12</td>
-        <td>10</td>
-        <td>5</td>
-        <td DATAORDER="64">+19</td>
-        <td>0009,25</td>
-        <td>000125,39</td>
+        <td>11</td>
+        <td>6</td>
+        <td data-order="67">+22</td>
+        <td>0010,98</td>
+        <td>000127,83</td>
         <td>2020-04-28</td>
         <td>594</td>
       </tr>
@@ -516,11 +518,11 @@
         <td>72</td>
         <td>0</td>
         <td>-5</td>
-        <td DATAORDER="-1">-46</td>
-        <td>0000,07</td>
-        <td>000034,03</td>
+        <td data-order="4">-41</td>
+        <td>0000,06</td>
+        <td>000034,04</td>
         <td>2020-05-10</td>
-        <td>592</td>
+        <td>593</td>
       </tr>
       <tr>
         <td>
@@ -539,11 +541,11 @@
         <td>57</td>
         <td>14</td>
         <td>9</td>
-        <td DATAORDER="45">+00</td>
+        <td data-order="45">+00</td>
         <td>0000,00</td>
         <td>000184,29</td>
         <td>2020-05-01</td>
-        <td>587</td>
+        <td>588</td>
       </tr>
       <tr>
         <td>
@@ -562,11 +564,11 @@
         <td>34</td>
         <td>47</td>
         <td>42</td>
-        <td DATAORDER="84">+39</td>
-        <td>0004,18</td>
-        <td>000286,56</td>
+        <td data-order="86">+41</td>
+        <td>0005,55</td>
+        <td>000288,12</td>
         <td>2020-03-31</td>
-        <td>585</td>
+        <td>586</td>
       </tr>
       <tr>
         <td>
@@ -585,11 +587,11 @@
         <td>22</td>
         <td>35</td>
         <td>30</td>
-        <td DATAORDER="77">+32</td>
+        <td data-order="68">+23</td>
         <td>0000,23</td>
         <td>000206,84</td>
         <td>2020-04-20</td>
-        <td>577</td>
+        <td>578</td>
       </tr>
       <tr>
         <td>
@@ -608,11 +610,11 @@
         <td>35</td>
         <td>74</td>
         <td>69</td>
-        <td DATAORDER="68">+23</td>
-        <td>0004,34</td>
-        <td>000493,14</td>
+        <td data-order="50">+05</td>
+        <td>0004,53</td>
+        <td>000493,81</td>
         <td>2020-03-14</td>
-        <td>575</td>
+        <td>576</td>
       </tr>
       <tr>
         <td>
@@ -631,11 +633,11 @@
         <td>26</td>
         <td>71</td>
         <td>66</td>
-        <td DATAORDER="28">-17</td>
-        <td>0008,52</td>
-        <td>000283,53</td>
+        <td data-order="63">+18</td>
+        <td>0008,35</td>
+        <td>000285,01</td>
         <td>2020-03-20</td>
-        <td>572</td>
+        <td>573</td>
       </tr>
       <tr>
         <td>
@@ -654,11 +656,11 @@
         <td>7</td>
         <td>64</td>
         <td>59</td>
-        <td DATAORDER="56">+11</td>
-        <td>0008,08</td>
+        <td data-order="57">+12</td>
+        <td>0005,93</td>
         <td>000371,64</td>
         <td>2020-03-29</td>
-        <td>570</td>
+        <td>571</td>
       </tr>
       <tr>
         <td>
@@ -677,11 +679,11 @@
         <td>42</td>
         <td>77</td>
         <td>72</td>
-        <td DATAORDER="85">+40</td>
-        <td>0002,83</td>
-        <td>000410,56</td>
+        <td data-order="71">+26</td>
+        <td>0002,99</td>
+        <td>000410,72</td>
         <td>2020-03-22</td>
-        <td>564</td>
+        <td>565</td>
       </tr>
       <tr>
         <td>
@@ -700,11 +702,11 @@
         <td>62</td>
         <td>41</td>
         <td>36</td>
-        <td DATAORDER="45">+00</td>
+        <td data-order="45">+00</td>
         <td>0000,00</td>
         <td>000248,55</td>
         <td>2020-04-28</td>
-        <td>563</td>
+        <td>564</td>
       </tr>
       <tr>
         <td>
@@ -718,14 +720,14 @@
         </td>
         <td>Ethiopia</td>
         <td>Africa</td>
-        <td>4</td>
+        <td>8</td>
         <td>5</td>
         <td>40</td>
-        <td>33</td>
-        <td>28</td>
-        <td DATAORDER="87">+42</td>
-        <td>0007,44</td>
-        <td>000334,36</td>
+        <td>34</td>
+        <td>29</td>
+        <td data-order="91">+46</td>
+        <td>0010,29</td>
+        <td>000337,68</td>
         <td>2020-05-06</td>
         <td>563</td>
       </tr>
@@ -746,11 +748,11 @@
         <td>11</td>
         <td>87</td>
         <td>82</td>
-        <td DATAORDER="81">+36</td>
-        <td>0000,71</td>
-        <td>000445,79</td>
+        <td data-order="84">+39</td>
+        <td>0000,85</td>
+        <td>000445,99</td>
         <td>2020-03-15</td>
-        <td>561</td>
+        <td>562</td>
       </tr>
       <tr>
         <td>
@@ -769,11 +771,11 @@
         <td>29</td>
         <td>66</td>
         <td>61</td>
-        <td DATAORDER="22">-23</td>
-        <td>0000,31</td>
+        <td data-order="45">+00</td>
+        <td>0000,15</td>
         <td>000329,80</td>
         <td>2020-04-07</td>
-        <td>559</td>
+        <td>560</td>
       </tr>
       <tr>
         <td>
@@ -787,14 +789,14 @@
         </td>
         <td>Togo</td>
         <td>Africa</td>
-        <td>4</td>
+        <td>8</td>
         <td>6</td>
         <td>24</td>
-        <td>69</td>
-        <td>64</td>
-        <td DATAORDER="84">+39</td>
-        <td>0008,08</td>
-        <td>000329,08</td>
+        <td>70</td>
+        <td>65</td>
+        <td data-order="82">+37</td>
+        <td>0011,40</td>
+        <td>000332,68</td>
         <td>2020-04-06</td>
         <td>557</td>
       </tr>
@@ -815,11 +817,11 @@
         <td>68</td>
         <td>86</td>
         <td>81</td>
-        <td DATAORDER="26">-19</td>
-        <td>0000,45</td>
-        <td>000407,41</td>
+        <td data-order="75">+30</td>
+        <td>0000,39</td>
+        <td>000407,50</td>
         <td>2020-03-22</td>
-        <td>555</td>
+        <td>556</td>
       </tr>
       <tr>
         <td>
@@ -838,11 +840,11 @@
         <td>13</td>
         <td>7</td>
         <td>2</td>
-        <td DATAORDER="87">+42</td>
-        <td>0005,01</td>
-        <td>000205,85</td>
+        <td data-order="87">+42</td>
+        <td>0008,31</td>
+        <td>000209,41</td>
         <td>2020-06-10</td>
-        <td>554</td>
+        <td>555</td>
       </tr>
       <tr>
         <td>
@@ -861,11 +863,11 @@
         <td>133</td>
         <td>30</td>
         <td>25</td>
-        <td DATAORDER="68">+23</td>
+        <td data-order="57">+12</td>
         <td>0000,77</td>
         <td>000263,94</td>
         <td>2020-05-19</td>
-        <td>553</td>
+        <td>554</td>
       </tr>
       <tr>
         <td>
@@ -882,11 +884,11 @@
         <td>8</td>
         <td>5</td>
         <td>21</td>
-        <td>40</td>
-        <td>35</td>
-        <td DATAORDER="56">+11</td>
-        <td>0015,79</td>
-        <td>000194,75</td>
+        <td>41</td>
+        <td>36</td>
+        <td data-order="67">+22</td>
+        <td>0018,92</td>
+        <td>000200,24</td>
         <td>2020-05-18</td>
         <td>544</td>
       </tr>
@@ -907,11 +909,11 @@
         <td>38</td>
         <td>42</td>
         <td>37</td>
-        <td DATAORDER="3">-42</td>
-        <td>0002,40</td>
-        <td>000286,68</td>
+        <td data-order="0">-45</td>
+        <td>0002,27</td>
+        <td>000286,96</td>
         <td>2020-05-23</td>
-        <td>537</td>
+        <td>538</td>
       </tr>
       <tr>
         <td>
@@ -930,11 +932,11 @@
         <td>10</td>
         <td>104</td>
         <td>99</td>
-        <td DATAORDER="85">+40</td>
-        <td>0005,54</td>
-        <td>000431,71</td>
+        <td data-order="94">+49</td>
+        <td>0008,55</td>
+        <td>000434,94</td>
         <td>2020-03-24</td>
-        <td>535</td>
+        <td>536</td>
       </tr>
       <tr>
         <td>
@@ -951,11 +953,11 @@
         <td>8</td>
         <td>3</td>
         <td>68</td>
-        <td>78</td>
-        <td>73</td>
-        <td DATAORDER="81">+36</td>
-        <td>0022,84</td>
-        <td>000353,64</td>
+        <td>79</td>
+        <td>74</td>
+        <td data-order="88">+43</td>
+        <td>0026,61</td>
+        <td>000359,91</td>
         <td>2020-04-23</td>
         <td>531</td>
       </tr>
@@ -976,11 +978,11 @@
         <td>17</td>
         <td>32</td>
         <td>27</td>
-        <td DATAORDER="22">-23</td>
-        <td>0003,70</td>
-        <td>000221,05</td>
+        <td data-order="30">-15</td>
+        <td>0003,28</td>
+        <td>000221,39</td>
         <td>2020-06-13</td>
-        <td>526</td>
+        <td>527</td>
       </tr>
       <tr>
         <td>
@@ -997,11 +999,11 @@
         <td>8</td>
         <td>7</td>
         <td>9</td>
-        <td>60</td>
-        <td>55</td>
-        <td DATAORDER="74">+29</td>
-        <td>0043,43</td>
-        <td>000572,03</td>
+        <td>61</td>
+        <td>56</td>
+        <td data-order="80">+35</td>
+        <td>0061,68</td>
+        <td>000591,78</td>
         <td>2020-05-20</td>
         <td>522</td>
       </tr>
@@ -1020,11 +1022,11 @@
         <td>8</td>
         <td>4</td>
         <td>59</td>
-        <td>115</td>
-        <td>110</td>
-        <td DATAORDER="82">+37</td>
-        <td>0024,82</td>
-        <td>000506,15</td>
+        <td>116</td>
+        <td>111</td>
+        <td data-order="83">+38</td>
+        <td>0030,06</td>
+        <td>000513,15</td>
         <td>2020-04-01</td>
         <td>516</td>
       </tr>
@@ -1043,11 +1045,11 @@
         <td>8</td>
         <td>3</td>
         <td>24</td>
-        <td>152</td>
-        <td>147</td>
-        <td DATAORDER="84">+39</td>
-        <td>0134,01</td>
-        <td>001073,39</td>
+        <td>153</td>
+        <td>148</td>
+        <td data-order="92">+47</td>
+        <td>0151,37</td>
+        <td>001105,70</td>
         <td>2020-02-29</td>
         <td>511</td>
       </tr>
@@ -1066,11 +1068,11 @@
         <td>8</td>
         <td>2</td>
         <td>23</td>
-        <td>142</td>
-        <td>137</td>
-        <td DATAORDER="57">+12</td>
-        <td>0012,37</td>
-        <td>003533,02</td>
+        <td>143</td>
+        <td>138</td>
+        <td data-order="34">-11</td>
+        <td>0012,14</td>
+        <td>003533,70</td>
         <td>2020-03-11</td>
         <td>510</td>
       </tr>
@@ -1089,11 +1091,11 @@
         <td>8</td>
         <td>5</td>
         <td>27</td>
-        <td>131</td>
-        <td>126</td>
-        <td DATAORDER="88">+43</td>
-        <td>0014,04</td>
-        <td>000797,10</td>
+        <td>132</td>
+        <td>127</td>
+        <td data-order="92">+47</td>
+        <td>0016,61</td>
+        <td>000800,77</td>
         <td>2020-03-23</td>
         <td>509</td>
       </tr>
@@ -1114,11 +1116,11 @@
         <td>78</td>
         <td>150</td>
         <td>145</td>
-        <td DATAORDER="55">+10</td>
-        <td>0001,00</td>
-        <td>000587,48</td>
+        <td data-order="52">+07</td>
+        <td>0001,02</td>
+        <td>000587,62</td>
         <td>2020-03-09</td>
-        <td>504</td>
+        <td>505</td>
       </tr>
       <tr>
         <td>
@@ -1135,11 +1137,11 @@
         <td>7</td>
         <td>1</td>
         <td>76</td>
-        <td>165</td>
-        <td>160</td>
-        <td DATAORDER="16">-29</td>
-        <td>0132,94</td>
-        <td>001634,76</td>
+        <td>166</td>
+        <td>161</td>
+        <td data-order="78">+33</td>
+        <td>0114,73</td>
+        <td>001651,62</td>
         <td>2020-03-08</td>
         <td>490</td>
       </tr>
@@ -1160,11 +1162,11 @@
         <td>18</td>
         <td>156</td>
         <td>151</td>
-        <td DATAORDER="12">-33</td>
-        <td>0003,78</td>
-        <td>000592,07</td>
+        <td data-order="31">-14</td>
+        <td>0003,69</td>
+        <td>000592,63</td>
         <td>2020-03-20</td>
-        <td>487</td>
+        <td>488</td>
       </tr>
       <tr>
         <td>
@@ -1181,11 +1183,11 @@
         <td>8</td>
         <td>3</td>
         <td>67</td>
-        <td>122</td>
-        <td>117</td>
-        <td DATAORDER="70">+25</td>
-        <td>0030,15</td>
-        <td>000530,66</td>
+        <td>123</td>
+        <td>118</td>
+        <td data-order="80">+35</td>
+        <td>0034,05</td>
+        <td>000538,53</td>
         <td>2020-04-24</td>
         <td>486</td>
       </tr>
@@ -1206,11 +1208,11 @@
         <td>25</td>
         <td>100</td>
         <td>95</td>
-        <td DATAORDER="36">-09</td>
+        <td data-order="17">-28</td>
         <td>0000,91</td>
         <td>000345,38</td>
         <td>2020-05-31</td>
-        <td>471</td>
+        <td>472</td>
       </tr>
       <tr>
         <td>
@@ -1227,11 +1229,11 @@
         <td>8</td>
         <td>5</td>
         <td>18</td>
-        <td>201</td>
-        <td>196</td>
-        <td DATAORDER="33">-12</td>
-        <td>0089,47</td>
-        <td>001150,94</td>
+        <td>202</td>
+        <td>197</td>
+        <td data-order="46">+01</td>
+        <td>0087,12</td>
+        <td>001163,10</td>
         <td>2020-02-20</td>
         <td>471</td>
       </tr>
@@ -1252,11 +1254,11 @@
         <td>nan</td>
         <td>186</td>
         <td>181</td>
-        <td DATAORDER="8">-37</td>
-        <td>0000,24</td>
-        <td>000722,38</td>
+        <td data-order="8">-37</td>
+        <td>0000,22</td>
+        <td>000722,41</td>
         <td>2020-03-17</td>
-        <td>460</td>
+        <td>461</td>
       </tr>
       <tr>
         <td>
@@ -1273,10 +1275,10 @@
         <td>8</td>
         <td>5</td>
         <td>24</td>
-        <td>191</td>
-        <td>186</td>
-        <td DATAORDER="17">-28</td>
-        <td>0019,74</td>
+        <td>192</td>
+        <td>187</td>
+        <td data-order="7">-38</td>
+        <td>0016,12</td>
         <td>001810,68</td>
         <td>2020-03-22</td>
         <td>450</td>
@@ -1298,11 +1300,11 @@
         <td>27</td>
         <td>186</td>
         <td>181</td>
-        <td DATAORDER="68">+23</td>
-        <td>0002,03</td>
-        <td>001375,19</td>
+        <td data-order="73">+28</td>
+        <td>0002,94</td>
+        <td>001376,10</td>
         <td>2020-03-31</td>
-        <td>446</td>
+        <td>447</td>
       </tr>
       <tr>
         <td>
@@ -1321,11 +1323,11 @@
         <td>42</td>
         <td>85</td>
         <td>80</td>
-        <td DATAORDER="63">+18</td>
-        <td>0001,37</td>
-        <td>000419,55</td>
+        <td data-order="60">+15</td>
+        <td>0001,75</td>
+        <td>000419,93</td>
         <td>2020-07-16</td>
-        <td>440</td>
+        <td>441</td>
       </tr>
       <tr>
         <td>
@@ -1344,11 +1346,11 @@
         <td>30</td>
         <td>184</td>
         <td>179</td>
-        <td DATAORDER="22">-23</td>
-        <td>0000,07</td>
-        <td>000977,64</td>
+        <td data-order="72">+27</td>
+        <td>0000,43</td>
+        <td>000978,00</td>
         <td>2020-04-14</td>
-        <td>434</td>
+        <td>435</td>
       </tr>
       <tr>
         <td>
@@ -1367,11 +1369,11 @@
         <td>43</td>
         <td>244</td>
         <td>239</td>
-        <td DATAORDER="67">+22</td>
-        <td>0000,95</td>
-        <td>001366,68</td>
+        <td data-order="77">+32</td>
+        <td>0001,01</td>
+        <td>001366,88</td>
         <td>2020-02-14</td>
-        <td>434</td>
+        <td>435</td>
       </tr>
       <tr>
         <td>
@@ -1388,11 +1390,11 @@
         <td>8</td>
         <td>4</td>
         <td>60</td>
-        <td>145</td>
-        <td>140</td>
-        <td DATAORDER="23">-22</td>
-        <td>0146,54</td>
-        <td>001345,67</td>
+        <td>146</td>
+        <td>141</td>
+        <td data-order="25">-20</td>
+        <td>0130,16</td>
+        <td>001358,77</td>
         <td>2020-05-27</td>
         <td>430</td>
       </tr>
@@ -1411,11 +1413,11 @@
         <td>8</td>
         <td>3</td>
         <td>65</td>
-        <td>173</td>
-        <td>168</td>
-        <td DATAORDER="77">+32</td>
-        <td>0052,55</td>
-        <td>001214,23</td>
+        <td>174</td>
+        <td>169</td>
+        <td data-order="84">+39</td>
+        <td>0066,33</td>
+        <td>001232,72</td>
         <td>2020-05-02</td>
         <td>427</td>
       </tr>
@@ -1436,11 +1438,11 @@
         <td>229</td>
         <td>210</td>
         <td>205</td>
-        <td DATAORDER="75">+30</td>
-        <td>0001,02</td>
-        <td>000962,55</td>
+        <td data-order="87">+42</td>
+        <td>0001,10</td>
+        <td>000962,78</td>
         <td>2020-04-05</td>
-        <td>417</td>
+        <td>418</td>
       </tr>
       <tr>
         <td>
@@ -1459,11 +1461,11 @@
         <td>10</td>
         <td>200</td>
         <td>195</td>
-        <td DATAORDER="17">-28</td>
+        <td data-order="5">-40</td>
         <td>0000,23</td>
         <td>001510,30</td>
         <td>2020-04-16</td>
-        <td>416</td>
+        <td>417</td>
       </tr>
       <tr>
         <td>
@@ -1482,11 +1484,11 @@
         <td>40</td>
         <td>112</td>
         <td>107</td>
-        <td DATAORDER="54">+09</td>
-        <td>0000,83</td>
-        <td>000404,42</td>
+        <td data-order="49">+04</td>
+        <td>0001,04</td>
+        <td>000404,63</td>
         <td>2020-07-26</td>
-        <td>403</td>
+        <td>404</td>
       </tr>
       <tr>
         <td>
@@ -1503,11 +1505,11 @@
         <td>8</td>
         <td>4</td>
         <td>18</td>
-        <td>252</td>
-        <td>247</td>
-        <td DATAORDER="29">-16</td>
-        <td>0029,79</td>
-        <td>003152,10</td>
+        <td>253</td>
+        <td>248</td>
+        <td data-order="71">+26</td>
+        <td>0023,66</td>
+        <td>003156,32</td>
         <td>2020-03-12</td>
         <td>399</td>
       </tr>
@@ -1528,11 +1530,11 @@
         <td>57</td>
         <td>189</td>
         <td>184</td>
-        <td DATAORDER="83">+38</td>
-        <td>0006,81</td>
-        <td>000870,31</td>
+        <td data-order="85">+40</td>
+        <td>0007,44</td>
+        <td>000871,80</td>
         <td>2020-05-16</td>
-        <td>397</td>
+        <td>398</td>
       </tr>
       <tr>
         <td>
@@ -1549,10 +1551,10 @@
         <td>8</td>
         <td>4</td>
         <td>13</td>
-        <td>140</td>
-        <td>135</td>
-        <td DATAORDER="22">-23</td>
-        <td>0118,10</td>
+        <td>141</td>
+        <td>136</td>
+        <td data-order="12">-33</td>
+        <td>0098,23</td>
         <td>001215,82</td>
         <td>2020-07-05</td>
         <td>396</td>
@@ -1574,11 +1576,11 @@
         <td>137</td>
         <td>234</td>
         <td>229</td>
-        <td DATAORDER="45">+00</td>
-        <td>0002,46</td>
-        <td>000973,27</td>
+        <td data-order="71">+26</td>
+        <td>0002,58</td>
+        <td>000973,78</td>
         <td>2020-04-11</td>
-        <td>387</td>
+        <td>388</td>
       </tr>
       <tr>
         <td>
@@ -1595,11 +1597,11 @@
         <td>8</td>
         <td>4</td>
         <td>71</td>
-        <td>275</td>
-        <td>270</td>
-        <td DATAORDER="24">-21</td>
-        <td>0036,00</td>
-        <td>004737,55</td>
+        <td>276</td>
+        <td>271</td>
+        <td data-order="39">-06</td>
+        <td>0035,44</td>
+        <td>004743,06</td>
         <td>2020-03-06</td>
         <td>382</td>
       </tr>
@@ -1620,11 +1622,11 @@
         <td>8</td>
         <td>226</td>
         <td>221</td>
-        <td DATAORDER="39">-06</td>
-        <td>0001,83</td>
-        <td>001706,39</td>
+        <td data-order="83">+38</td>
+        <td>0002,74</td>
+        <td>001708,22</td>
         <td>2020-05-05</td>
-        <td>371</td>
+        <td>372</td>
       </tr>
       <tr>
         <td>
@@ -1641,11 +1643,11 @@
         <td>8</td>
         <td>3</td>
         <td>81</td>
-        <td>277</td>
-        <td>272</td>
-        <td DATAORDER="30">-15</td>
-        <td>0097,76</td>
-        <td>001226,01</td>
+        <td>278</td>
+        <td>273</td>
+        <td data-order="65">+20</td>
+        <td>0121,53</td>
+        <td>001276,31</td>
         <td>2020-03-19</td>
         <td>367</td>
       </tr>
@@ -1666,11 +1668,11 @@
         <td>136</td>
         <td>308</td>
         <td>303</td>
-        <td DATAORDER="90">+45</td>
-        <td>0002,90</td>
-        <td>001589,16</td>
+        <td data-order="91">+46</td>
+        <td>0003,48</td>
+        <td>001589,99</td>
         <td>2020-03-12</td>
-        <td>343</td>
+        <td>344</td>
       </tr>
       <tr>
         <td>
@@ -1689,11 +1691,11 @@
         <td>153</td>
         <td>312</td>
         <td>307</td>
-        <td DATAORDER="75">+30</td>
-        <td>0004,73</td>
-        <td>002590,18</td>
+        <td data-order="83">+38</td>
+        <td>0005,46</td>
+        <td>002591,47</td>
         <td>2020-03-14</td>
-        <td>337</td>
+        <td>338</td>
       </tr>
       <tr>
         <td>
@@ -1710,10 +1712,10 @@
         <td>8</td>
         <td>3</td>
         <td>30</td>
-        <td>292</td>
-        <td>287</td>
-        <td DATAORDER="46">+01</td>
-        <td>0058,21</td>
+        <td>293</td>
+        <td>288</td>
+        <td data-order="31">-14</td>
+        <td>0049,49</td>
         <td>011871,35</td>
         <td>2020-04-14</td>
         <td>326</td>
@@ -1735,11 +1737,11 @@
         <td>103</td>
         <td>340</td>
         <td>335</td>
-        <td DATAORDER="20">-25</td>
-        <td>0000,52</td>
-        <td>001561,22</td>
+        <td data-order="10">-35</td>
+        <td>0000,49</td>
+        <td>001561,27</td>
         <td>2020-03-09</td>
-        <td>314</td>
+        <td>315</td>
       </tr>
       <tr>
         <td>
@@ -1756,11 +1758,11 @@
         <td>8</td>
         <td>2</td>
         <td>49</td>
-        <td>321</td>
-        <td>316</td>
-        <td DATAORDER="49">+04</td>
-        <td>0097,81</td>
-        <td>009504,88</td>
+        <td>322</td>
+        <td>317</td>
+        <td data-order="74">+29</td>
+        <td>0144,45</td>
+        <td>009566,84</td>
         <td>2020-04-02</td>
         <td>309</td>
       </tr>
@@ -1781,11 +1783,11 @@
         <td>116</td>
         <td>339</td>
         <td>334</td>
-        <td DATAORDER="46">+01</td>
-        <td>0004,45</td>
-        <td>008512,69</td>
+        <td data-order="67">+22</td>
+        <td>0004,60</td>
+        <td>008513,48</td>
         <td>2020-03-22</td>
-        <td>302</td>
+        <td>303</td>
       </tr>
       <tr>
         <td>
@@ -1802,9 +1804,9 @@
         <td>8</td>
         <td>4</td>
         <td>105</td>
-        <td>333</td>
-        <td>328</td>
-        <td DATAORDER="76">+31</td>
+        <td>334</td>
+        <td>329</td>
+        <td data-order="58">+13</td>
         <td>0016,17</td>
         <td>001717,65</td>
         <td>2020-04-09</td>
@@ -1825,11 +1827,11 @@
         <td>8</td>
         <td>3</td>
         <td>7</td>
-        <td>273</td>
-        <td>268</td>
-        <td DATAORDER="32">-13</td>
-        <td>0028,64</td>
-        <td>004301,17</td>
+        <td>274</td>
+        <td>269</td>
+        <td data-order="41">-04</td>
+        <td>0038,87</td>
+        <td>004312,43</td>
         <td>2020-06-25</td>
         <td>276</td>
       </tr>
@@ -1850,11 +1852,11 @@
         <td>154</td>
         <td>394</td>
         <td>389</td>
-        <td DATAORDER="54">+09</td>
-        <td>0003,44</td>
-        <td>002524,33</td>
+        <td data-order="56">+11</td>
+        <td>0003,38</td>
+        <td>002524,82</td>
         <td>2020-03-04</td>
-        <td>265</td>
+        <td>266</td>
       </tr>
       <tr>
         <td>
@@ -1871,11 +1873,11 @@
         <td>8</td>
         <td>5</td>
         <td>67</td>
-        <td>380</td>
-        <td>375</td>
-        <td DATAORDER="27">-18</td>
-        <td>0320,97</td>
-        <td>006224,32</td>
+        <td>381</td>
+        <td>376</td>
+        <td data-order="40">-05</td>
+        <td>0346,78</td>
+        <td>006290,67</td>
         <td>2020-03-21</td>
         <td>262</td>
       </tr>
@@ -1896,11 +1898,11 @@
         <td>17</td>
         <td>384</td>
         <td>379</td>
-        <td DATAORDER="74">+29</td>
-        <td>0004,63</td>
+        <td data-order="48">+03</td>
+        <td>0004,03</td>
         <td>002835,46</td>
         <td>2020-03-24</td>
-        <td>255</td>
+        <td>256</td>
       </tr>
       <tr>
         <td>
@@ -1917,11 +1919,11 @@
         <td>8</td>
         <td>3</td>
         <td>nan</td>
-        <td>396</td>
-        <td>391</td>
-        <td DATAORDER="15">-30</td>
-        <td>0314,15</td>
-        <td>010567,40</td>
+        <td>397</td>
+        <td>392</td>
+        <td data-order="30">-15</td>
+        <td>0301,08</td>
+        <td>010612,70</td>
         <td>2020-03-12</td>
         <td>255</td>
       </tr>
@@ -1940,11 +1942,11 @@
         <td>8</td>
         <td>4</td>
         <td>23</td>
-        <td>396</td>
-        <td>391</td>
-        <td DATAORDER="24">-21</td>
-        <td>0021,64</td>
-        <td>002718,34</td>
+        <td>397</td>
+        <td>392</td>
+        <td data-order="23">-22</td>
+        <td>0020,68</td>
+        <td>002720,93</td>
         <td>2020-03-16</td>
         <td>251</td>
       </tr>
@@ -1963,11 +1965,11 @@
         <td>8</td>
         <td>2</td>
         <td>61</td>
-        <td>399</td>
-        <td>394</td>
-        <td DATAORDER="43">-02</td>
-        <td>0266,15</td>
-        <td>012764,82</td>
+        <td>400</td>
+        <td>395</td>
+        <td data-order="50">+05</td>
+        <td>0248,44</td>
+        <td>012801,92</td>
         <td>2020-03-14</td>
         <td>250</td>
       </tr>
@@ -1986,11 +1988,11 @@
         <td>8</td>
         <td>5</td>
         <td>32</td>
-        <td>411</td>
-        <td>406</td>
-        <td DATAORDER="71">+26</td>
-        <td>0506,46</td>
-        <td>006334,31</td>
+        <td>412</td>
+        <td>407</td>
+        <td data-order="78">+33</td>
+        <td>0599,48</td>
+        <td>006481,02</td>
         <td>2020-03-04</td>
         <td>248</td>
       </tr>
@@ -2009,11 +2011,11 @@
         <td>8</td>
         <td>4</td>
         <td>80</td>
-        <td>364</td>
-        <td>359</td>
-        <td DATAORDER="24">-21</td>
-        <td>0577,87</td>
-        <td>005432,29</td>
+        <td>365</td>
+        <td>360</td>
+        <td data-order="32">-13</td>
+        <td>0483,54</td>
+        <td>005479,80</td>
         <td>2020-04-25</td>
         <td>243</td>
       </tr>
@@ -2032,46 +2034,23 @@
         <td>7</td>
         <td>1</td>
         <td>36</td>
-        <td>133</td>
-        <td>128</td>
-        <td DATAORDER="73">+28</td>
-        <td>0016,01</td>
-        <td>005277,62</td>
+        <td>134</td>
+        <td>129</td>
+        <td data-order="84">+39</td>
+        <td>0029,35</td>
+        <td>005290,97</td>
         <td>2020-12-13</td>
         <td>242</td>
       </tr>
       <tr>
         <td>
-          <img src="86_Laos.png"/>
+          <img src="86_Nepal.png"/>
         </td>
         <td>
-          <img src="86_INF_Laos.png"/>
+          <img src="86_INF_Nepal.png"/>
         </td>
         <td>
-          <a href="86_Laos.png" target="_blank">86</a>
-        </td>
-        <td>Laos</td>
-        <td>Asia</td>
-        <td>8</td>
-        <td>3</td>
-        <td>33</td>
-        <td>156</td>
-        <td>151</td>
-        <td DATAORDER="19">-26</td>
-        <td>0121,37</td>
-        <td>001404,31</td>
-        <td>2020-11-23</td>
-        <td>239</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="87_Nepal.png"/>
-        </td>
-        <td>
-          <img src="87_INF_Nepal.png"/>
-        </td>
-        <td>
-          <a href="87_Nepal.png" target="_blank">87</a>
+          <a href="86_Nepal.png" target="_blank">86</a>
         </td>
         <td>Nepal</td>
         <td>Asia</td>
@@ -2080,10 +2059,33 @@
         <td>37</td>
         <td>376</td>
         <td>371</td>
-        <td DATAORDER="62">+17</td>
-        <td>0004,85</td>
-        <td>002847,05</td>
+        <td data-order="58">+13</td>
+        <td>0005,13</td>
+        <td>002847,88</td>
         <td>2020-04-17</td>
+        <td>240</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="87_Laos.png"/>
+        </td>
+        <td>
+          <img src="87_INF_Laos.png"/>
+        </td>
+        <td>
+          <a href="87_Laos.png" target="_blank">87</a>
+        </td>
+        <td>Laos</td>
+        <td>Asia</td>
+        <td>8</td>
+        <td>3</td>
+        <td>33</td>
+        <td>157</td>
+        <td>152</td>
+        <td data-order="14">-31</td>
+        <td>0100,79</td>
+        <td>001404,31</td>
+        <td>2020-11-23</td>
         <td>239</td>
       </tr>
       <tr>
@@ -2101,11 +2103,11 @@
         <td>8</td>
         <td>3</td>
         <td>29</td>
-        <td>410</td>
-        <td>405</td>
-        <td DATAORDER="75">+30</td>
-        <td>0068,79</td>
-        <td>011686,67</td>
+        <td>411</td>
+        <td>406</td>
+        <td data-order="79">+34</td>
+        <td>0073,32</td>
+        <td>011699,52</td>
         <td>2020-03-16</td>
         <td>237</td>
       </tr>
@@ -2124,11 +2126,11 @@
         <td>8</td>
         <td>4</td>
         <td>59</td>
-        <td>415</td>
-        <td>410</td>
-        <td DATAORDER="57">+12</td>
-        <td>0011,09</td>
-        <td>006533,02</td>
+        <td>416</td>
+        <td>411</td>
+        <td data-order="55">+10</td>
+        <td>0014,39</td>
+        <td>006536,32</td>
         <td>2020-03-24</td>
         <td>224</td>
       </tr>
@@ -2147,11 +2149,11 @@
         <td>8</td>
         <td>2</td>
         <td>21</td>
-        <td>426</td>
-        <td>421</td>
-        <td DATAORDER="11">-34</td>
-        <td>0594,36</td>
-        <td>024452,79</td>
+        <td>427</td>
+        <td>422</td>
+        <td data-order="49">+04</td>
+        <td>0581,34</td>
+        <td>024588,67</td>
         <td>2020-03-13</td>
         <td>224</td>
       </tr>
@@ -2170,11 +2172,11 @@
         <td>8</td>
         <td>3</td>
         <td>64</td>
-        <td>438</td>
-        <td>433</td>
-        <td DATAORDER="9">-36</td>
-        <td>0077,64</td>
-        <td>008451,52</td>
+        <td>439</td>
+        <td>434</td>
+        <td data-order="22">-23</td>
+        <td>0075,31</td>
+        <td>008462,40</td>
         <td>2020-03-04</td>
         <td>221</td>
       </tr>
@@ -2193,11 +2195,11 @@
         <td>8</td>
         <td>6</td>
         <td>40</td>
-        <td>424</td>
-        <td>419</td>
-        <td DATAORDER="56">+11</td>
-        <td>0014,02</td>
-        <td>006120,39</td>
+        <td>425</td>
+        <td>420</td>
+        <td data-order="80">+35</td>
+        <td>0013,61</td>
+        <td>006123,15</td>
         <td>2020-03-19</td>
         <td>220</td>
       </tr>
@@ -2218,11 +2220,11 @@
         <td>86</td>
         <td>444</td>
         <td>439</td>
-        <td DATAORDER="26">-19</td>
-        <td>0009,61</td>
-        <td>001554,13</td>
+        <td data-order="25">-20</td>
+        <td>0008,77</td>
+        <td>001555,02</td>
         <td>2020-03-17</td>
-        <td>202</td>
+        <td>203</td>
       </tr>
       <tr>
         <td>
@@ -2241,11 +2243,11 @@
         <td>97</td>
         <td>453</td>
         <td>448</td>
-        <td DATAORDER="21">-24</td>
-        <td>0000,80</td>
-        <td>002596,79</td>
+        <td data-order="19">-26</td>
+        <td>0000,81</td>
+        <td>002596,90</td>
         <td>2020-03-09</td>
-        <td>201</td>
+        <td>202</td>
       </tr>
       <tr>
         <td>
@@ -2264,11 +2266,11 @@
         <td>73</td>
         <td>446</td>
         <td>441</td>
-        <td DATAORDER="61">+16</td>
-        <td>0003,53</td>
-        <td>008489,16</td>
+        <td data-order="45">+00</td>
+        <td>0003,32</td>
+        <td>008489,37</td>
         <td>2020-03-24</td>
-        <td>193</td>
+        <td>194</td>
       </tr>
       <tr>
         <td>
@@ -2285,11 +2287,11 @@
         <td>8</td>
         <td>3</td>
         <td>216</td>
-        <td>456</td>
-        <td>451</td>
-        <td DATAORDER="30">-15</td>
-        <td>0273,67</td>
-        <td>014241,96</td>
+        <td>457</td>
+        <td>452</td>
+        <td data-order="55">+10</td>
+        <td>0274,73</td>
+        <td>014292,43</td>
         <td>2020-03-17</td>
         <td>190</td>
       </tr>
@@ -2308,11 +2310,11 @@
         <td>8</td>
         <td>4</td>
         <td>70</td>
-        <td>465</td>
-        <td>460</td>
-        <td DATAORDER="22">-23</td>
-        <td>0212,94</td>
-        <td>010269,78</td>
+        <td>466</td>
+        <td>461</td>
+        <td data-order="23">-22</td>
+        <td>0197,49</td>
+        <td>010291,76</td>
         <td>2020-03-17</td>
         <td>181</td>
       </tr>
@@ -2331,11 +2333,11 @@
         <td>8</td>
         <td>5</td>
         <td>37</td>
-        <td>467</td>
-        <td>462</td>
-        <td DATAORDER="77">+32</td>
-        <td>0398,73</td>
-        <td>012250,15</td>
+        <td>468</td>
+        <td>463</td>
+        <td data-order="83">+38</td>
+        <td>0427,43</td>
+        <td>012331,27</td>
         <td>2020-03-17</td>
         <td>179</td>
       </tr>
@@ -2354,11 +2356,11 @@
         <td>8</td>
         <td>4</td>
         <td>101</td>
-        <td>464</td>
-        <td>459</td>
-        <td DATAORDER="27">-18</td>
-        <td>0383,14</td>
-        <td>018543,11</td>
+        <td>465</td>
+        <td>460</td>
+        <td data-order="50">+05</td>
+        <td>0376,36</td>
+        <td>018608,03</td>
         <td>2020-03-20</td>
         <td>179</td>
       </tr>
@@ -2377,11 +2379,11 @@
         <td>8</td>
         <td>5</td>
         <td>70</td>
-        <td>466</td>
-        <td>461</td>
-        <td DATAORDER="13">-32</td>
-        <td>0050,68</td>
-        <td>006049,12</td>
+        <td>467</td>
+        <td>462</td>
+        <td data-order="51">+06</td>
+        <td>0049,39</td>
+        <td>006057,56</td>
         <td>2020-03-19</td>
         <td>178</td>
       </tr>
@@ -2400,11 +2402,11 @@
         <td>8</td>
         <td>5</td>
         <td>19</td>
-        <td>478</td>
-        <td>473</td>
-        <td DATAORDER="48">+03</td>
-        <td>0069,10</td>
-        <td>007178,10</td>
+        <td>479</td>
+        <td>474</td>
+        <td data-order="56">+11</td>
+        <td>0069,73</td>
+        <td>007189,19</td>
         <td>2020-03-12</td>
         <td>173</td>
       </tr>
@@ -2423,9 +2425,9 @@
         <td>8</td>
         <td>3</td>
         <td>7</td>
-        <td>211</td>
-        <td>206</td>
-        <td DATAORDER="76">+31</td>
+        <td>212</td>
+        <td>207</td>
+        <td data-order="59">+14</td>
         <td>0325,23</td>
         <td>009061,85</td>
         <td>2021-01-06</td>
@@ -2446,11 +2448,11 @@
         <td>8</td>
         <td>4</td>
         <td>73</td>
-        <td>467</td>
-        <td>462</td>
-        <td DATAORDER="33">-12</td>
-        <td>0461,02</td>
-        <td>022965,43</td>
+        <td>468</td>
+        <td>463</td>
+        <td data-order="37">-08</td>
+        <td>0436,99</td>
+        <td>023019,66</td>
         <td>2020-03-30</td>
         <td>166</td>
       </tr>
@@ -2469,11 +2471,11 @@
         <td>8</td>
         <td>4</td>
         <td>43</td>
-        <td>505</td>
-        <td>500</td>
-        <td DATAORDER="53">+08</td>
-        <td>0302,38</td>
-        <td>008293,00</td>
+        <td>506</td>
+        <td>501</td>
+        <td data-order="62">+17</td>
+        <td>0282,10</td>
+        <td>008334,11</td>
         <td>2020-02-26</td>
         <td>161</td>
       </tr>
@@ -2492,11 +2494,11 @@
         <td>8</td>
         <td>4</td>
         <td>55</td>
-        <td>499</td>
-        <td>494</td>
-        <td DATAORDER="63">+18</td>
-        <td>0311,42</td>
-        <td>010063,57</td>
+        <td>500</td>
+        <td>495</td>
+        <td data-order="78">+33</td>
+        <td>0330,12</td>
+        <td>010127,28</td>
         <td>2020-03-05</td>
         <td>159</td>
       </tr>
@@ -2515,11 +2517,11 @@
         <td>8</td>
         <td>5</td>
         <td>68</td>
-        <td>496</td>
-        <td>491</td>
-        <td DATAORDER="62">+17</td>
-        <td>0269,20</td>
-        <td>004047,10</td>
+        <td>497</td>
+        <td>492</td>
+        <td data-order="65">+20</td>
+        <td>0287,60</td>
+        <td>004101,26</td>
         <td>2020-03-10</td>
         <td>157</td>
       </tr>
@@ -2538,11 +2540,11 @@
         <td>8</td>
         <td>6</td>
         <td>7</td>
-        <td>397</td>
-        <td>392</td>
-        <td DATAORDER="45">+00</td>
-        <td>0241,29</td>
-        <td>024634,51</td>
+        <td>398</td>
+        <td>393</td>
+        <td data-order="80">+35</td>
+        <td>0205,65</td>
+        <td>024687,45</td>
         <td>2020-06-28</td>
         <td>149</td>
       </tr>
@@ -2561,11 +2563,11 @@
         <td>8</td>
         <td>4</td>
         <td>nan</td>
-        <td>504</td>
-        <td>499</td>
-        <td DATAORDER="40">-05</td>
-        <td>0389,30</td>
-        <td>021740,83</td>
+        <td>505</td>
+        <td>500</td>
+        <td data-order="48">+03</td>
+        <td>0378,33</td>
+        <td>021795,04</td>
         <td>2020-03-10</td>
         <td>149</td>
       </tr>
@@ -2584,11 +2586,11 @@
         <td>8</td>
         <td>5</td>
         <td>29</td>
-        <td>510</td>
-        <td>505</td>
-        <td DATAORDER="15">-30</td>
-        <td>0188,34</td>
-        <td>013964,28</td>
+        <td>511</td>
+        <td>506</td>
+        <td data-order="27">-18</td>
+        <td>0178,35</td>
+        <td>013988,15</td>
         <td>2020-03-05</td>
         <td>148</td>
       </tr>
@@ -2607,11 +2609,11 @@
         <td>8</td>
         <td>4</td>
         <td>23</td>
-        <td>472</td>
-        <td>467</td>
-        <td DATAORDER="60">+15</td>
-        <td>0012,10</td>
-        <td>003117,25</td>
+        <td>473</td>
+        <td>468</td>
+        <td data-order="64">+19</td>
+        <td>0011,90</td>
+        <td>003119,04</td>
         <td>2020-04-15</td>
         <td>145</td>
       </tr>
@@ -2630,46 +2632,23 @@
         <td>8</td>
         <td>4</td>
         <td>49</td>
-        <td>518</td>
-        <td>513</td>
-        <td DATAORDER="45">+00</td>
-        <td>0537,00</td>
-        <td>006716,77</td>
+        <td>519</td>
+        <td>514</td>
+        <td data-order="57">+12</td>
+        <td>0533,16</td>
+        <td>006796,43</td>
         <td>2020-03-04</td>
         <td>141</td>
       </tr>
       <tr>
         <td>
-          <img src="112_Serbia.png"/>
+          <img src="112_Oman.png"/>
         </td>
         <td>
-          <img src="112_INF_Serbia.png"/>
+          <img src="112_INF_Oman.png"/>
         </td>
         <td>
-          <a href="112_Serbia.png" target="_blank">112</a>
-        </td>
-        <td>Serbia</td>
-        <td>Europe</td>
-        <td>8</td>
-        <td>5</td>
-        <td>37</td>
-        <td>509</td>
-        <td>504</td>
-        <td DATAORDER="50">+05</td>
-        <td>0090,40</td>
-        <td>014707,03</td>
-        <td>2020-03-13</td>
-        <td>141</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="113_Oman.png"/>
-        </td>
-        <td>
-          <img src="113_INF_Oman.png"/>
-        </td>
-        <td>
-          <a href="113_Oman.png" target="_blank">113</a>
+          <a href="112_Oman.png" target="_blank">112</a>
         </td>
         <td>Oman</td>
         <td>Asia</td>
@@ -2678,11 +2657,34 @@
         <td>66</td>
         <td>505</td>
         <td>500</td>
-        <td DATAORDER="70">+25</td>
-        <td>0003,48</td>
-        <td>006003,98</td>
+        <td data-order="78">+33</td>
+        <td>0003,96</td>
+        <td>006004,88</td>
         <td>2020-03-18</td>
-        <td>140</td>
+        <td>141</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="113_Serbia.png"/>
+        </td>
+        <td>
+          <img src="113_INF_Serbia.png"/>
+        </td>
+        <td>
+          <a href="113_Serbia.png" target="_blank">113</a>
+        </td>
+        <td>Serbia</td>
+        <td>Europe</td>
+        <td>8</td>
+        <td>5</td>
+        <td>37</td>
+        <td>510</td>
+        <td>505</td>
+        <td data-order="55">+10</td>
+        <td>0088,71</td>
+        <td>014720,49</td>
+        <td>2020-03-13</td>
+        <td>141</td>
       </tr>
       <tr>
         <td>
@@ -2699,11 +2701,11 @@
         <td>8</td>
         <td>6</td>
         <td>204</td>
-        <td>528</td>
-        <td>523</td>
-        <td DATAORDER="81">+36</td>
-        <td>0013,29</td>
-        <td>009733,73</td>
+        <td>529</td>
+        <td>524</td>
+        <td data-order="84">+39</td>
+        <td>0016,44</td>
+        <td>009737,91</td>
         <td>2020-02-25</td>
         <td>139</td>
       </tr>
@@ -2722,11 +2724,11 @@
         <td>8</td>
         <td>6</td>
         <td>37</td>
-        <td>505</td>
-        <td>500</td>
-        <td DATAORDER="83">+38</td>
-        <td>0494,21</td>
-        <td>009760,30</td>
+        <td>506</td>
+        <td>501</td>
+        <td data-order="87">+42</td>
+        <td>0622,47</td>
+        <td>009926,40</td>
         <td>2020-03-19</td>
         <td>139</td>
       </tr>
@@ -2745,11 +2747,11 @@
         <td>8</td>
         <td>6</td>
         <td>72</td>
-        <td>503</td>
-        <td>498</td>
-        <td DATAORDER="37">-08</td>
-        <td>0035,89</td>
-        <td>004958,84</td>
+        <td>504</td>
+        <td>499</td>
+        <td data-order="34">-11</td>
+        <td>0034,36</td>
+        <td>004962,92</td>
         <td>2020-03-22</td>
         <td>138</td>
       </tr>
@@ -2768,11 +2770,11 @@
         <td>8</td>
         <td>4</td>
         <td>39</td>
-        <td>517</td>
-        <td>512</td>
-        <td DATAORDER="41">-04</td>
-        <td>0164,26</td>
-        <td>010326,91</td>
+        <td>518</td>
+        <td>513</td>
+        <td data-order="54">+09</td>
+        <td>0160,36</td>
+        <td>010351,00</td>
         <td>2020-03-08</td>
         <td>138</td>
       </tr>
@@ -2791,11 +2793,11 @@
         <td>8</td>
         <td>4</td>
         <td>48</td>
-        <td>514</td>
-        <td>509</td>
-        <td DATAORDER="59">+14</td>
-        <td>0318,39</td>
-        <td>017649,25</td>
+        <td>515</td>
+        <td>510</td>
+        <td data-order="79">+34</td>
+        <td>0335,05</td>
+        <td>017714,54</td>
         <td>2020-03-13</td>
         <td>136</td>
       </tr>
@@ -2814,11 +2816,11 @@
         <td>8</td>
         <td>4</td>
         <td>64</td>
-        <td>515</td>
-        <td>510</td>
-        <td DATAORDER="58">+13</td>
-        <td>0140,32</td>
-        <td>010492,59</td>
+        <td>516</td>
+        <td>511</td>
+        <td data-order="71">+26</td>
+        <td>0147,83</td>
+        <td>010520,84</td>
         <td>2020-03-13</td>
         <td>135</td>
       </tr>
@@ -2837,11 +2839,11 @@
         <td>8</td>
         <td>3</td>
         <td>210</td>
-        <td>518</td>
-        <td>513</td>
-        <td DATAORDER="12">-33</td>
-        <td>0020,96</td>
-        <td>009341,64</td>
+        <td>519</td>
+        <td>514</td>
+        <td data-order="56">+11</td>
+        <td>0025,18</td>
+        <td>009350,08</td>
         <td>2020-03-10</td>
         <td>135</td>
       </tr>
@@ -2860,11 +2862,11 @@
         <td>8</td>
         <td>5</td>
         <td>13</td>
-        <td>515</td>
-        <td>510</td>
-        <td DATAORDER="54">+09</td>
-        <td>0096,41</td>
-        <td>008715,16</td>
+        <td>516</td>
+        <td>511</td>
+        <td data-order="68">+23</td>
+        <td>0091,57</td>
+        <td>008730,87</td>
         <td>2020-03-18</td>
         <td>130</td>
       </tr>
@@ -2883,11 +2885,11 @@
         <td>8</td>
         <td>4</td>
         <td>73</td>
-        <td>527</td>
-        <td>522</td>
-        <td DATAORDER="82">+37</td>
-        <td>0193,18</td>
-        <td>005130,73</td>
+        <td>528</td>
+        <td>523</td>
+        <td data-order="84">+39</td>
+        <td>0231,91</td>
+        <td>005188,93</td>
         <td>2020-03-06</td>
         <td>130</td>
       </tr>
@@ -2904,12 +2906,12 @@
         <td>Czechia</td>
         <td>Europe</td>
         <td>8</td>
-        <td>2</td>
+        <td>3</td>
         <td>37</td>
-        <td>527</td>
-        <td>522</td>
-        <td DATAORDER="-2">-47</td>
-        <td>0372,84</td>
+        <td>528</td>
+        <td>523</td>
+        <td data-order="-4">-49</td>
+        <td>0264,00</td>
         <td>022484,69</td>
         <td>2020-03-08</td>
         <td>128</td>
@@ -2929,11 +2931,11 @@
         <td>8</td>
         <td>5</td>
         <td>59</td>
-        <td>543</td>
-        <td>538</td>
-        <td DATAORDER="58">+13</td>
-        <td>0314,81</td>
-        <td>009048,48</td>
+        <td>544</td>
+        <td>539</td>
+        <td data-order="73">+28</td>
+        <td>0345,36</td>
+        <td>009122,20</td>
         <td>2020-02-21</td>
         <td>128</td>
       </tr>
@@ -2954,11 +2956,11 @@
         <td>94</td>
         <td>513</td>
         <td>508</td>
-        <td DATAORDER="15">-30</td>
-        <td>0005,49</td>
-        <td>001877,01</td>
+        <td data-order="34">-11</td>
+        <td>0004,27</td>
+        <td>001877,60</td>
         <td>2020-04-04</td>
-        <td>115</td>
+        <td>116</td>
       </tr>
       <tr>
         <td>
@@ -2975,46 +2977,23 @@
         <td>8</td>
         <td>3</td>
         <td>64</td>
-        <td>534</td>
-        <td>529</td>
-        <td DATAORDER="24">-21</td>
-        <td>0206,37</td>
-        <td>005668,36</td>
+        <td>535</td>
+        <td>530</td>
+        <td data-order="55">+10</td>
+        <td>0200,23</td>
+        <td>005704,12</td>
         <td>2020-03-14</td>
         <td>115</td>
       </tr>
       <tr>
         <td>
-          <img src="127_Israel.png"/>
+          <img src="127_Honduras.png"/>
         </td>
         <td>
-          <img src="127_INF_Israel.png"/>
+          <img src="127_INF_Honduras.png"/>
         </td>
         <td>
-          <a href="127_Israel.png" target="_blank">127</a>
-        </td>
-        <td>Israel</td>
-        <td>Asia</td>
-        <td>8</td>
-        <td>5</td>
-        <td>38</td>
-        <td>545</td>
-        <td>540</td>
-        <td DATAORDER="83">+38</td>
-        <td>0078,40</td>
-        <td>015753,99</td>
-        <td>2020-03-06</td>
-        <td>112</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="128_Honduras.png"/>
-        </td>
-        <td>
-          <img src="128_INF_Honduras.png"/>
-        </td>
-        <td>
-          <a href="128_Honduras.png" target="_blank">128</a>
+          <a href="127_Honduras.png" target="_blank">127</a>
         </td>
         <td>Honduras</td>
         <td>Americas</td>
@@ -3023,11 +3002,34 @@
         <td>89</td>
         <td>532</td>
         <td>527</td>
-        <td DATAORDER="45">+00</td>
+        <td data-order="45">+00</td>
         <td>0000,00</td>
         <td>003835,99</td>
         <td>2020-03-20</td>
-        <td>111</td>
+        <td>112</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="128_Israel.png"/>
+        </td>
+        <td>
+          <img src="128_INF_Israel.png"/>
+        </td>
+        <td>
+          <a href="128_Israel.png" target="_blank">128</a>
+        </td>
+        <td>Israel</td>
+        <td>Asia</td>
+        <td>8</td>
+        <td>5</td>
+        <td>38</td>
+        <td>546</td>
+        <td>541</td>
+        <td data-order="87">+42</td>
+        <td>0088,45</td>
+        <td>015774,22</td>
+        <td>2020-03-06</td>
+        <td>112</td>
       </tr>
       <tr>
         <td>
@@ -3044,11 +3046,11 @@
         <td>8</td>
         <td>5</td>
         <td>11</td>
-        <td>557</td>
-        <td>552</td>
-        <td DATAORDER="54">+09</td>
-        <td>0610,61</td>
-        <td>013644,75</td>
+        <td>558</td>
+        <td>553</td>
+        <td data-order="71">+26</td>
+        <td>0657,72</td>
+        <td>013785,21</td>
         <td>2020-02-27</td>
         <td>108</td>
       </tr>
@@ -3067,46 +3069,23 @@
         <td>8</td>
         <td>6</td>
         <td>32</td>
-        <td>536</td>
-        <td>531</td>
-        <td DATAORDER="40">-05</td>
-        <td>0090,96</td>
-        <td>010658,78</td>
+        <td>537</td>
+        <td>532</td>
+        <td data-order="45">+00</td>
+        <td>0089,57</td>
+        <td>010671,69</td>
         <td>2020-03-19</td>
         <td>108</td>
       </tr>
       <tr>
         <td>
-          <img src="131_Switzerland.png"/>
+          <img src="131_Iraq.png"/>
         </td>
         <td>
-          <img src="131_INF_Switzerland.png"/>
+          <img src="131_INF_Iraq.png"/>
         </td>
         <td>
-          <a href="131_Switzerland.png" target="_blank">131</a>
-        </td>
-        <td>Switzerland</td>
-        <td>Europe</td>
-        <td>8</td>
-        <td>5</td>
-        <td>39</td>
-        <td>557</td>
-        <td>552</td>
-        <td DATAORDER="55">+10</td>
-        <td>0708,68</td>
-        <td>014070,52</td>
-        <td>2020-02-29</td>
-        <td>106</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="132_Iraq.png"/>
-        </td>
-        <td>
-          <img src="132_INF_Iraq.png"/>
-        </td>
-        <td>
-          <a href="132_Iraq.png" target="_blank">132</a>
+          <a href="131_Iraq.png" target="_blank">131</a>
         </td>
         <td>Iraq</td>
         <td>Asia</td>
@@ -3115,11 +3094,34 @@
         <td>175</td>
         <td>551</td>
         <td>546</td>
-        <td DATAORDER="42">-03</td>
-        <td>0005,65</td>
-        <td>005224,67</td>
+        <td data-order="61">+16</td>
+        <td>0005,41</td>
+        <td>005225,45</td>
         <td>2020-03-07</td>
-        <td>105</td>
+        <td>106</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="132_Switzerland.png"/>
+        </td>
+        <td>
+          <img src="132_INF_Switzerland.png"/>
+        </td>
+        <td>
+          <a href="132_Switzerland.png" target="_blank">132</a>
+        </td>
+        <td>Switzerland</td>
+        <td>Europe</td>
+        <td>8</td>
+        <td>5</td>
+        <td>39</td>
+        <td>558</td>
+        <td>553</td>
+        <td data-order="65">+20</td>
+        <td>0713,01</td>
+        <td>014203,02</td>
+        <td>2020-02-29</td>
+        <td>106</td>
       </tr>
       <tr>
         <td>
@@ -3136,11 +3138,11 @@
         <td>8</td>
         <td>5</td>
         <td>28</td>
-        <td>542</td>
-        <td>537</td>
-        <td DATAORDER="28">-17</td>
-        <td>0946,77</td>
-        <td>011445,41</td>
+        <td>543</td>
+        <td>538</td>
+        <td data-order="27">-18</td>
+        <td>1255,55</td>
+        <td>011754,20</td>
         <td>2020-03-22</td>
         <td>105</td>
       </tr>
@@ -3159,11 +3161,11 @@
         <td>8</td>
         <td>3</td>
         <td>88</td>
-        <td>548</td>
-        <td>543</td>
-        <td DATAORDER="34">-11</td>
-        <td>0495,40</td>
-        <td>016611,28</td>
+        <td>549</td>
+        <td>544</td>
+        <td data-order="52">+07</td>
+        <td>0497,01</td>
+        <td>016704,48</td>
         <td>2020-03-13</td>
         <td>102</td>
       </tr>
@@ -3182,11 +3184,11 @@
         <td>8</td>
         <td>4</td>
         <td>171</td>
-        <td>517</td>
-        <td>512</td>
-        <td DATAORDER="50">+05</td>
-        <td>0052,96</td>
-        <td>005596,10</td>
+        <td>518</td>
+        <td>513</td>
+        <td data-order="60">+15</td>
+        <td>0051,68</td>
+        <td>005604,27</td>
         <td>2020-04-15</td>
         <td>100</td>
       </tr>
@@ -3205,46 +3207,23 @@
         <td>8</td>
         <td>6</td>
         <td>130</td>
-        <td>538</td>
-        <td>533</td>
-        <td DATAORDER="33">-12</td>
-        <td>0104,83</td>
-        <td>004887,97</td>
+        <td>539</td>
+        <td>534</td>
+        <td data-order="35">-10</td>
+        <td>0105,76</td>
+        <td>004904,37</td>
         <td>2020-03-26</td>
         <td>99</td>
       </tr>
       <tr>
         <td>
-          <img src="137_Kazakhstan.png"/>
+          <img src="137_Costa_Rica.png"/>
         </td>
         <td>
-          <img src="137_INF_Kazakhstan.png"/>
+          <img src="137_INF_Costa_Rica.png"/>
         </td>
         <td>
-          <a href="137_Kazakhstan.png" target="_blank">137</a>
-        </td>
-        <td>Kazakhstan</td>
-        <td>Asia</td>
-        <td>8</td>
-        <td>5</td>
-        <td>51</td>
-        <td>548</td>
-        <td>543</td>
-        <td DATAORDER="49">+04</td>
-        <td>0018,00</td>
-        <td>005703,85</td>
-        <td>2020-03-17</td>
-        <td>98</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="138_Costa_Rica.png"/>
-        </td>
-        <td>
-          <img src="138_INF_Costa_Rica.png"/>
-        </td>
-        <td>
-          <a href="138_Costa_Rica.png" target="_blank">138</a>
+          <a href="137_Costa_Rica.png" target="_blank">137</a>
         </td>
         <td>Costa_Rica</td>
         <td>Americas</td>
@@ -3253,11 +3232,34 @@
         <td>7</td>
         <td>547</td>
         <td>542</td>
-        <td DATAORDER="54">+09</td>
-        <td>0009,58</td>
+        <td data-order="45">+00</td>
+        <td>0008,50</td>
         <td>011187,82</td>
         <td>2020-03-19</td>
-        <td>97</td>
+        <td>98</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="138_Kazakhstan.png"/>
+        </td>
+        <td>
+          <img src="138_INF_Kazakhstan.png"/>
+        </td>
+        <td>
+          <a href="138_Kazakhstan.png" target="_blank">138</a>
+        </td>
+        <td>Kazakhstan</td>
+        <td>Asia</td>
+        <td>8</td>
+        <td>5</td>
+        <td>51</td>
+        <td>549</td>
+        <td>544</td>
+        <td data-order="55">+10</td>
+        <td>0017,94</td>
+        <td>005706,71</td>
+        <td>2020-03-17</td>
+        <td>98</td>
       </tr>
       <tr>
         <td>
@@ -3274,11 +3276,11 @@
         <td>8</td>
         <td>5</td>
         <td>94</td>
-        <td>560</td>
-        <td>555</td>
-        <td DATAORDER="79">+34</td>
-        <td>0024,36</td>
-        <td>007556,93</td>
+        <td>561</td>
+        <td>556</td>
+        <td data-order="82">+37</td>
+        <td>0032,49</td>
+        <td>007567,09</td>
         <td>2020-03-07</td>
         <td>96</td>
       </tr>
@@ -3297,11 +3299,11 @@
         <td>8</td>
         <td>4</td>
         <td>28</td>
-        <td>542</td>
-        <td>537</td>
-        <td DATAORDER="69">+24</td>
-        <td>0050,56</td>
-        <td>010287,87</td>
+        <td>543</td>
+        <td>538</td>
+        <td data-order="59">+14</td>
+        <td>0056,97</td>
+        <td>010294,28</td>
         <td>2020-03-26</td>
         <td>95</td>
       </tr>
@@ -3320,11 +3322,11 @@
         <td>8</td>
         <td>4</td>
         <td>55</td>
-        <td>566</td>
-        <td>561</td>
-        <td DATAORDER="11">-34</td>
-        <td>0556,46</td>
-        <td>017853,96</td>
+        <td>567</td>
+        <td>562</td>
+        <td data-order="24">-21</td>
+        <td>0540,57</td>
+        <td>017933,92</td>
         <td>2020-03-04</td>
         <td>93</td>
       </tr>
@@ -3343,11 +3345,11 @@
         <td>8</td>
         <td>5</td>
         <td>56</td>
-        <td>566</td>
-        <td>561</td>
-        <td DATAORDER="23">-22</td>
-        <td>1068,02</td>
-        <td>011186,51</td>
+        <td>567</td>
+        <td>562</td>
+        <td data-order="9">-36</td>
+        <td>0898,62</td>
+        <td>011190,20</td>
         <td>2020-03-06</td>
         <td>91</td>
       </tr>
@@ -3366,11 +3368,11 @@
         <td>8</td>
         <td>5</td>
         <td>72</td>
-        <td>482</td>
-        <td>477</td>
-        <td DATAORDER="60">+15</td>
-        <td>0033,30</td>
-        <td>008798,06</td>
+        <td>483</td>
+        <td>478</td>
+        <td data-order="43">-02</td>
+        <td>0037,40</td>
+        <td>008802,16</td>
         <td>2020-06-01</td>
         <td>88</td>
       </tr>
@@ -3389,11 +3391,11 @@
         <td>8</td>
         <td>4</td>
         <td>45</td>
-        <td>570</td>
-        <td>565</td>
-        <td DATAORDER="67">+22</td>
-        <td>0742,05</td>
-        <td>013660,14</td>
+        <td>571</td>
+        <td>566</td>
+        <td data-order="73">+28</td>
+        <td>0808,43</td>
+        <td>013810,57</td>
         <td>2020-03-06</td>
         <td>87</td>
       </tr>
@@ -3412,11 +3414,11 @@
         <td>8</td>
         <td>3</td>
         <td>84</td>
-        <td>556</td>
-        <td>551</td>
-        <td DATAORDER="13">-32</td>
-        <td>0106,23</td>
-        <td>008681,21</td>
+        <td>557</td>
+        <td>552</td>
+        <td data-order="36">-09</td>
+        <td>0100,78</td>
+        <td>008698,42</td>
         <td>2020-03-20</td>
         <td>87</td>
       </tr>
@@ -3435,10 +3437,10 @@
         <td>8</td>
         <td>8</td>
         <td>16</td>
-        <td>565</td>
-        <td>560</td>
-        <td DATAORDER="28">-17</td>
-        <td>0022,98</td>
+        <td>566</td>
+        <td>561</td>
+        <td data-order="36">-09</td>
+        <td>0015,94</td>
         <td>003060,23</td>
         <td>2020-03-14</td>
         <td>84</td>
@@ -3458,11 +3460,11 @@
         <td>8</td>
         <td>7</td>
         <td>29</td>
-        <td>561</td>
-        <td>556</td>
-        <td DATAORDER="71">+26</td>
-        <td>0223,23</td>
-        <td>025741,90</td>
+        <td>562</td>
+        <td>557</td>
+        <td data-order="79">+34</td>
+        <td>0236,76</td>
+        <td>025785,21</td>
         <td>2020-03-20</td>
         <td>82</td>
       </tr>
@@ -3481,11 +3483,11 @@
         <td>8</td>
         <td>5</td>
         <td>38</td>
-        <td>585</td>
-        <td>580</td>
-        <td DATAORDER="73">+28</td>
-        <td>0538,65</td>
-        <td>012074,77</td>
+        <td>586</td>
+        <td>581</td>
+        <td data-order="82">+37</td>
+        <td>0632,79</td>
+        <td>012230,72</td>
         <td>2020-02-28</td>
         <td>79</td>
       </tr>
@@ -3504,11 +3506,11 @@
         <td>8</td>
         <td>4</td>
         <td>16</td>
-        <td>569</td>
-        <td>564</td>
-        <td DATAORDER="73">+28</td>
-        <td>0152,71</td>
-        <td>010969,04</td>
+        <td>570</td>
+        <td>565</td>
+        <td data-order="74">+29</td>
+        <td>0153,51</td>
+        <td>010991,35</td>
         <td>2020-03-16</td>
         <td>78</td>
       </tr>
@@ -3527,11 +3529,11 @@
         <td>8</td>
         <td>4</td>
         <td>74</td>
-        <td>587</td>
-        <td>582</td>
-        <td DATAORDER="69">+24</td>
-        <td>0944,05</td>
-        <td>017273,18</td>
+        <td>588</td>
+        <td>583</td>
+        <td data-order="79">+34</td>
+        <td>0995,98</td>
+        <td>017454,94</td>
         <td>2020-02-28</td>
         <td>77</td>
       </tr>
@@ -3550,11 +3552,11 @@
         <td>8</td>
         <td>3</td>
         <td>95</td>
-        <td>575</td>
-        <td>570</td>
-        <td DATAORDER="80">+35</td>
-        <td>0097,89</td>
-        <td>012004,77</td>
+        <td>576</td>
+        <td>571</td>
+        <td data-order="87">+42</td>
+        <td>0115,97</td>
+        <td>012034,60</td>
         <td>2020-03-13</td>
         <td>75</td>
       </tr>
@@ -3573,11 +3575,11 @@
         <td>8</td>
         <td>6</td>
         <td>7</td>
-        <td>483</td>
-        <td>478</td>
-        <td DATAORDER="41">-04</td>
-        <td>0301,37</td>
-        <td>008741,75</td>
+        <td>484</td>
+        <td>479</td>
+        <td data-order="74">+29</td>
+        <td>0389,90</td>
+        <td>008925,08</td>
         <td>2020-06-13</td>
         <td>75</td>
       </tr>
@@ -3596,11 +3598,11 @@
         <td>8</td>
         <td>6</td>
         <td>26</td>
-        <td>588</td>
-        <td>583</td>
-        <td DATAORDER="58">+13</td>
-        <td>16042,47</td>
-        <td>216779,71</td>
+        <td>589</td>
+        <td>584</td>
+        <td data-order="68">+23</td>
+        <td>15688,59</td>
+        <td>219610,73</td>
         <td>2020-03-09</td>
         <td>75</td>
       </tr>
@@ -3619,11 +3621,11 @@
         <td>8</td>
         <td>5</td>
         <td>56</td>
-        <td>579</td>
-        <td>574</td>
-        <td DATAORDER="53">+08</td>
-        <td>0025,55</td>
-        <td>010069,98</td>
+        <td>580</td>
+        <td>575</td>
+        <td data-order="68">+23</td>
+        <td>0027,04</td>
+        <td>010074,86</td>
         <td>2020-03-15</td>
         <td>69</td>
       </tr>
@@ -3642,9 +3644,9 @@
         <td>7</td>
         <td>1</td>
         <td>70</td>
-        <td>176</td>
-        <td>171</td>
-        <td DATAORDER="76">+31</td>
+        <td>177</td>
+        <td>172</td>
+        <td data-order="56">+11</td>
         <td>0011,40</td>
         <td>005888,10</td>
         <td>2021-04-26</td>
@@ -3665,46 +3667,23 @@
         <td>8</td>
         <td>3</td>
         <td>57</td>
-        <td>481</td>
-        <td>476</td>
-        <td DATAORDER="47">+02</td>
-        <td>0300,28</td>
+        <td>482</td>
+        <td>477</td>
+        <td data-order="23">-22</td>
+        <td>0272,23</td>
         <td>005572,06</td>
         <td>2020-06-25</td>
         <td>65</td>
       </tr>
       <tr>
         <td>
-          <img src="157_Mexico.png"/>
+          <img src="157_Guatemala.png"/>
         </td>
         <td>
-          <img src="157_INF_Mexico.png"/>
+          <img src="157_INF_Guatemala.png"/>
         </td>
         <td>
-          <a href="157_Mexico.png" target="_blank">157</a>
-        </td>
-        <td>Mexico</td>
-        <td>Americas</td>
-        <td>4</td>
-        <td>5</td>
-        <td>88</td>
-        <td>587</td>
-        <td>582</td>
-        <td DATAORDER="45">+00</td>
-        <td>0009,67</td>
-        <td>003060,17</td>
-        <td>2020-03-13</td>
-        <td>63</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="158_Guatemala.png"/>
-        </td>
-        <td>
-          <img src="158_INF_Guatemala.png"/>
-        </td>
-        <td>
-          <a href="158_Guatemala.png" target="_blank">158</a>
+          <a href="157_Guatemala.png" target="_blank">157</a>
         </td>
         <td>Guatemala</td>
         <td>Americas</td>
@@ -3713,11 +3692,34 @@
         <td>77</td>
         <td>566</td>
         <td>561</td>
-        <td DATAORDER="53">+08</td>
-        <td>0009,40</td>
-        <td>003499,58</td>
+        <td data-order="74">+29</td>
+        <td>0009,36</td>
+        <td>003501,39</td>
         <td>2020-04-04</td>
-        <td>62</td>
+        <td>63</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="158_Mexico.png"/>
+        </td>
+        <td>
+          <img src="158_INF_Mexico.png"/>
+        </td>
+        <td>
+          <a href="158_Mexico.png" target="_blank">158</a>
+        </td>
+        <td>Mexico</td>
+        <td>Americas</td>
+        <td>8</td>
+        <td>5</td>
+        <td>88</td>
+        <td>588</td>
+        <td>583</td>
+        <td data-order="71">+26</td>
+        <td>0010,21</td>
+        <td>003062,75</td>
+        <td>2020-03-13</td>
+        <td>63</td>
       </tr>
       <tr>
         <td>
@@ -3734,11 +3736,11 @@
         <td>8</td>
         <td>7</td>
         <td>35</td>
-        <td>586</td>
-        <td>581</td>
-        <td DATAORDER="49">+04</td>
-        <td>1600,21</td>
-        <td>027669,60</td>
+        <td>587</td>
+        <td>582</td>
+        <td data-order="71">+26</td>
+        <td>1323,15</td>
+        <td>027927,24</td>
         <td>2020-03-17</td>
         <td>60</td>
       </tr>
@@ -3757,11 +3759,11 @@
         <td>8</td>
         <td>4</td>
         <td>55</td>
-        <td>599</td>
-        <td>594</td>
-        <td DATAORDER="49">+04</td>
-        <td>0372,77</td>
-        <td>017473,03</td>
+        <td>600</td>
+        <td>595</td>
+        <td data-order="35">-10</td>
+        <td>0438,34</td>
+        <td>017538,60</td>
         <td>2020-03-04</td>
         <td>60</td>
       </tr>
@@ -3780,11 +3782,11 @@
         <td>8</td>
         <td>6</td>
         <td>19</td>
-        <td>561</td>
-        <td>556</td>
-        <td DATAORDER="72">+27</td>
-        <td>0023,07</td>
-        <td>006968,00</td>
+        <td>562</td>
+        <td>557</td>
+        <td data-order="79">+34</td>
+        <td>0037,85</td>
+        <td>006985,31</td>
         <td>2020-04-15</td>
         <td>56</td>
       </tr>
@@ -3803,11 +3805,11 @@
         <td>8</td>
         <td>7</td>
         <td>35</td>
-        <td>595</td>
-        <td>590</td>
-        <td DATAORDER="56">+11</td>
-        <td>0422,53</td>
-        <td>015685,87</td>
+        <td>596</td>
+        <td>591</td>
+        <td data-order="71">+26</td>
+        <td>0429,74</td>
+        <td>015779,16</td>
         <td>2020-03-12</td>
         <td>56</td>
       </tr>
@@ -3826,11 +3828,11 @@
         <td>8</td>
         <td>5</td>
         <td>88</td>
-        <td>602</td>
-        <td>597</td>
-        <td DATAORDER="15">-30</td>
-        <td>0102,34</td>
-        <td>007279,92</td>
+        <td>603</td>
+        <td>598</td>
+        <td data-order="19">-26</td>
+        <td>0098,18</td>
+        <td>007292,65</td>
         <td>2020-03-13</td>
         <td>48</td>
       </tr>
@@ -3849,11 +3851,11 @@
         <td>8</td>
         <td>3</td>
         <td>14</td>
-        <td>460</td>
-        <td>455</td>
-        <td DATAORDER="71">+26</td>
-        <td>0050,49</td>
-        <td>007923,61</td>
+        <td>461</td>
+        <td>456</td>
+        <td data-order="83">+38</td>
+        <td>0057,31</td>
+        <td>007938,00</td>
         <td>2020-08-05</td>
         <td>45</td>
       </tr>
@@ -3870,13 +3872,13 @@
         <td>Brazil</td>
         <td>Americas</td>
         <td>8</td>
-        <td>6</td>
-        <td>137</td>
-        <td>607</td>
-        <td>602</td>
-        <td DATAORDER="61">+16</td>
-        <td>0010,23</td>
-        <td>010470,01</td>
+        <td>5</td>
+        <td>nan</td>
+        <td>608</td>
+        <td>603</td>
+        <td data-order="54">+09</td>
+        <td>0010,16</td>
+        <td>010473,79</td>
         <td>2020-03-12</td>
         <td>44</td>
       </tr>
@@ -3895,11 +3897,11 @@
         <td>8</td>
         <td>6</td>
         <td>21</td>
-        <td>604</td>
-        <td>599</td>
-        <td DATAORDER="44">-01</td>
-        <td>0060,01</td>
-        <td>009251,49</td>
+        <td>605</td>
+        <td>600</td>
+        <td data-order="56">+11</td>
+        <td>0058,03</td>
+        <td>009260,88</td>
         <td>2020-03-15</td>
         <td>44</td>
       </tr>
@@ -3918,11 +3920,11 @@
         <td>8</td>
         <td>4</td>
         <td>27</td>
-        <td>628</td>
-        <td>623</td>
-        <td DATAORDER="47">+02</td>
-        <td>0017,82</td>
-        <td>007374,68</td>
+        <td>629</td>
+        <td>624</td>
+        <td data-order="58">+13</td>
+        <td>0017,15</td>
+        <td>007376,98</td>
         <td>2020-02-21</td>
         <td>43</td>
       </tr>
@@ -3941,11 +3943,11 @@
         <td>8</td>
         <td>4</td>
         <td>60</td>
-        <td>625</td>
-        <td>620</td>
-        <td DATAORDER="85">+40</td>
-        <td>0039,85</td>
-        <td>016514,88</td>
+        <td>626</td>
+        <td>621</td>
+        <td data-order="86">+41</td>
+        <td>0047,32</td>
+        <td>016525,60</td>
         <td>2020-02-25</td>
         <td>42</td>
       </tr>
@@ -3964,9 +3966,9 @@
         <td>8</td>
         <td>4</td>
         <td>43</td>
-        <td>325</td>
-        <td>320</td>
-        <td DATAORDER="65">+20</td>
+        <td>326</td>
+        <td>321</td>
+        <td data-order="36">-09</td>
         <td>0072,50</td>
         <td>004841,67</td>
         <td>2021-01-06</td>
@@ -3987,11 +3989,11 @@
         <td>8</td>
         <td>4</td>
         <td>85</td>
-        <td>617</td>
-        <td>612</td>
-        <td DATAORDER="3">-42</td>
-        <td>0128,72</td>
-        <td>006931,77</td>
+        <td>618</td>
+        <td>613</td>
+        <td data-order="1">-44</td>
+        <td>0126,86</td>
+        <td>006949,21</td>
         <td>2020-03-13</td>
         <td>33</td>
       </tr>
@@ -4010,11 +4012,11 @@
         <td>8</td>
         <td>5</td>
         <td>75</td>
-        <td>620</td>
-        <td>615</td>
-        <td DATAORDER="19">-26</td>
-        <td>0034,43</td>
-        <td>011613,14</td>
+        <td>621</td>
+        <td>616</td>
+        <td data-order="27">-18</td>
+        <td>0032,71</td>
+        <td>011617,49</td>
         <td>2020-03-14</td>
         <td>29</td>
       </tr>
@@ -4033,11 +4035,11 @@
         <td>8</td>
         <td>8</td>
         <td>nan</td>
-        <td>623</td>
-        <td>618</td>
-        <td DATAORDER="39">-06</td>
-        <td>0038,63</td>
-        <td>006903,00</td>
+        <td>624</td>
+        <td>619</td>
+        <td data-order="39">-06</td>
+        <td>0039,82</td>
+        <td>006909,24</td>
         <td>2020-03-13</td>
         <td>27</td>
       </tr>
@@ -4056,11 +4058,11 @@
         <td>8</td>
         <td>5</td>
         <td>106</td>
-        <td>633</td>
-        <td>628</td>
-        <td DATAORDER="62">+17</td>
-        <td>0253,02</td>
-        <td>012573,74</td>
+        <td>634</td>
+        <td>629</td>
+        <td data-order="67">+22</td>
+        <td>0263,30</td>
+        <td>012623,89</td>
         <td>2020-03-03</td>
         <td>27</td>
       </tr>
@@ -4079,11 +4081,11 @@
         <td>8</td>
         <td>6</td>
         <td>nan</td>
-        <td>622</td>
-        <td>617</td>
-        <td DATAORDER="58">+13</td>
-        <td>0012,35</td>
-        <td>003808,19</td>
+        <td>623</td>
+        <td>618</td>
+        <td data-order="65">+20</td>
+        <td>0015,44</td>
+        <td>003812,09</td>
         <td>2020-03-17</td>
         <td>24</td>
       </tr>
@@ -4102,11 +4104,11 @@
         <td>8</td>
         <td>4</td>
         <td>nan</td>
-        <td>631</td>
-        <td>626</td>
-        <td DATAORDER="-1">-46</td>
-        <td>0044,89</td>
-        <td>009405,06</td>
+        <td>632</td>
+        <td>627</td>
+        <td data-order="24">-21</td>
+        <td>0044,84</td>
+        <td>009412,83</td>
         <td>2020-03-11</td>
         <td>21</td>
       </tr>
@@ -4125,11 +4127,11 @@
         <td>8</td>
         <td>5</td>
         <td>43</td>
-        <td>640</td>
-        <td>635</td>
-        <td DATAORDER="72">+27</td>
-        <td>0348,60</td>
-        <td>015591,15</td>
+        <td>641</td>
+        <td>636</td>
+        <td data-order="80">+35</td>
+        <td>0386,79</td>
+        <td>015672,46</td>
         <td>2020-03-02</td>
         <td>21</td>
       </tr>
@@ -4148,11 +4150,11 @@
         <td>8</td>
         <td>5</td>
         <td>41</td>
-        <td>406</td>
-        <td>401</td>
-        <td DATAORDER="73">+28</td>
-        <td>0051,24</td>
-        <td>007200,01</td>
+        <td>407</td>
+        <td>402</td>
+        <td data-order="74">+29</td>
+        <td>0053,42</td>
+        <td>007208,73</td>
         <td>2020-11-03</td>
         <td>19</td>
       </tr>
@@ -4171,11 +4173,11 @@
         <td>8</td>
         <td>5</td>
         <td>97</td>
-        <td>636</td>
-        <td>631</td>
-        <td DATAORDER="85">+40</td>
-        <td>0042,74</td>
-        <td>008606,36</td>
+        <td>637</td>
+        <td>632</td>
+        <td data-order="86">+41</td>
+        <td>0043,37</td>
+        <td>008612,88</td>
         <td>2020-03-11</td>
         <td>16</td>
       </tr>
@@ -4194,11 +4196,11 @@
         <td>8</td>
         <td>3</td>
         <td>60</td>
-        <td>637</td>
-        <td>632</td>
-        <td DATAORDER="59">+14</td>
-        <td>0078,01</td>
-        <td>011272,51</td>
+        <td>638</td>
+        <td>633</td>
+        <td data-order="63">+18</td>
+        <td>0085,75</td>
+        <td>011289,23</td>
         <td>2020-03-13</td>
         <td>13</td>
       </tr>
@@ -4217,11 +4219,11 @@
         <td>8</td>
         <td>4</td>
         <td>38</td>
-        <td>642</td>
-        <td>637</td>
-        <td DATAORDER="66">+21</td>
-        <td>0358,26</td>
-        <td>012178,74</td>
+        <td>643</td>
+        <td>638</td>
+        <td data-order="81">+36</td>
+        <td>0411,31</td>
+        <td>012282,14</td>
         <td>2020-03-08</td>
         <td>13</td>
       </tr>
@@ -4240,11 +4242,11 @@
         <td>8</td>
         <td>7</td>
         <td>nan</td>
-        <td>514</td>
-        <td>509</td>
-        <td DATAORDER="78">+33</td>
-        <td>0073,89</td>
-        <td>005921,37</td>
+        <td>515</td>
+        <td>510</td>
+        <td data-order="86">+41</td>
+        <td>0104,21</td>
+        <td>005957,04</td>
         <td>2020-07-19</td>
         <td>8</td>
       </tr>
@@ -4263,10 +4265,10 @@
         <td>8</td>
         <td>2</td>
         <td>17</td>
-        <td>213</td>
-        <td>208</td>
-        <td DATAORDER="73">+28</td>
-        <td>0033,96</td>
+        <td>214</td>
+        <td>209</td>
+        <td data-order="51">+06</td>
+        <td>0032,08</td>
         <td>005311,32</td>
         <td>2021-05-24</td>
         <td>7</td>
@@ -4286,11 +4288,11 @@
         <td>8</td>
         <td>5</td>
         <td>24</td>
-        <td>500</td>
-        <td>495</td>
-        <td DATAORDER="58">+13</td>
-        <td>0787,28</td>
-        <td>015357,16</td>
+        <td>501</td>
+        <td>496</td>
+        <td data-order="58">+13</td>
+        <td>0795,15</td>
+        <td>015472,63</td>
         <td>2020-10-13</td>
         <td>5</td>
       </tr>
@@ -4309,11 +4311,11 @@
         <td>8</td>
         <td>6</td>
         <td>42</td>
-        <td>611</td>
-        <td>606</td>
-        <td DATAORDER="67">+22</td>
-        <td>0142,42</td>
-        <td>017509,53</td>
+        <td>612</td>
+        <td>607</td>
+        <td data-order="73">+28</td>
+        <td>0151,33</td>
+        <td>017536,46</td>
         <td>2020-04-19</td>
         <td>2</td>
       </tr>
