@@ -276,7 +276,7 @@ sup {
 /* Links */
 a {
     color: var(--color-link);
-    display: inline-block;
+    display: inline;
     font-weight: bold;
     text-decoration: none;
 }
