@@ -224,6 +224,10 @@ h6 {
     line-height: var(--line-height);
 }
 
+p {
+  font-size: 1.00em; /* 14px/16=0.875em */
+}
+
 mark {
     padding: 0.1rem;
 }
