@@ -1,0 +1,157 @@
+#plot wind speed
+import pandas as pd
+import matplotlib as mpl
+import numpy as np
+from datetime import date
+import random
+from matplotlib import dates
+import math
+import matplotlib.pylab as plt
+
+SMALL_SIZE = 10
+MEDIUM_SIZE = 15
+BIGGER_SIZE = 17
+
+#Make some wind
+
+arrowlength = 0.15
+
+def direction2karth(angle, diameter = arrowlength):
+    angle = math.radians(angle-90)
+    x = diameter*math.cos(angle)
+    y = diameter*math.sin(angle)
+    return x, y
+
+period = pd.date_range(start = date.today(), periods = 144, freq = '10min')
+wind_values = []
+for datetime in period: 
+    wind_direction = random.randint(10, 250) 
+    wind_values.append([dates.date2num(datetime), datetime.time(), wind_direction, random.randint(0, 35), random.randint(37, 60), direction2karth(wind_direction)[0], direction2karth(wind_direction)[1]])
+df = pd.DataFrame(wind_values, columns=['datetime', 'time', 'wind_direction', 'wind_average', 'wind_gusts', 'x_arrow_direction' , 'y_arrow_direction'])
+
+
+max_wind = df['wind_gusts'].max()
+min_wind = df['wind_average'].min()
+max_y = max_wind + 5
+min_y = min_wind - 5
+if min_y < 0:
+    min_y = 0
+arrow_y = max_y+2
+
+
+wind_direction_step = 6
+
+df_wind_direction = df.iloc[::wind_direction_step]
+
+x_pos = df_wind_direction['datetime']
+y_pos = arrow_y
+x_direct = df_wind_direction['x_arrow_direction']
+y_direct = df_wind_direction['y_arrow_direction']
+
+
+fig, ax = plt.subplots(figsize=(20, 12))
+# Format plot
+top_side = ax.spines["top"]
+top_side.set_visible(False)
+
+# get the extent of the axes
+beaufort = {
+'0' : 0,
+'1' : 1, 
+'2' : 4,    
+'3' : 7, 
+'4' : 11,
+'5' : 17, 
+'6' : 22,
+'7' : 28,
+'8' : 34,
+'9' : 41,
+'10' : 48, 
+'11' : 56, 
+'12' : 63,
+'max' : 100,     
+}
+
+beaufortColors = {
+'0' : 'white',
+'1' : 'aliceblue',
+'2' : 'lightskyblue', 
+'3' : 'deepskyblue',    
+'4' : 'aquamarine', 
+'5' : 'palegreen',
+'6' : 'greenyellow', 
+'7' : 'yellow',
+'8' : 'gold',
+'9' : 'orange',
+'10' : 'darkorange', 
+'11' : 'orangered', 
+'12' : 'red',
+'max' : 'red',     
+}
+
+
+revBeaufort = {val: key for (key, val) in beaufort.items()}
+
+levels = list(beaufort.values())
+
+colors=list(beaufortColors.values())
+
+xmin = df[:1]['datetime'].values[0]
+xmax = df[-1:]['datetime'].values[0]
+ymin = min_y
+ymax = max_y
+
+# create a dummy image
+img_data = np.arange(ymin,ymax,(ymax-ymin)/100.)
+img_data = img_data.reshape(img_data.size,1)
+
+# create new colormap 
+cmap = mpl.colors.ListedColormap(colors)
+
+bounds = np.asarray(levels)
+    
+norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
+
+
+
+# Plot graph
+plt.yticks(fontsize=MEDIUM_SIZE)
+ax.quiver(x_pos,y_pos,x_direct,y_direct, color = 'red', scale=5, pivot = 'middle')    
+x = df['datetime']
+y = df['wind_average']
+ax.plot(x, y, color = "blue", label = "wind_average", alpha = 1)
+ax.plot(x, df['wind_gusts'], color = "red", label = "wind_gusts", alpha = 1)
+
+ax.grid(axis='both')
+
+
+#Plot image
+
+im = ax.imshow(img_data, aspect='auto', origin='lower', cmap=cmap, norm=norm, alpha = 0.3,extent=[xmin,xmax,ymin,ymax])
+
+ax.xaxis_date()
+
+date_format = dates.DateFormatter('%H:%M')
+
+ax.xaxis.set_major_formatter(date_format)
+
+# This simply sets the x-axis data to diagonal so it fits better.
+fig.autofmt_xdate()
+
+
+ax.set_title('Windstärke (kn) und Windrichtung', size=MEDIUM_SIZE)
+ax.set_ylabel('(kts)',  size=MEDIUM_SIZE, rotation='horizontal')
+ax.yaxis.set_label_coords(-0.017,0.94)
+
+for level in levels:
+    if ymin <= level <= ymax:
+        ax.text(xmax,level," " + revBeaufort[level],fontsize=MEDIUM_SIZE)
+
+ax.text(xmax,arrow_y,"(bft)", fontsize=MEDIUM_SIZE)
+
+ax.tick_params(axis='x', labelsize=MEDIUM_SIZE)
+        
+
+outFormat = 'jpg'
+
+plt.savefig('c:/temp/wind.' + outFormat, dpi=300, bbox_inches="tight")
