@@ -2,7 +2,7 @@
 
 Create wind and weather graphics for selected locations.
 
-Script file is getwind.py (https://github.com/2222029/wind/blob/main/getWind.py).
+Script file is getwind.py (https://github.com/2222029/wind/blob/main/getWind.py), private repository!
 Ouptput to ./2222029.github.io.
 
 Uses the Meteomatis API (https://www.meteomatics.com/en/sign-up-weather-api-free-basic-account/) for retrospective data and predictions if live data unavailable.
